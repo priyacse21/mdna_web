@@ -1,0 +1,4 @@
+export default function ProblemSection() {
+  const needs = ['More qualified conversations', 'More visibility in search & AI', 'Stronger digital credibility', "A clearer view of what's working", 'A stronger marketing function']
+  return <section className="problem-section light-section" id="story"><div className="problem-copy"><p className="eyebrow">00 - The marketing problem</p><h2>More marketing<br />isn't always<br />the <span>answer.</span></h2><p>The next move depends on the problem in front of you. Sometimes you need more pipeline. Sometimes you need visibility, credibility, clarity or a stronger marketing function.</p></div><div className="need-list"><p className="eyebrow">Where the need shows up</p>{needs.map((need, index) => <div className="need-row" key={need}><small>0{index + 1}</small><strong>{need}</strong><i /></div>)}<em>The starting point matters.</em></div></section>
+}
