@@ -1,3 +1,9 @@
+import ContactSection from "../../screens/contact/ContactSection"
+
 export default function Contact() {
-	return <section className="light-section page-placeholder"><p className="eyebrow">Contact</p><h1>Start a conversation.</h1></section>
+	return (
+		<div>
+			<ContactSection />
+		</div>
+	)
 }
