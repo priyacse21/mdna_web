@@ -1,3 +1,6 @@
+import './home.css'
+import { Link } from 'react-router-dom'
+
 export default function Hero() {
   const nodes = [
     ['01', 'LEAD GENERATION', 'PIPELINE / CONVERSATIONS'],
@@ -13,7 +16,7 @@ export default function Hero() {
       <p className="eyebrow">mDNA.digital &nbsp; Marketing that moves business forward</p>
       <h1 id="home-title">Marketing<br />that moves<br /><span>business.</span></h1>
       <p className="hero-description">From qualified conversations and visibility to credibility, diagnosis and strategy - mDNA brings the right marketing moves together.</p>
-      <div className="button-row"><a className="button button-primary" href="#system">Explore the mDNA System <span>↓</span></a><a className="button button-outline" href="#contact">Talk to Us <span>↗</span></a></div>
+      <div className="button-row"><a className="button button-primary" href="#system">Explore the mDNA System <span>↓</span></a><Link className="button button-outline" to="/contact">Talk to Us <span>↗</span></Link></div>
       <p className="micro-note"><i /> Five capabilities / one connected portfolio</p>
     </div>
     <div className="hero-system" aria-label="The mDNA system">

@@ -1,5 +1,4 @@
 
-import "../../pages/OurWork/ourwork.css";
 
 const signals = [
   { num: "01", text: "More qualified conversations" },

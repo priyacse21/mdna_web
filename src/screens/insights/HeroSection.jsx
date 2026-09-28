@@ -1,5 +1,5 @@
 
-import "../../pages/Insights/insights.css";
+import "./Insights.css";
 
 const InsightsHero = () => {
   return (

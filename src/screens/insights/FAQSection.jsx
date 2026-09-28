@@ -1,5 +1,5 @@
 
-import "../../pages/Insights/insights.css";
+import { Link } from "react-router-dom";
 
 const faqs = [
   {
@@ -36,9 +36,9 @@ const FAQContactSection = () => {
             Have a question worth <span>exploring?</span>
           </h2>
         </div>
-        <a className="insights-btn insights-btn-light" href="/contact">
+        <Link className="insights-btn insights-btn-light" to="/contact">
           Talk to Us <span className="arrow">↗</span>
-        </a>
+        </Link>
       </section>
     </div>
   );

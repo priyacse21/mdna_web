@@ -13,11 +13,7 @@ h2 {
 }
 
 h1,
-h2,
-.hero-copy h1,
-.problem-copy h2,
-.audit-copy h2,
-.cta-section h2 {
+h2 {
   text-wrap: balance;
 }
 

@@ -1,6 +1,6 @@
 
 import  React from "react";
-import "../../pages/OurStory/ourstory.css";
+import "./OurStory.css";
 
 const OurStoryHero = () => {
   return (

@@ -1,6 +1,5 @@
 
 import React from "react";
-import "./ourstory.css";
 import CompanySection from "../../screens/ourstory/CompanySection";
 import BeliefSection from "../../screens/ourstory/BeliefSection";
 import OurStoryHero from "../../screens/ourstory/HeroSection";

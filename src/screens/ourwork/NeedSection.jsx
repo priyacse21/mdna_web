@@ -1,6 +1,5 @@
 
 import { useState } from "react";
-import "../../pages/OurWork/ourwork.css";
 
 const rows = [
   {

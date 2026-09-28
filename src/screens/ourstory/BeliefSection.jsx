@@ -1,6 +1,5 @@
 
 import React from "react";
-import "../../pages/OurStory/ourstory.css";
 
 const BeliefSection = () => {
   return (

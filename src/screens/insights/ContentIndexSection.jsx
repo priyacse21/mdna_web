@@ -1,6 +1,5 @@
 
 import { useState } from "react";
-import "../../pages/Insights/insights.css";
 
 const items = [
   {

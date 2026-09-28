@@ -1,5 +1,4 @@
 
-import "../../pages/OurWork/ourwork.css";
 
 const audits = [
   {

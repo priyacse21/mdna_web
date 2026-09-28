@@ -14,5 +14,5 @@ export const serviceLinksData = [
   { number: '03', label: 'Branding', description: 'Build attention and credibility', path: '/services/branding' },
   { number: '04', label: 'Audits & Diagnostics', description: 'Clarity before momentum', path: '/services/audits' },
   { number: '05', label: 'Consulting', description: 'Strategic direction', path: '/services/consulting' },
-  { number: '06', label: 'Performance Marketing', description: 'Measurable growth across paid channels', path: '/contact' },
+  { number: '06', label: 'Performance Marketing', description: 'Measurable growth across paid channels', path: '/services/performance-marketing' },
 ]

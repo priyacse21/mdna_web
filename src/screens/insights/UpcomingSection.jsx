@@ -1,5 +1,4 @@
 
-import "../../pages/Insights/insights.css";
 
 const drafts = [
   {
