@@ -31,19 +31,16 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import MobileMenu from "./MobileMenu";
-import { getPrimaryNavigation, getServiceLinks } from "../../data/navigation";
+import { getPrimaryNavigation } from "../../data/navigation";
 import mdnaLogo from "../../assets/logo/mdna-logo-clean.png";
 
 export default function Header() {
   const primaryNavigation = getPrimaryNavigation();
-  const serviceLinks = getServiceLinks();
 
   const [menuOpen, setMenuOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
 
   const closeMenus = () => {
     setMenuOpen(false);
-    setServicesOpen(false);
   };
 
   return (
@@ -73,30 +70,7 @@ export default function Header() {
               </Link>
             ))}
 
-            <div
-              className={`services-nav ${servicesOpen ? "open" : ""}`}
-            >
-              <button
-                type="button"
-                onClick={() => setServicesOpen(!servicesOpen)}
-                aria-expanded={servicesOpen}
-              >
-                Services
-              </button>
-
-              <div className="services-menu">
-                {serviceLinks.map(({ number, label, path }) => (
-                  <Link
-                    to={path}
-                    key={path}
-                    onClick={closeMenus}
-                  >
-                    <small>{number}</small>
-                    {label}
-                  </Link>
-                ))}
-              </div>
-            </div>
+            <Link to="/services" onClick={closeMenus}>Services</Link>
 
             {primaryNavigation.slice(1, -1).map(({ label, path }) => (
               <Link to={path} key={path}>
