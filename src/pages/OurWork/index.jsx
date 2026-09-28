@@ -1,3 +1,26 @@
+import React from "react";
+import HeroSection from "../../screens/ourwork/HeroSection";
+import MarketingSection from "../../screens/ourwork/MarketingSection";
+import "../../pages/OurWork/ourwork.css";
+import SystemSection from "../../screens/ourwork/SystemSection";
+import NeedSection from "../../screens/ourwork/NeedSection";
+import SystemMoveSection from "../../screens/ourwork/SystemMoveSection";
+import ClaritySection from "../../screens/ourwork/ClaritySection";
+
+
+
 export default function OurWork() {
-	return <section className="light-section page-placeholder"><p className="eyebrow">Our work</p><h1>Marketing moves with measurable momentum.</h1></section>
+	return(
+	<div>
+		<HeroSection /> 
+		<MarketingSection />
+		<SystemSection />
+		<NeedSection />
+		<SystemMoveSection />
+		<ClaritySection />
+
+
+
+	</div> )
+	  
 }

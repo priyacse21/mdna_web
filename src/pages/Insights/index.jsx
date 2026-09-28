@@ -1,3 +1,18 @@
+import React from "react";
+import "./insights.css";
+import InsightsHero from "../../screens/insights/HeroSection";
+import ContentIndexSection from "../../screens/insights/ContentIndexSection";
+import UpcomingSection from "../../screens/insights/UpcomingSection";
+import FAQSection from "../../screens/insights/FAQSection";
+
 export default function Insights() {
-	return <section className="light-section page-placeholder"><p className="eyebrow">Insights</p><h1>Ideas for the market you are moving through.</h1></section>
+	return (
+		<div>
+			<InsightsHero />
+			<ContentIndexSection />
+			<UpcomingSection />
+			<FAQSection />
+
+		</div>
+	);
 }

@@ -1,0 +1,141 @@
+.contact-page {
+  --ink: #111318;
+  --paper: #f3f1eb;
+  --line: rgba(17, 19, 24, 0.18);
+  --accent: #b400e8;
+
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Manrope", Arial, sans-serif;
+}
+
+.contact-page *,
+.contact-page *::before,
+.contact-page *::after {
+  box-sizing: border-box;
+}
+
+
+.contact-main {
+  padding: 7vw 5vw 8vw;
+}
+
+.contact-eyebrow {
+  font: 12px "DM Mono", monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contact-title {
+  font-size: clamp(56px, 9vw, 145px);
+  line-height: 0.88;
+  letter-spacing: -0.065em;
+  max-width: 1050px;
+  margin: 24px 0 7vw;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 8vw;
+  align-items: start;
+}
+
+.contact-statement {
+  font-size: clamp(22px, 2.4vw, 38px);
+  line-height: 1.12;
+  max-width: 540px;
+}
+
+/* Form */
+.contact-form {
+  border-top: 1px solid var(--ink);
+}
+
+.contact-field {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-field:focus-within {
+  border-bottom-color: var(--ink);
+}
+
+.contact-field label {
+  display: block;
+  font: 11px "DM Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 9px;
+}
+
+.contact-field input,
+.contact-field textarea,
+.contact-field select {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  outline: 0;
+  color: var(--ink);
+  font: inherit;
+  font-size: 17px;
+}
+
+.contact-field textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.contact-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.contact-actions {
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-actions button {
+  border: 0;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 15px 23px;
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.contact-actions button:hover {
+  background: var(--accent);
+}
+
+.contact-status {
+  font: 11px "DM Mono", monospace;
+  min-height: 16px;
+}
+
+/* Responsive */
+@media (max-width: 760px) {
+  .contact-main {
+    padding: 55px 28px 70px;
+  }
+
+  .contact-title {
+    font-size: clamp(54px, 18vw, 90px);
+    margin: 20px 0 70px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 65px;
+  }
+
+  .contact-statement {
+    font-size: 26px;
+  }
+}
