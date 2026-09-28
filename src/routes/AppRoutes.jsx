@@ -6,6 +6,7 @@ import OurWork from "../pages/OurWork";
 import Insights from "../pages/Insights";
 import Careers from "../pages/Careers/Careers";
 import Contact from "../pages/Contact/Contact";
+import Services from "../pages/Services";
 
 import LeadGeneration from "../screens/services/leadGeneration";
 import ContentSearchAI from "../screens/services/ContentSearchAI";
@@ -20,6 +21,7 @@ export default function AppRoutes() {
     <Routes>
      <Route element={<WebsiteLayout />}>
       <Route index element={<Home />} />
+        <Route path="services" element={<Services />} />
         <Route path="our-story" element={<OurStory />} />
         <Route path="our-work" element={<OurWork />} />
        

@@ -27,7 +27,7 @@
 //     <MobileMenu open={menuOpen} onClose={closeMenus} />
 //   </>
 // }
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 import MobileMenu from "./MobileMenu";
@@ -40,11 +40,38 @@ export default function Header() {
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const servicesNavRef = useRef(null);
+  const servicesButtonRef = useRef(null);
 
   const closeMenus = () => {
     setMenuOpen(false);
     setServicesOpen(false);
   };
+
+  useEffect(() => {
+    if (!servicesOpen) return undefined;
+
+    const handlePointerDown = (event) => {
+      if (!servicesNavRef.current?.contains(event.target)) {
+        setServicesOpen(false);
+      }
+    };
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setServicesOpen(false);
+        servicesButtonRef.current?.focus();
+      }
+    };
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [servicesOpen]);
 
   return (
     <>
@@ -74,17 +101,20 @@ export default function Header() {
             ))}
 
             <div
+              ref={servicesNavRef}
               className={`services-nav ${servicesOpen ? "open" : ""}`}
             >
               <button
+                ref={servicesButtonRef}
                 type="button"
-                onClick={() => setServicesOpen(!servicesOpen)}
+                onClick={() => setServicesOpen((isOpen) => !isOpen)}
                 aria-expanded={servicesOpen}
+                aria-controls="services-dropdown"
               >
                 Services
               </button>
 
-              <div className="services-menu">
+              <div className="services-menu" id="services-dropdown">
                 {serviceLinks.map(({ number, label, path }) => (
                   <Link
                     to={path}
