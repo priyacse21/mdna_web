@@ -27,51 +27,21 @@
 //     <MobileMenu open={menuOpen} onClose={closeMenus} />
 //   </>
 // }
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import MobileMenu from "./MobileMenu";
-import { getPrimaryNavigation, getServiceLinks } from "../../data/navigation";
+import { getPrimaryNavigation } from "../../data/navigation";
 import mdnaLogo from "../../assets/logo/mdna-logo-clean.png";
 
 export default function Header() {
   const primaryNavigation = getPrimaryNavigation();
-  const serviceLinks = getServiceLinks();
 
   const [menuOpen, setMenuOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const servicesNavRef = useRef(null);
-  const servicesButtonRef = useRef(null);
 
   const closeMenus = () => {
     setMenuOpen(false);
-    setServicesOpen(false);
   };
-
-  useEffect(() => {
-    if (!servicesOpen) return undefined;
-
-    const handlePointerDown = (event) => {
-      if (!servicesNavRef.current?.contains(event.target)) {
-        setServicesOpen(false);
-      }
-    };
-
-    const handleKeyDown = (event) => {
-      if (event.key === "Escape") {
-        setServicesOpen(false);
-        servicesButtonRef.current?.focus();
-      }
-    };
-
-    document.addEventListener("pointerdown", handlePointerDown);
-    document.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      document.removeEventListener("pointerdown", handlePointerDown);
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [servicesOpen]);
 
   return (
     <>
@@ -100,33 +70,7 @@ export default function Header() {
               </Link>
             ))}
 
-            <div
-              ref={servicesNavRef}
-              className={`services-nav ${servicesOpen ? "open" : ""}`}
-            >
-              <button
-                ref={servicesButtonRef}
-                type="button"
-                onClick={() => setServicesOpen((isOpen) => !isOpen)}
-                aria-expanded={servicesOpen}
-                aria-controls="services-dropdown"
-              >
-                Services
-              </button>
-
-              <div className="services-menu" id="services-dropdown">
-                {serviceLinks.map(({ number, label, path }) => (
-                  <Link
-                    to={path}
-                    key={path}
-                    onClick={closeMenus}
-                  >
-                    <small>{number}</small>
-                    {label}
-                  </Link>
-                ))}
-              </div>
-            </div>
+            <Link to="/services" onClick={closeMenus}>Services</Link>
 
             {primaryNavigation.slice(1, -1).map(({ label, path }) => (
               <Link to={path} key={path}>
