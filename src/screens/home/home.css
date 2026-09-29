@@ -152,7 +152,7 @@
 
 .hero-node small,
 .service-node small,
-.need-row small,
+.problem-section .need-row small,
 .question-row small,
 .audit-list small {
     display: block;
@@ -202,13 +202,13 @@
     line-height: 1.85;
 }
 
-.need-list {
+.problem-section .need-list {
     position: relative;
     padding: 35px;
     border: 1px solid rgba(16, 22, 29, .18);
 }
 
-.need-row {
+.problem-section .need-row {
     min-height: 74px;
     display: grid;
     grid-template-columns: 45px 1fr 10px;
@@ -218,18 +218,18 @@
     margin: 12px 0;
 }
 
-.need-row strong {
+.problem-section .need-row strong {
     font-size: 13px;
     font-weight: 600;
 }
 
-.need-row i {
+.problem-section .need-row i {
     width: 7px;
     height: 7px;
     background: var(--violet);
 }
 
-.need-list>em {
+.problem-section .need-list>em {
     color: #89919a;
     font: 9px var(--mono);
     text-transform: uppercase;
@@ -405,31 +405,44 @@
     font-size: clamp(3.3rem, 5.5vw, 6.3rem);
 }
 
-.audit-list {
+.audit-section .need-list--simple {
     align-self: center;
 }
 
-.audit-list>div {
+.audit-section .need-list--simple .need-row {
     min-height: 75px;
     display: grid;
-    grid-template-columns: 45px 1fr;
+    grid-template-columns: 45px minmax(0, 1fr);
     align-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: 0;
     border-top: 1px solid rgba(16, 22, 29, .18);
+    box-sizing: border-box;
 }
 
-.audit-list>div:last-child {
+.audit-section .need-list--simple .need-row:last-child {
     border-bottom: 1px solid rgba(16, 22, 29, .18);
 }
 
-.audit-list strong {
-    font-size: 12px;
+.audit-section .need-list--simple .need-row > small {
+    color: var(--violet);
 }
 
-.audit-list p {
-    grid-column: 2;
+.audit-section .need-list--simple .need-content strong {
+    font-size: 12px;
+    text-align: left;
+}
+
+.audit-section .need-list--simple .need-content p {
     margin: 5px 0 0;
     color: #707985;
     font-size: 9px;
+}
+
+.audit-section .need-list--simple .need-row i {
+    display: none;
 }
 
 .explorer-section {
@@ -833,14 +846,14 @@
 
 @media (max-width: 767px) {
 
-    .need-list {
+    .problem-section .need-list {
         padding: 18px;
     }
 }
 
 @media (max-width: 767px) {
 
-    .need-row {
+    .problem-section .need-row {
         min-height: 62px;
         grid-template-columns: 35px 1fr 8px;
         padding: 0 10px;
@@ -849,8 +862,16 @@
 
 @media (max-width: 767px) {
 
-    .need-row strong {
+    .problem-section .need-row strong {
         font-size: 11px;
+    }
+}
+
+@media (max-width: 767px) {
+    .audit-section .need-list--simple .need-row {
+        grid-template-columns: 35px minmax(0, 1fr);
+        min-height: 75px;
+        padding: 12px 0;
     }
 }
 
