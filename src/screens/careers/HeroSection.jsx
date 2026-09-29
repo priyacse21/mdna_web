@@ -1,5 +1,5 @@
 
-import "../../pages/careers/Careers.css";
+import "./Careers.css";
 
 const HeroSection = () => {
   return (

@@ -14,6 +14,7 @@ import DigitalPR from "../screens/services/DigitalPR";
 import Audits from "../screens/services/Audits";
 import Consulting from "../screens/services/Consulting";
 import Branding from "../screens/services/Branding";
+import PerformanceMarketing from "../screens/services/PerformanceMarketing";
 import NotFound from "../pages/NotFound";
 
 export default function AppRoutes() {
@@ -55,6 +56,11 @@ export default function AppRoutes() {
           <Route
             path="branding"
             element={<Branding />}
+          />
+
+          <Route
+            path="performance-marketing"
+            element={<PerformanceMarketing />}
           />
         </Route>
          <Route path="our-work" element={<Insights />} />

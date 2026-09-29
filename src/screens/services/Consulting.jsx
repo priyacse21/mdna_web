@@ -1,5 +1,7 @@
+import './services.css'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import NeedList from '../../components/common/NeedList/NeedList'
 
 const offers = [
 	['01', 'Marketing Function Setup & Handover', 'Build and hand over an in-house marketing division.', 'Fully operational, self-sufficient team.', 'Book a consulting call'],
@@ -65,9 +67,15 @@ export default function Consulting() {
 
 		<section className="consulting-system dark-section" id="consulting-system" aria-labelledby="consulting-system-title">
 			<div className="consulting-section-heading"><div><p className="eyebrow"><span />01 / The service system</p><h2 id="consulting-system-title">Three ways to turn insight into decision.</h2></div><p>The consulting offer is built around the practical questions behind marketing capability, market understanding and customer focus.</p></div>
-			<div className="consulting-offer-list" role="group" aria-label="Choose a consulting service">
-				{offers.map(([number, title, description], index) => <button className={`consulting-offer${index === activeOffer ? ' active' : ''}`} type="button" key={number} onClick={() => setActiveOffer(index)} aria-pressed={index === activeOffer}><span>{number}</span><strong>{title}</strong><small>{description}</small><em>{offers[index][3]}</em><b aria-hidden="true">{index === activeOffer ? '×' : '+'}</b></button>)}
-			</div>
+			<NeedList
+				className="consulting-offer-list"
+				needs={offers.map(([, title, description, impact]) => ({ title, description, impact }))}
+				variant="interactive"
+				activeIndex={activeOffer}
+				onSelect={setActiveOffer}
+				accentColor="var(--violet)"
+				ariaLabel="Choose a consulting service"
+			/>
 			<div className="consulting-offer-active" aria-live="polite"><span>{offer[0]} / 03</span><h3>{offer[1]}</h3><p>{offer[2]}</p><strong>{offer[3]}</strong><Link to="/contact">{offer[4]} <span aria-hidden="true">↗</span></Link></div>
 		</section>
 

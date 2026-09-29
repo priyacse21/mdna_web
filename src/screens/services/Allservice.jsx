@@ -1,3 +1,4 @@
+import './services.css'
 import { Link } from 'react-router-dom'
 
 const servicePortfolios = [
@@ -39,7 +40,7 @@ const servicePortfolios = [
 	{
 		number: '06',
 		name: 'Performance Marketing',
-		path: '/contact',
+		path: '/services/performance-marketing',
 		description: 'Turn paid media and conversion systems into measurable growth.',
 		services: 'Search, social, programmatic, CRO, tracking, creative and partnerships.',
 	},

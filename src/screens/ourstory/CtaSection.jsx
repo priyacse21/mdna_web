@@ -1,5 +1,4 @@
 
-import "../../pages/OurStory/ourstory.css";
 
 const CtaSection = () => {
   return (

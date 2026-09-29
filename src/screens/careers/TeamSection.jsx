@@ -1,5 +1,4 @@
 
-import "../../pages/careers/Careers.css";
 
 const TeamSection = () => {
   return (

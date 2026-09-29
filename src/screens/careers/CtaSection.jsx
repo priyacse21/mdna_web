@@ -1,5 +1,5 @@
 
-import "../../pages/careers/Careers.css";
+import { Link } from "react-router-dom";
 
 const CtaSection = () => {
   return (
@@ -15,9 +15,9 @@ const CtaSection = () => {
           <a className="careers-next-link" href="/our-work">
             Explore Our Work →
           </a>
-          <a className="careers-next-link alt" href="/contact">
+          <Link className="careers-next-link alt" to="/contact">
             Talk to Us →
-          </a>
+          </Link>
         </div>
       </div>
     </section>

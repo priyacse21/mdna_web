@@ -1,7 +1,6 @@
 import React from "react";
 import HeroSection from "../../screens/ourwork/HeroSection";
 import MarketingSection from "../../screens/ourwork/MarketingSection";
-import "../../pages/OurWork/ourwork.css";
 import SystemSection from "../../screens/ourwork/SystemSection";
 import NeedSection from "../../screens/ourwork/NeedSection";
 import SystemMoveSection from "../../screens/ourwork/SystemMoveSection";

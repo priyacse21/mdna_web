@@ -1,6 +1,5 @@
 
 import { useState } from "react";
-import "../../pages/OurStory/ourstory.css";
 
 const qualities = ["Resourceful", "Hands-on", "Fast-moving", "Effective"];
 

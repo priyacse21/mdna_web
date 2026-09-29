@@ -1,5 +1,7 @@
+import './services.css'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import NeedList from '../../components/common/NeedList/NeedList'
 
 const capabilities = [
 	['01', 'Content Marketing', 'Blogs, guides and thought-leadership content.', 'Build lasting inbound traffic with useful, relevant information.'],
@@ -30,6 +32,27 @@ const impacts = [
 	['03', 'RECALL', 'Stay in the conversation.', 'Consistent owned and organic channels keep the brand familiar and useful over time.'],
 ]
 
+const heroNeeds = [
+	{
+		title: 'Structured content signal',
+		description: 'Useful, relevant information designed to build lasting inbound traffic.',
+	},
+	{
+		title: 'Search + AI discoverability',
+		description: 'Classic SEO and Generative Engine Optimization working together.',
+	},
+	{
+		title: 'Active distribution',
+		description: 'Paid, email, campaigns and organic social extend the signal.',
+	},
+]
+
+const problemNeeds = [
+	'Content needs a job beyond filling a calendar.',
+	'Search visibility now includes generative engines.',
+	'Distribution keeps useful ideas in circulation.',
+]
+
 export default function ContentSearchAI() {
 	const [activeCapability, setActiveCapability] = useState(0)
 	const [activeVisibility, setActiveVisibility] = useState(0)
@@ -49,14 +72,7 @@ export default function ContentSearchAI() {
 				</div>
 			</div>
 			<div className="content-ai-hero-visual" aria-label="Content, search and AI visibility signals">
-				<div className="content-ai-question"><i />What should we know about this category?</div>
-				<div className="content-ai-signal-list">
-					<div><span>01</span><strong>Structured content signal</strong><small>Useful, relevant information designed to build lasting inbound traffic.</small><b>CONTENT</b></div>
-					<div><span>02</span><strong>Search + AI discoverability</strong><small>Classic SEO and Generative Engine Optimization working together.</small><b>SEO / GEO</b></div>
-					<div><span>03</span><strong>Active distribution</strong><small>Paid, email, campaigns and organic social extend the signal.</small><b>CHANNELS</b></div>
-				</div>
-				<div className="content-ai-browser" aria-hidden="true"><span className="content-ai-browser-bar">mDNA <i /></span><span className="content-ai-browser-label">CONTENT, SEARCH &amp; AI VISIBILITY</span><strong>Be found.<br />Be <em>seen.</em><br />Be remembered.</strong></div>
-				<span className="content-ai-visual-caption">MODEL / ILLUSTRATIVE</span>
+				<NeedList needs={heroNeeds} title="What should we know about this category?" />
 			</div>
 		</section>
 
@@ -66,7 +82,7 @@ export default function ContentSearchAI() {
 				<h2 id="content-ai-problem-title">Good marketing doesn't happen by <span>accident.</span></h2>
 				<div className="content-ai-problem-detail">
 					<p>Visibility is no longer one channel. Buyers discover brands through search, AI answers, paid media, email and social content. The work has to connect across those surfaces.</p>
-					<div>{['Content needs a job beyond filling a calendar.', 'Search visibility now includes generative engines.', 'Distribution keeps useful ideas in circulation.'].map((point, index) => <p key={point}><span>{String(index + 1).padStart(2, '0')}</span>{point}</p>)}</div>
+					<NeedList className="content-ai-problem-list" needs={problemNeeds} />
 				</div>
 			</div>
 		</section>

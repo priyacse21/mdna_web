@@ -1,5 +1,6 @@
 
-import "../../pages/OurWork/ourwork.css";
+import { Link } from "react-router-dom";
+import "./OurWork.css";
 
 const nodes = [
   {
@@ -66,9 +67,9 @@ const HeroSection = () => {
             <a className="ourwork-btn ourwork-btn-primary" href="#system">
               Explore the mDNA System <span>↓</span>
             </a>
-            <a className="ourwork-btn ourwork-btn-outline" href="/contact">
+            <Link className="ourwork-btn ourwork-btn-outline" to="/contact">
               Talk to Us <span>↗</span>
-            </a>
+            </Link>
           </div>
           <div className="ourwork-hero-note">
             <i></i> FIVE CAPABILITIES / ONE CONNECTED PORTFOLIO

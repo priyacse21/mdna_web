@@ -1,6 +1,7 @@
 
-import { useState } from "react";
-import "../../pages/Contact/contact.css";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import "./Contact.css";
 
 const helpOptions = [
   "Marketing Strategy",
@@ -8,11 +9,23 @@ const helpOptions = [
   "Content & Visibility",
   "Digital PR",
   "Research",
+  "Paid Search Advertising (PPC)",
+  "Paid Social Campaigns",
+  "Conversion Rate Optimization (CRO)",
   "Something Else",
 ];
 
 const ContactSection = () => {
   const [status, setStatus] = useState("");
+  const [searchParams] = useSearchParams();
+  const requestedService = searchParams.get("service");
+  const [help, setHelp] = useState(() =>
+    helpOptions.includes(requestedService) ? requestedService : "",
+  );
+
+  useEffect(() => {
+    setHelp(helpOptions.includes(requestedService) ? requestedService : "");
+  }, [requestedService]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -62,7 +75,7 @@ const ContactSection = () => {
 
             <div className="contact-field">
               <label htmlFor="contact-help">What Can We Help With?</label>
-              <select id="contact-help" name="help" required defaultValue="">
+              <select id="contact-help" name="help" required value={help} onChange={(event) => setHelp(event.target.value)}>
                 <option value="">Select one</option>
                 {helpOptions.map((option) => (
                   <option key={option} value={option}>
