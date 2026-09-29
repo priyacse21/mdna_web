@@ -1,8 +1,8 @@
 export const primaryNavigationData = [
   { label: 'Home', path: '/' },
   { label: 'Our Story', path: '/our-story' },
+  // { label: 'Our Work', path: '/our-work' },
   { label: 'Our Work', path: '/our-work' },
-  { label: 'Insights', path: '/insights' },
   { label: 'Careers', path: '/careers' },
   { label: 'Contact', path: '/contact' },
 ]
