@@ -1,52 +1,11 @@
 import './services.css'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-
-const methods = [
-	{
-		number: '01',
-		name: 'ABM',
-		description: 'Identify, target and message ideal buyers.',
-		impact: 'Identify and use the best-performing channels to get sales-ready conversations.',
-	},
-	{
-		number: '02',
-		name: 'Cold Email Outreach',
-		description: 'Start relevant conversations with the right people.',
-		impact: 'Build focused outreach around the needs, timing and language of each audience.',
-	},
-	{
-		number: '03',
-		name: 'Researched Lead Lists',
-		description: 'Reach decision-makers with useful, verified data.',
-		impact: 'Give your team a reliable starting point with researched accounts and contacts.',
-	},
-]
-
-const pathway = [
-	['01', 'Identify', 'Find and define the ideal buyers worth targeting.', 'IDEAL BUYERS / PRIORITY ACCOUNTS'],
-	['02', 'Target', 'Focus outreach around the accounts and prospects that matter.', 'ACCOUNTS / DECISION-MAKERS'],
-	['03', 'Message', 'Use relevant campaigns to reach the people you want to talk to.', 'CHANNEL / OUTREACH'],
-	['04', 'Converse', 'Move toward sales-ready conversations with the right prospects.', 'CONVERSATION / PIPELINE'],
-]
-
-const accountNodes = [
-	['ACCOUNT / 01', 'Priority target', 'account-one'],
-	['ACCOUNT / 02', 'Ideal buyer group', 'account-two'],
-	['ACCOUNT / 03', 'Decision-maker', 'account-three'],
-	['ACCOUNT / 04', 'Target prospect', 'account-four'],
-	['ACCOUNT / 05', 'Qualified signal', 'account-five'],
-]
-
-const outcomes = [
-	['01 / FOCUS', 'Right buyers.', 'Identify and use the best-performing channels to reach sales-ready conversations.'],
-	['02 / CONTINUITY', 'Working outreach.', 'Personalized campaigns create a scalable background pipeline.'],
-	['03 / CONTROL', 'Useful lists.', 'Vetted, targeted decision-maker lists give teams control, faster turnaround and lower cost.'],
-]
+import { accountNodes, leadMethods, leadOutcomes, leadPathway } from './data/serviceData'
 
 export default function LeadGeneration() {
 	const [activeMethod, setActiveMethod] = useState(0)
-	const selectedMethod = methods[activeMethod]
+	const selectedMethod = leadMethods[activeMethod]
 
 	return <main className="lead-page">
 		<section className="lead-hero dark-section" aria-labelledby="lead-title">
@@ -95,7 +54,7 @@ export default function LeadGeneration() {
 			</div>
 			<div className="lead-methods" aria-label="Lead generation methods">
 				<div className="lead-method-list" role="group" aria-label="Select a lead generation method">
-					{methods.map((method, index) => <button className={`lead-method-button${index === activeMethod ? ' active' : ''}`} type="button" key={method.number} onClick={() => setActiveMethod(index)} aria-pressed={index === activeMethod}>
+					{leadMethods.map((method, index) => <button className={`lead-method-button${index === activeMethod ? ' active' : ''}`} type="button" key={method.number} onClick={() => setActiveMethod(index)} aria-pressed={index === activeMethod}>
 						<span>{method.number}</span><strong>{method.name}</strong><b aria-hidden="true">+</b>
 					</button>)}
 				</div>
@@ -124,7 +83,7 @@ export default function LeadGeneration() {
 				</div>
 			</div>
 			<div className="lead-pathway-steps">
-				{pathway.map(([number, title, description, label], index) => <article className={`lead-pathway-step${index === 0 ? ' current' : ''}`} key={number}>
+				{leadPathway.map(([number, title, description, label], index) => <article className={`lead-pathway-step${index === 0 ? ' current' : ''}`} key={number}>
 					<span className="lead-step-diamond"><b>{number}</b></span>
 					<h3>{title}</h3>
 					<p>{description}</p>
@@ -158,7 +117,7 @@ export default function LeadGeneration() {
 			<p className="eyebrow"><span>06</span> / What changes</p>
 			<h2 id="lead-outcomes-title">Turn prospecting into a more focused system.</h2>
 			<div className="lead-outcome-grid">
-				{outcomes.map(([label, title, description]) => <article className="lead-outcome" key={label}>
+				{leadOutcomes.map(([label, title, description]) => <article className="lead-outcome" key={label}>
 					<span>{label}</span>
 					<div><h3>{title}</h3><p>{description}</p></div>
 					<i aria-hidden="true" />

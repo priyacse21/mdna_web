@@ -1,57 +1,11 @@
 
 import { useState } from "react";
+import { systemNodes } from "./data/ourworkData";
 
-const nodes = [
-  {
-    key: "lead",
-    num: "01",
-    label: "Lead Generation",
-    sub: "PIPELINE",
-    detailName: "Lead Generation",
-    detailCopy: "Identify, target and message ideal buyers.",
-    href: "/services/lead-generation",
-  },
-  {
-    key: "visibility",
-    num: "02",
-    label: "Content, Search & AI Visibility",
-    sub: "VISIBILITY",
-    detailName: "Content, Search & AI Visibility",
-    detailCopy: "Build visibility across search, content and AI discovery.",
-    href: "/services/content-search-ai-visibility",
-  },
-  {
-    key: "pr",
-    num: "03",
-    label: "Digital PR",
-    sub: "CREDIBILITY",
-    detailName: "Digital PR",
-    detailCopy: "Build credibility, reach and reputation across digital channels.",
-    href: "/services/digital-pr",
-  },
-  {
-    key: "audit",
-    num: "04",
-    label: "Audits & Diagnostics",
-    sub: "CLARITY",
-    detailName: "Audits & Diagnostics",
-    detailCopy: "Find what is working, what is not and what should happen next.",
-    href: "/services/audits-diagnostics",
-  },
-  {
-    key: "consulting",
-    num: "05",
-    label: "Consulting",
-    sub: "CAPABILITY",
-    detailName: "Consulting",
-    detailCopy: "Build stronger marketing functions and make better decisions.",
-    href: "/services/consulting",
-  },
-];
 
 const SystemSection = () => {
   const [activeKey, setActiveKey] = useState("lead");
-  const active = nodes.find((n) => n.key === activeKey);
+  const active = systemNodes.find((n) => n.key === activeKey);
 
   return (
     <section aria-labelledby="system-title" className="ourwork-system-section">
@@ -78,7 +32,7 @@ const SystemSection = () => {
           </div>
           <div className="ourwork-system-route"></div>
 
-          {nodes.map((node, index) => (
+          {systemNodes.map((node, index) => (
             <div
               key={node.key}
               className={`ourwork-system-node s${index + 1} ${

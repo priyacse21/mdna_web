@@ -1,27 +1,5 @@
 
-
-const audits = [
-  {
-    num: "01",
-    title: "Marketing Setup Audit",
-    desc: "Full review of marketing operations.",
-  },
-  {
-    num: "02",
-    title: "Channel Performance Audit",
-    desc: "Deep-dive into marketing channels and ROI.",
-  },
-  {
-    num: "03",
-    title: "AI Readiness (GEO) Audit",
-    desc: "Assessment for AI visibility readiness.",
-  },
-  {
-    num: "04",
-    title: "Website Audit",
-    desc: "Evaluate conversion, SEO and UX issues.",
-  },
-];
+import { audits } from "./data/ourworkData";
 
 const ClaritySection = () => {
   return (

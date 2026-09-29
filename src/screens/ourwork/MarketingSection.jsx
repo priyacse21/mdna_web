@@ -1,12 +1,5 @@
 
-
-const signals = [
-  { num: "01", text: "More qualified conversations" },
-  { num: "02", text: "More visibility in search & AI" },
-  { num: "03", text: "Stronger digital credibility" },
-  { num: "04", text: "A clearer view of what's working" },
-  { num: "05", text: "A stronger marketing function" },
-];
+import { signals } from "./data/ourworkData";
 
 const MarketingSection = () => {
   return (

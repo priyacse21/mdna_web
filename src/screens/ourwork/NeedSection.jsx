@@ -1,58 +1,7 @@
 
 import { useState } from "react";
+import { rows } from "./data/ourworkData";
 
-const rows = [
-  {
-    key: "lead",
-    num: "01",
-    question: "I need more qualified conversations.",
-    category: "Lead Generation",
-    startLabel: "Start with Lead Generation.",
-    desc: "Identify, target and message ideal buyers.",
-    href: "/services/lead-generation",
-    cta: "Explore Lead Generation →",
-  },
-  {
-    key: "visibility",
-    num: "02",
-    question: "I need to be found on Google and AI.",
-    category: "Content, Search & AI Visibility",
-    startLabel: "Start with Content, Search & AI Visibility.",
-    desc: "Build visibility across search, content and AI discovery.",
-    href: "/services/content-search-ai-visibility",
-    cta: "Explore Visibility →",
-  },
-  {
-    key: "pr",
-    num: "03",
-    question: "I need stronger digital credibility.",
-    category: "Digital PR",
-    startLabel: "Start with Digital PR.",
-    desc: "Build credibility, reach and reputation across digital channels.",
-    href: "/services/digital-pr",
-    cta: "Explore Digital PR →",
-  },
-  {
-    key: "audit",
-    num: "04",
-    question: "I need to know what's working.",
-    category: "Audits & Diagnostics",
-    startLabel: "Start with Audits & Diagnostics.",
-    desc: "Find what is working, what is not and what should happen next.",
-    href: "/services/audits-diagnostics",
-    cta: "Explore Audits →",
-  },
-  {
-    key: "consulting",
-    num: "05",
-    question: "I need a stronger marketing function.",
-    category: "Consulting",
-    startLabel: "Start with Consulting.",
-    desc: "Build stronger marketing functions and make better decisions.",
-    href: "/services/consulting",
-    cta: "Explore Consulting →",
-  },
-];
 
 const NeedSection = () => {
   const [activeKey, setActiveKey] = useState("lead");

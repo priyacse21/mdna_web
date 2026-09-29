@@ -2,38 +2,14 @@ import './services.css'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import NeedList from '../../components/common/NeedList/NeedList'
+import { consultingJourney, consultingLenses, consultingOffers, consultingOutcomes } from './data/serviceData'
 
-const offers = [
-	['01', 'Marketing Function Setup & Handover', 'Build and hand over an in-house marketing division.', 'Fully operational, self-sufficient team.', 'Book a consulting call'],
-	['02', 'Market Research', 'Use industry reports and competitive benchmarking to understand the market.', 'Data-backed decisions.', 'Request a research scope'],
-	['03', 'Customer Insights & Segmentation', 'Analyse customer behaviour to define useful audience segments.', 'Targeted campaigns, not one-size-fits-all.', 'Book a segmentation review'],
-]
-
-const journey = [
-	['01', 'Understand', 'Establish the marketing, market or customer context that needs to be clear.'],
-	['02', 'Decide', 'Use research, benchmarking or customer insight to define the direction.'],
-	['03', 'Build', 'Turn the chosen direction into a marketing function, framework or audience structure.'],
-	['04', 'Move', 'Hand over the capability or use the result clarity to take the next action.'],
-]
-
-const lenses = [
-	['Function', 'Build the function you can hand over.', 'Marketing Function Setup & Handover - build and hand over an in-house marketing division.', 'CAPABILITY'],
-	['Market', 'Know the market before you move.', 'Market Research - use industry reports and competitive benchmarking to support decisions.', 'CONTEXT'],
-	['Customer', 'Understand who you need to reach.', 'Customer Insights & Segmentation - define audience segments from customer behaviour.', 'AUDIENCE'],
-	['Direction', 'Choose the next move with confidence.', 'Connect capability, evidence and customer understanding into a clear direction.', 'MOVE'],
-]
-
-const outcomes = [
-	['01 / CAPABILITY', 'Self-sufficient.', 'Build and hand over a fully operational in-house marketing division.'],
-	['02 / EVIDENCE', 'Data-backed.', 'Use industry reports and competitive benchmarking to support decisions.'],
-	['03 / PRECISION', 'Targeted.', 'Define audience segments from behaviour so campaigns are not one-size-fits-all.'],
-]
 
 export default function Consulting() {
 	const [activeOffer, setActiveOffer] = useState(0)
 	const [activeLens, setActiveLens] = useState(0)
-	const offer = offers[activeOffer]
-	const lens = lenses[activeLens]
+	const offer = consultingOffers[activeOffer]
+	const lens = consultingLenses[activeLens]
 
 	return <div className="consulting-page">
 		<section className="consulting-hero dark-section" aria-labelledby="consulting-title">
@@ -69,7 +45,7 @@ export default function Consulting() {
 			<div className="consulting-section-heading"><div><p className="eyebrow"><span />01 / The service system</p><h2 id="consulting-system-title">Three ways to turn insight into decision.</h2></div><p>The consulting offer is built around the practical questions behind marketing capability, market understanding and customer focus.</p></div>
 			<NeedList
 				className="consulting-offer-list"
-				needs={offers.map(([, title, description, impact]) => ({ title, description, impact }))}
+				needs={consultingOffers.map(([, title, description, impact]) => ({ title, description, impact }))}
 				variant="interactive"
 				activeIndex={activeOffer}
 				onSelect={setActiveOffer}
@@ -81,13 +57,13 @@ export default function Consulting() {
 
 		<section className="consulting-journey light-section" aria-labelledby="consulting-journey-title">
 			<p className="eyebrow"><span />The journey</p><h2 id="consulting-journey-title">Understand.<br /><span>Decide. Build. Move.</span></h2>
-			<div className="consulting-journey-grid">{journey.map(([number, title, description], index) => <article className={index === 0 ? 'current' : ''} key={number}><span className="consulting-journey-marker"><b>{number}</b></span><div><span>{number} / {['Understand', 'Decide', 'Build', 'Move'][index]}</span><h3>{title}</h3><p>{description}</p></div></article>)}</div>
+			<div className="consulting-journey-grid">{consultingJourney.map(([number, title, description], index) => <article className={index === 0 ? 'current' : ''} key={number}><span className="consulting-journey-marker"><b>{number}</b></span><div><span>{number} / {['Understand', 'Decide', 'Build', 'Move'][index]}</span><h3>{title}</h3><p>{description}</p></div></article>)}</div>
 		</section>
 
 		<section className="consulting-lens light-section" aria-labelledby="consulting-lens-title">
 			<div className="consulting-lens-heading"><div><p className="eyebrow"><span />02 / Signature interaction</p><h2 id="consulting-lens-title">Change the question.<br />Change the route.</h2></div><p>Use the map to explore the consulting lens that matches the decision in front of you.</p></div>
 			<div className="consulting-lens-board">
-				<div className="consulting-lens-tabs" role="group" aria-label="Choose a consulting lens">{lenses.map(([name], index) => <button className={index === activeLens ? 'active' : ''} type="button" key={name} onClick={() => setActiveLens(index)} aria-pressed={index === activeLens}><span>0{index + 1}</span>{name}</button>)}</div>
+				<div className="consulting-lens-tabs" role="group" aria-label="Choose a consulting lens">{consultingLenses.map(([name], index) => <button className={index === activeLens ? 'active' : ''} type="button" key={name} onClick={() => setActiveLens(index)} aria-pressed={index === activeLens}><span>0{index + 1}</span>{name}</button>)}</div>
 				<div className="consulting-lens-map" aria-live="polite"><span className="consulting-lens-label">LENS / 0{activeLens + 1}</span><span className="consulting-lens-grid" />
 					<i className="consulting-lens-line consulting-lens-line-one" /><i className="consulting-lens-line consulting-lens-line-two" /><i className="consulting-lens-line consulting-lens-line-three" />
 					<span className="consulting-lens-point consulting-lens-point-one"><b />{lens[3]}</span><span className="consulting-lens-point consulting-lens-point-two"><b />CHOICE</span><span className="consulting-lens-point consulting-lens-point-three"><b />CONTEXT</span><span className="consulting-lens-point consulting-lens-point-four"><b />MOVE</span>
@@ -98,7 +74,7 @@ export default function Consulting() {
 
 		<section className="consulting-outcomes dark-section" aria-labelledby="consulting-outcomes-title">
 			<div className="consulting-section-heading"><h2 id="consulting-outcomes-title">Clarify the choices that come next.</h2><p>The consulting offer connects capability, evidence and audience understanding to practical business decisions.</p></div>
-			<div className="consulting-outcome-grid">{outcomes.map(([label, title, description]) => <article key={label}><span>{label}</span><div><h3>{title}</h3><p>{description}</p></div></article>)}</div>
+			<div className="consulting-outcome-grid">{consultingOutcomes.map(([label, title, description]) => <article key={label}><span>{label}</span><div><h3>{title}</h3><p>{description}</p></div></article>)}</div>
 		</section>
 
 		<section className="consulting-cta dark-section" aria-labelledby="consulting-cta-title">

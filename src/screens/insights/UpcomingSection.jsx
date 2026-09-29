@@ -1,13 +1,5 @@
 
-
-const drafts = [
-  {
-    title: "What Generative Engine Optimization actually changes about SEO",
-  },
-  {
-    title: "ABM vs. volume outbound: choosing the right model for your pipeline",
-  },
-];
+import { drafts } from "./data/insightsData";
 
 const UpcomingSection = () => {
   return (

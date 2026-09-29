@@ -2,61 +2,13 @@ import './services.css'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import NeedList from '../../components/common/NeedList/NeedList'
+import { contentCapabilities, contentHeroNeeds, contentImpacts, contentProcess, contentProblemNeeds, visibilityModes } from './data/serviceData'
 
-const capabilities = [
-	['01', 'Content Marketing', 'Blogs, guides and thought-leadership content.', 'Build lasting inbound traffic with useful, relevant information.'],
-	['02', 'SEO & GEO', 'Search engine and generative engine optimisation.', 'Help the brand get found through search and recommended by AI.'],
-	['03', 'Paid Digital Advertising', 'Paid campaigns across the channels buyers use.', 'Put useful messages in front of the right audiences with control.'],
-	['04', 'Email Marketing & Newsletters', 'Regular communication with the audiences you own.', 'Keep useful ideas moving between discovery and decision.'],
-	['05', 'Targeted Marketing Campaigns', 'Connected campaigns built around a clear audience.', 'Bring content, channels and timing together around an objective.'],
-	['06', 'Organic Social Media', 'Consistent organic publishing across social channels.', 'Extend the signal and keep the brand present in the conversation.'],
-]
-
-const visibilityModes = [
-	['Search', 'INDEXED', 'Make useful information easier to find.', 'Content and SEO work together so relevant information has a stronger path into search discovery.', ['Content structure', 'Search discovery', 'Findability']],
-	['AI', 'RECOMMENDED', 'Make the brand easier to understand.', 'Clear, well-structured expertise gives answer engines useful signals to interpret and reference.', ['Expertise signals', 'Answer inclusion', 'Brand context']],
-	['Paid', 'ACTIVATED', 'Put the signal in front of the right audience.', 'Paid campaigns extend useful content to focused audiences and support timely discovery.', ['Audience focus', 'Campaign reach', 'Action signals']],
-	['Owned', 'RETAINED', 'Stay useful after the first visit.', 'Email and owned channels bring interested audiences back to relevant ideas and next steps.', ['Subscriber value', 'Repeat visits', 'Ongoing relevance']],
-]
-
-const process = [
-	['01', 'Create', 'Build useful content that answers real audience questions.'],
-	['02', 'Optimise', 'Structure it for search discovery and generative answers.'],
-	['03', 'Activate', 'Extend the signal through paid, email and social channels.'],
-	['04', 'Sustain', 'Keep the brand visible with consistent, valuable publishing.'],
-]
-
-const impacts = [
-	['01', 'DISCOVERY', 'Be easier to find.', 'Content and optimisation create lasting inbound traffic and make expertise visible across search.'],
-	['02', 'DEMAND', 'Reach the right people.', 'Paid campaigns, email and targeted activity extend useful ideas to relevant audiences.'],
-	['03', 'RECALL', 'Stay in the conversation.', 'Consistent owned and organic channels keep the brand familiar and useful over time.'],
-]
-
-const heroNeeds = [
-	{
-		title: 'Structured content signal',
-		description: 'Useful, relevant information designed to build lasting inbound traffic.',
-	},
-	{
-		title: 'Search + AI discoverability',
-		description: 'Classic SEO and Generative Engine Optimization working together.',
-	},
-	{
-		title: 'Active distribution',
-		description: 'Paid, email, campaigns and organic social extend the signal.',
-	},
-]
-
-const problemNeeds = [
-	'Content needs a job beyond filling a calendar.',
-	'Search visibility now includes generative engines.',
-	'Distribution keeps useful ideas in circulation.',
-]
 
 export default function ContentSearchAI() {
 	const [activeCapability, setActiveCapability] = useState(0)
 	const [activeVisibility, setActiveVisibility] = useState(0)
-	const capability = capabilities[activeCapability]
+	const capability = contentCapabilities[activeCapability]
 	const visibility = visibilityModes[activeVisibility]
 
 	return <div className="content-ai-page">
@@ -72,7 +24,7 @@ export default function ContentSearchAI() {
 				</div>
 			</div>
 			<div className="content-ai-hero-visual" aria-label="Content, search and AI visibility signals">
-				<NeedList needs={heroNeeds} title="What should we know about this category?" />
+				<NeedList needs={contentHeroNeeds} title="What should we know about this category?" />
 			</div>
 		</section>
 
@@ -82,7 +34,7 @@ export default function ContentSearchAI() {
 				<h2 id="content-ai-problem-title">Good marketing doesn't happen by <span>accident.</span></h2>
 				<div className="content-ai-problem-detail">
 					<p>Visibility is no longer one channel. Buyers discover brands through search, AI answers, paid media, email and social content. The work has to connect across those surfaces.</p>
-					<NeedList className="content-ai-problem-list" needs={problemNeeds} />
+					<NeedList className="content-ai-problem-list" needs={contentProblemNeeds} />
 				</div>
 			</div>
 		</section>
@@ -94,7 +46,7 @@ export default function ContentSearchAI() {
 			</div>
 			<div className="content-ai-capabilities">
 				<div className="content-ai-capability-list" role="group" aria-label="Select a visibility capability">
-					{capabilities.map(([number, name], index) => <button className={`content-ai-capability${index === activeCapability ? ' active' : ''}`} type="button" key={number} onClick={() => setActiveCapability(index)} aria-pressed={index === activeCapability}><span>{number}</span><strong>{name}</strong><b aria-hidden="true">{index === activeCapability ? '×' : '+'}</b></button>)}
+					{contentCapabilities.map(([number, name], index) => <button className={`content-ai-capability${index === activeCapability ? ' active' : ''}`} type="button" key={number} onClick={() => setActiveCapability(index)} aria-pressed={index === activeCapability}><span>{number}</span><strong>{name}</strong><b aria-hidden="true">{index === activeCapability ? '×' : '+'}</b></button>)}
 				</div>
 				<div className="content-ai-capability-panel" aria-live="polite">
 					<span className="content-ai-panel-index">{capability[0]} / 06</span><span className="content-ai-panel-code">VIS / CONTENT</span>
@@ -108,7 +60,7 @@ export default function ContentSearchAI() {
 		<section className="content-ai-process light-section" aria-labelledby="content-ai-process-title">
 			<div className="content-ai-process-intro"><p className="eyebrow"><span>04</span> / Process</p><h2 id="content-ai-process-title">From useful ideas to sustained visibility.</h2></div>
 			<div className="content-ai-process-list">
-				{process.map(([number, title, description], index) => <article className={`content-ai-process-step${index === 0 ? ' current' : ''}`} key={number}><span className="content-ai-process-number">{number}</span><div><span className="content-ai-process-label">{['CREATE', 'OPTIMISE', 'ACTIVATE', 'SUSTAIN'][index]}</span><h3>{title}</h3><p>{description}</p></div></article>)}
+				{contentProcess.map(([number, title, description], index) => <article className={`content-ai-process-step${index === 0 ? ' current' : ''}`} key={number}><span className="content-ai-process-number">{number}</span><div><span className="content-ai-process-label">{['CREATE', 'OPTIMISE', 'ACTIVATE', 'SUSTAIN'][index]}</span><h3>{title}</h3><p>{description}</p></div></article>)}
 			</div>
 		</section>
 
@@ -122,7 +74,7 @@ export default function ContentSearchAI() {
 
 		<section className="content-ai-impact light-section" aria-labelledby="content-ai-impact-title">
 			<p className="eyebrow"><span>06</span> / Business impact</p><h2 id="content-ai-impact-title">Visibility that has a job to do.</h2>
-			<div className="content-ai-impact-list">{impacts.map(([number, label, title, description]) => <article key={number}><span>{number}</span><strong>{label}</strong><h3>{title}</h3><p>{description}</p></article>)}</div>
+			<div className="content-ai-impact-list">{contentImpacts.map(([number, label, title, description]) => <article key={number}><span>{number}</span><strong>{label}</strong><h3>{title}</h3><p>{description}</p></article>)}</div>
 		</section>
 
 		<section className="content-ai-cta dark-section" aria-labelledby="content-ai-cta-title">

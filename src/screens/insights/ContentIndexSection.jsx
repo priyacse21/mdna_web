@@ -1,23 +1,7 @@
 
 import { useState } from "react";
+import { items } from "./data/insightsData";
 
-const items = [
-  {
-    num: "01",
-    title: "Blogs",
-    desc: "Perspectives, explainers and practical thinking.",
-  },
-  {
-    num: "02",
-    title: "Case Studies",
-    desc: "Examples of approaches, work and outcomes.",
-  },
-  {
-    num: "03",
-    title: "White Papers",
-    desc: "Long-form research and strategic perspectives.",
-  },
-];
 
 const ContentIndexSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);

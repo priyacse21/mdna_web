@@ -1,32 +1,5 @@
 
-
-const steps = [
-  {
-    num: "01",
-    title: "IDENTIFY",
-    desc: "Understand the business need in front of you.",
-    word: "NEED",
-    active: true,
-  },
-  {
-    num: "02",
-    title: "FOCUS",
-    desc: "Determine what deserves attention now.",
-    word: "PRIORITY",
-  },
-  {
-    num: "03",
-    title: "ACT",
-    desc: "Deploy the marketing capability that fits.",
-    word: "ACTION",
-  },
-  {
-    num: "04",
-    title: "MOVE",
-    desc: "Measure, learn and determine the next move.",
-    word: "DIRECTION",
-  },
-];
+import { steps } from "./data/ourworkData";
 
 const SystemMoveSection = () => {
   return (
