@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import WebsiteLayout from "../components/layout/WebsiteLayout";
 import Home from "../pages/Home";
 import OurStory from "../pages/OurStory";
-import OurWork from "../pages/OurWork";
+// import OurWork from "../pages/OurWork";
 import Insights from "../pages/Insights";
 import Careers from "../pages/Careers/Careers";
 import Contact from "../pages/Contact/Contact";
@@ -23,7 +23,7 @@ export default function AppRoutes() {
       <Route index element={<Home />} />
         <Route path="services" element={<Services />} />
         <Route path="our-story" element={<OurStory />} />
-        <Route path="our-work" element={<OurWork />} />
+        {/* <Route path="our-work" element={<OurWork />} /> */}
        
         {/* Services */}
         <Route path="services">
@@ -57,7 +57,7 @@ export default function AppRoutes() {
             element={<Branding />}
           />
         </Route>
-         <Route path="insights" element={<Insights />} />
+         <Route path="our-work" element={<Insights />} />
         <Route path="careers" element={<Careers />} />
         <Route path="contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
