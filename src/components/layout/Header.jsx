@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <>
       <header className="sticky top-0 z-20 min-h-[68px] bg-[#101116] text-[#f8f8f7] border-b border-white/12">
-        <div className="site-container min-h-[68px] mx-auto flex items-center justify-between gap-8">
+        <div className="w-[calc(100%-32px)] md:w-[calc(100%-48px)] xl:w-[min(calc(100%-64px),1500px)] min-h-[68px] mx-auto flex items-center justify-between gap-8">
           {/* Logo */}
           <Link
             className="inline-flex items-center gap-[7px] text-[21px] md:text-[24px] tracking-[-0.08em] no-underline text-inherit"

@@ -6,7 +6,7 @@ export default function NeedsSection() {
     <section className="bg-[#f2f0ea] text-[#10161d] block min-h-[680px] py-[90px] px-4 md:px-6 lg:py-[14vw] lg:px-[max(12vw,40px)]">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-end gap-5 lg:gap-[7vw] mb-[42px]">
         <div>
-          <p className="eyebrow">
+          <p className="mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-violet max-md:mb-5 max-md:text-[8px]">
             02 - Where should we start?
           </p>
 

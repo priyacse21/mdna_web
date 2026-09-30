@@ -18,7 +18,7 @@ export default function NeedList({
       role={interactive && ariaLabel ? "group" : undefined}
       aria-label={interactive ? ariaLabel : undefined}
     >
-      {title && <p className="eyebrow">{title}</p>}
+      {title && <p className="mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-violet max-md:mb-5 max-md:text-[8px]">{title}</p>}
 
       {needs.map((need, index) => {
         const item = typeof need === "string" ? { title: need } : need;

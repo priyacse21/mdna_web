@@ -11,7 +11,7 @@ export default function Footer() {
 
   return (
     <footer className="block bg-[#101116] text-[#f8f8f7]" id="footer-contact">
-      <div className="site-container min-h-[330px] mx-auto py-11 px-0 md:px-10 grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-[55px] lg:gap-20">
+      <div className="w-[calc(100%-32px)] md:w-[calc(100%-48px)] xl:w-[min(calc(100%-64px),1500px)] min-h-[330px] mx-auto py-11 px-0 md:px-10 grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-[55px] lg:gap-20">
         {/* Logo */}
         <Link
           className="inline-flex items-center no-underline self-start"
@@ -87,7 +87,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="site-container mx-auto py-4 px-0 md:px-10 flex flex-wrap justify-between gap-3 border-t border-white/12 text-[#747c87] font-mono text-[8px] md:text-[9px]">
+      <div className="w-[calc(100%-32px)] md:w-[calc(100%-48px)] xl:w-[min(calc(100%-64px),1500px)] mx-auto py-4 px-0 md:px-10 flex flex-wrap justify-between gap-3 border-t border-white/12 text-[#747c87] font-mono text-[8px] md:text-[9px]">
         <span>© 2026 mDNA.digital</span>
         <span>Marketing that moves business forward.</span>
       </div>

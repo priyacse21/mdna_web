@@ -5,7 +5,7 @@ export default function ProblemSection() {
   return (
     <section className="bg-[#f2f0ea] text-[#10161d] min-h-[680px] py-[90px] px-4 md:px-6 lg:py-[14vw] lg:px-[max(12vw,40px)] grid grid-cols-1 lg:grid-cols-2 items-center gap-[55px] lg:gap-[8vw]">
       <div>
-        <p className="eyebrow">00 - The marketing problem</p>
+        <p className="mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-violet max-md:mb-5 max-md:text-[8px]">00 - The marketing problem</p>
 
         <h2 className="text-[3.5rem] lg:text-[clamp(3.2rem,5vw,6rem)] leading-[0.92] tracking-[-0.075em] uppercase font-bold text-balance mb-[34px]">
           More marketing

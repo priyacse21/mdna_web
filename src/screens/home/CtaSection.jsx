@@ -12,7 +12,7 @@ export default function CtaSection() {
       />
 
       <div className="relative z-1 max-w-3xl flex flex-col items-center">
-        <p className="eyebrow">07 - The next move</p>
+        <p className="mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-violet max-md:mb-5 max-md:text-[8px]">07 - The next move</p>
 
         <h2 className="text-[clamp(3.3rem,6.5vw,7.4rem)] leading-[0.92] tracking-[-0.075em] uppercase font-bold text-balance mb-5">
           Ready to make
@@ -27,11 +27,11 @@ export default function CtaSection() {
         </p>
 
         <div className="flex flex-wrap justify-center gap-2.5">
-          <Link className="button button-primary" to="/contact">
+          <Link className="inline-flex min-h-[45px] cursor-pointer items-center gap-[14px] px-[17px] text-[11px] font-bold no-underline transition-all duration-200 max-md:text-[10px] bg-violet text-white" to="/contact">
             Talk to mDNA -&gt;
           </Link>
           <Link
-            className="button button-outline border-white/40 text-white hover:border-[#bd00f2] hover:bg-[#bd00f2]/10 transition-colors"
+            className="inline-flex min-h-[45px] cursor-pointer items-center gap-[14px] px-[17px] text-[11px] font-bold no-underline transition-all duration-200 max-md:text-[10px] border border-current border-white/40 text-white hover:border-[#bd00f2] hover:bg-[#bd00f2]/10 transition-colors"
             to="/services"
           >
             Explore Services -&gt;

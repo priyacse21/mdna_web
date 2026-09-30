@@ -5,7 +5,7 @@ export default function AuditSection() {
   return (
     <section className="bg-[#f2f0ea] text-[#10161d] min-h-[600px] py-[90px] px-4 md:px-6 lg:py-[14vw] lg:px-[max(12vw,40px)] grid grid-cols-1 lg:grid-cols-2 items-center gap-[55px] lg:gap-[8vw]">
       <div>
-        <p className="eyebrow">04 - Start with clarity</p>
+        <p className="mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-violet max-md:mb-5 max-md:text-[8px]">04 - Start with clarity</p>
         <h2 className="text-[3.5rem] lg:text-[clamp(3.3rem,5.5vw,6.3rem)] leading-[0.92] tracking-[-0.075em] uppercase font-bold text-balance mb-[34px]">
           Don't know
           <br />
@@ -20,13 +20,13 @@ export default function AuditSection() {
         </p>
         <div className="flex flex-wrap gap-2.5">
           <a
-            className="button button-primary"
+            className="inline-flex min-h-[45px] cursor-pointer items-center gap-[14px] px-[17px] text-[11px] font-bold no-underline transition-all duration-200 max-md:text-[10px] bg-violet text-white"
             href="#contact"
           >
             Book a Free Audit -&gt;
           </a>
           <a
-            className="button button-outline border-current text-[#10161d] hover:bg-[#10161d] hover:text-white transition-colors"
+            className="inline-flex min-h-[45px] cursor-pointer items-center gap-[14px] px-[17px] text-[11px] font-bold no-underline transition-all duration-200 max-md:text-[10px] border border-current text-[#10161d] hover:bg-[#10161d] hover:text-white transition-colors"
             href="#contact"
           >
             Explore Audits &amp; Diagnostics -&gt;

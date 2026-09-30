@@ -11,7 +11,7 @@ export default function ServicesOverview() {
     <section className="bg-[#0d151d] text-[#f8f8f7] py-[90px] px-4 md:px-6 lg:py-[8vw] lg:px-[max(12vw,40px)]" id="system">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-end gap-5 lg:gap-[7vw]">
         <div>
-          <p className="eyebrow">01 - The mDNA system</p>
+          <p className="mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-violet max-md:mb-5 max-md:text-[8px]">01 - The mDNA system</p>
           <h2 className="text-[clamp(3.3rem,6vw,6.8rem)] leading-[0.92] tracking-[-0.075em] uppercase font-bold text-balance mb-2">
             Five entry points.
             <br />
