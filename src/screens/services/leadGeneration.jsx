@@ -2,6 +2,8 @@ import './services.css'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { accountNodes, leadMethods, leadOutcomes, leadPathway } from './data/serviceData'
+import { leadGenerationData } from './data/toolsCatlog'
+import ToolsSection from './common/ToolSection/Toolsection'
 
 export default function LeadGeneration() {
 	const [activeMethod, setActiveMethod] = useState(0)
@@ -132,5 +134,7 @@ export default function LeadGeneration() {
 			<Link className="button button-primary" to="/contact">Talk to mDNA <span aria-hidden="true">↗</span></Link>
 			<div className="lead-cta-orbit" />
 		</section>
+
+      <ToolsSection tools={leadGenerationData.tools} />
 	</main>
 }
