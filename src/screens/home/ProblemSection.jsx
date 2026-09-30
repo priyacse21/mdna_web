@@ -1,23 +1,8 @@
 
 import NeedList from "../../components/common/NeedList/NeedList";
+import "../../screens/home/home.css";
+import {needs1} from "./data/homedata";
 
-const needs = [
-  {
-    title: "More qualified conversations",
-  },
-  {
-    title: "More visibility in search & AI",
-  },
-  {
-    title: "Stronger digital credibility",
-  },
-  {
-    title: "A clearer view of what's working",
-  },
-  {
-    title: "A stronger marketing function",
-  },
-];
 
 export default function ProblemSection() {
   return (
@@ -43,7 +28,7 @@ export default function ProblemSection() {
 
       <NeedList
         title="Where the need shows up"
-        needs={needs}
+        needs={needs1}
         variant="simple"
         showFooter
       />

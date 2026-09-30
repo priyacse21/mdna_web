@@ -1,50 +1,9 @@
-import "../../pages/Home/Home.css";
+import "../../screens/home/home.css";
 
 // src/pages/Home/ExplorerSection.jsx
 import { useRef, useState } from "react";
 
-const points = [
-  {
-    key: "lead",
-    tab: "PIPELINE",
-    title: "Pipeline",
-    text: "Lead Generation — identify, target and message ideal buyers.",
-    x: 20,
-    y: 22,
-  },
-  {
-    key: "visibility",
-    tab: "VISIBILITY",
-    title: "Visibility",
-    text: "Content, Search & AI Visibility — build visibility across search, content and AI discovery.",
-    x: 75,
-    y: 22,
-  },
-  {
-    key: "pr",
-    tab: "CREDIBILITY",
-    title: "Credibility",
-    text: "Digital PR — build credibility, reach and reputation across digital channels.",
-    x: 17,
-    y: 70,
-  },
-  {
-    key: "audit",
-    tab: "CLARITY",
-    title: "Clarity",
-    text: "Audits & Diagnostics — find what is working, what is not and what should happen next.",
-    x: 80,
-    y: 70,
-  },
-  {
-    key: "consulting",
-    tab: "CAPABILITY",
-    title: "Capability",
-    text: "Consulting — build stronger marketing functions and make better decisions.",
-    x: 50,
-    y: 12,
-  },
-];
+import {points} from "./data/homedata";
 
 const ExplorerSection = () => {
   const [activeKey, setActiveKey] = useState("lead");

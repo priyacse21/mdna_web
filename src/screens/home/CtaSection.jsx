@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import "../../screens/home/home.css";
 
 export default function CtaSection() {
   return <section className="cta-section dark-section" id="contact">

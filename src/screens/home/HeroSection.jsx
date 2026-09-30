@@ -1,44 +1,9 @@
 import React from "react";
 import "../../pages/Home/Home.css";
+import {nodes} from "./data/homedata";
 
 
-const nodes = [
-  {
-    num: "01",
-    title: "LEAD GENERATION",
-    tag: "PIPELINE / CONVERSATIONS",
-    href: "/services/lead-generation",
-    className: "n1",
-  },
-  {
-    num: "02",
-    title: "CONTENT, SEARCH & AI VISIBILITY",
-    tag: "FOUND / SEEN / DISCOVERED",
-    href: "/services/content-search-ai-visibility",
-    className: "n2",
-  },
-  {
-    num: "03",
-    title: "DIGITAL PR",
-    tag: "CREDIBILITY / REACH",
-    href: "/services/digital-pr",
-    className: "n3",
-  },
-  {
-    num: "04",
-    title: "AUDITS & DIAGNOSTICS",
-    tag: "CLARITY / PRIORITIES",
-    href: "/services/audits-diagnostics",
-    className: "n4",
-  },
-  {
-    num: "05",
-    title: "CONSULTING",
-    tag: "CAPABILITY / DIRECTION",
-    href: "/services/consulting",
-    className: "n5",
-  },
-];
+
 
 const HeroSection = () => {
   return (

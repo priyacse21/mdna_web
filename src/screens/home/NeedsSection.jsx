@@ -30,33 +30,10 @@
 // }
 
 
-
+import "../../screens/home/home.css";
 import NeedList from "../../components/common/NeedList/NeedList";
-const needs = [
-  {
-    title: "I need more qualified conversations.",
-    service: "LEAD GENERATION",
-  },
-  {
-    title: "I need to be found on Google and AI.",
-    service: "CONTENT, SEARCH & AI VISIBILITY",
-  },
-  {
-    title: "I need stronger digital credibility.",
-    service: "DIGITAL PR",
-  },
-  {
-    title: "I need to know what's working.",
-    service: "AUDITS & DIAGNOSTICS",
-  },
-  {
-    title: "I need a stronger marketing function.",
-    service: "CONSULTING",
-    description:
-      "Build stronger marketing functions and make better decisions.",
-    active: true,
-  },
-];
+import {needs} from "./data/homedata";
+
 export default function NeedsSection() {
   return (
     <section className="needs-section light-section">
