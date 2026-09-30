@@ -1,4 +1,3 @@
-import './services.css'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { brandingBenefits, brandingFormats, brandingJourney, brandingServices } from './data/serviceData'
@@ -9,54 +8,54 @@ export default function Branding() {
 	const [activeService, setActiveService] = useState(0)
 	const service = brandingServices[activeService]
 
-	return <div className="branding-page">
-		<section className="branding-hero dark-section" aria-labelledby="branding-title">
-			<div className="branding-hero-copy">
-				<p className="eyebrow">mDNA / BRAND</p>
-				<h1 id="branding-title">Make your<br />brand part of<br />the <span>conversation.</span></h1>
-				<p>Branding that builds visibility, credibility and attention across the channels your audience already trusts.</p>
-				<div className="button-row"><Link className="button button-primary" to="/contact">Talk to us <span aria-hidden="true">↗</span></Link><a className="button button-outline" href="#branding-system">Explore branding <span aria-hidden="true">↓</span></a></div>
+	return <div className="[&_h1]:tracking-normal [&_h1]:normal-case [&_h2]:tracking-normal [&_h2]:normal-case">
+		<section className="grid min-h-[700px] grid-cols-[1.15fr_0.85fr] bg-[#101116] text-white max-[1023px]:grid-cols-2 max-[767px]:grid-cols-1" aria-labelledby="branding-title">
+			<div className="self-center py-[75px] pr-12 pl-[max(48px,calc((100vw-1400px)/2))] max-[1023px]:px-7 max-[1023px]:py-[65px] max-[1023px]:pl-6 max-[767px]:px-5 max-[767px]:pt-[68px] max-[767px]:pb-[42px]">
+				<p className="mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-[#bd00f2] max-[767px]:mb-5 max-[767px]:text-[8px]">mDNA / BRAND</p>
+				<h1 className="m-0 mb-[22px] text-[84px] leading-[1.02] max-[1023px]:text-[62px] max-[767px]:text-5xl" id="branding-title">Make your<br />brand part of<br />the <span className="text-[#bd00f2]">conversation.</span></h1>
+				<p className="mb-7 max-w-[580px] text-[14px] leading-[1.7] text-[#a6abb4] max-[767px]:text-xs">Branding that builds visibility, credibility and attention across the channels your audience already trusts.</p>
+				<div className="flex flex-wrap gap-[10px]"><Link className="inline-flex min-h-[45px] items-center gap-[14px] bg-[#f8f8f7] px-[17px] text-[11px] font-bold text-[#101116] no-underline transition-all duration-200 max-[767px]:text-[10px]" to="/contact">Talk to us <span aria-hidden="true">↗</span></Link><a className="inline-flex min-h-[45px] items-center gap-[14px] border border-current px-[17px] text-[11px] font-bold text-white no-underline transition-all duration-200 max-[767px]:text-[10px]" href="#branding-system">Explore branding <span aria-hidden="true">↓</span></a></div>
 			</div>
-			<div className="branding-hero-visual" aria-label="A grid of brand and media touchpoints">
-				<div className="branding-tile-grid">{Array.from({ length: 35 }, (_, index) => <span className={`branding-tile${[2, 8, 12, 17, 23, 29, 33].includes(index) ? ' highlighted' : ''}`} key={index} />)}</div>
-				<div className="branding-mark" aria-hidden="true"><span>m</span><b>D</b><span>NA</span></div>
-				<div className="branding-hero-steps"><span>STORY</span><span>AUDIENCE</span><span>PROOF</span><span>INFLUENCE</span></div>
-				<span className="branding-hero-side">/ EVENTS / FORMAT / TRUST</span>
-				<span className="branding-hero-caption">SCALE / TO / EXPLORE</span>
-			</div>
-		</section>
-
-		<section className="branding-premise light-section" aria-labelledby="branding-premise-title">
-			<p className="eyebrow"><span>01</span> / The premise</p>
-			<div className="branding-premise-content"><h2 id="branding-premise-title">PR that moves beyond press releases.</h2><p>mDNA uses digital channels, content formats, communities and reputation platforms to help brands build visibility and credibility.</p></div>
-		</section>
-
-		<section className="branding-system dark-section" id="branding-system" aria-labelledby="branding-system-title">
-			<div className="branding-section-heading"><div><p className="eyebrow"><span>02</span> / The service system</p><h2 id="branding-system-title">Four ways to create digital attention.</h2></div><p>Choose a format. See how it works. Move from attention to the next useful action.</p></div>
-			<div className="branding-service-board">
-				<div className="branding-service-list" role="group" aria-label="Choose a branding service">{brandingServices.map(([number, name], index) => <button className={`branding-service-option${index === activeService ? ' active' : ''}`} type="button" key={number} onClick={() => setActiveService(index)} aria-pressed={index === activeService}><span>{number}</span><strong>{name}</strong><b aria-hidden="true">{index === activeService ? '×' : '+'}</b></button>)}</div>
-				<div className="branding-service-panel" aria-live="polite"><span className="branding-panel-count">{service[0]} / 04</span><span className="branding-panel-label">BRANDING SERVICES</span><div><h3>{service[1]}</h3><p>{service[2]}</p><div className="branding-panel-impact"><span>Impact</span><p>{service[3]}</p></div><Link to="/contact" className="button button-outline">{service[4]} <span aria-hidden="true">↗</span></Link></div><span className="branding-panel-diamond" /></div>
+			<div className="relative min-h-[700px] overflow-hidden border-l border-white/[0.14] bg-[#111318] max-[1023px]:min-h-[600px] max-[767px]:min-h-[420px] max-[767px]:border-t max-[767px]:border-l-0" aria-label="A grid of brand and media touchpoints">
+				<div className="absolute inset-[-6%] grid grid-cols-7 auto-rows-fr gap-2 rotate-[-10deg] scale-[1.08]">{Array.from({ length: 35 }, (_, index) => <span className={`border ${[2, 8, 12, 17, 23, 29, 33].includes(index) ? 'border-[#bd00f2]/[0.65] bg-[#bd00f2]/[0.04]' : 'border-white/[0.09] bg-[#0d0f15]/75'}`} key={index} />)}</div>
+				<div className="absolute top-1/2 left-1/2 flex h-[210px] w-[210px] -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-1 border border-[#bd00f2]/70 bg-[#111318] text-[42px] font-extrabold text-[#f8f8f7] max-[767px]:h-[150px] max-[767px]:w-[150px] max-[767px]:text-[30px]" aria-hidden="true"><span>m</span><b className="text-[#bd00f2]">D</b><span>NA</span></div>
+				<div className="absolute top-[38%] left-[12%] z-[1] grid font-mono text-[8px] leading-[2] text-[#9aa0aa] [&_span]:before:mr-[10px] [&_span]:before:inline-block [&_span]:before:w-7 [&_span]:before:border-t [&_span]:before:border-[#bd00f2] [&_span]:before:align-middle"><span>STORY</span><span>AUDIENCE</span><span>PROOF</span><span>INFLUENCE</span></div>
+				<span className="absolute top-[10px] right-3 z-[1] font-mono text-[8px] leading-[2] text-[#9aa0aa] [writing-mode:vertical-rl]">/ EVENTS / FORMAT / TRUST</span>
+				<span className="absolute bottom-[18px] left-[12%] z-[1] font-mono text-[8px] leading-[2] text-[#707782]">SCALE / TO / EXPLORE</span>
 			</div>
 		</section>
 
-		<section className="branding-journey light-section" aria-labelledby="branding-journey-title">
-			<p className="eyebrow"><span>03</span> / The journey</p>
-			<h2 id="branding-journey-title">From story to influence.</h2>
-			<div className="branding-journey-list">{brandingJourney.map(([number, title, description], index) => <article className={index === 0 ? 'current' : ''} key={number}><span><b>{number}</b></span><div><strong>{title}</strong><p>{description}</p></div></article>)}</div>
+		<section className="bg-[#f2f0ea] px-[max(48px,calc((100vw-1300px)/2))] pt-[100px] pb-[112px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="branding-premise-title">
+			<p className="mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-[#bd00f2] max-[767px]:mb-5 max-[767px]:text-[8px]"><span>01</span> / The premise</p>
+			<div className="ml-auto max-w-[1030px] border-b border-[#10161d]/[0.18] pb-[42px] max-[767px]:mt-6 max-[767px]:pb-7"><h2 className="m-0 max-w-[900px] text-[72px] leading-[1.04] max-[767px]:text-[42px]" id="branding-premise-title">PR that moves beyond press releases.</h2><p className="mt-6 mb-0 max-w-[640px] text-[14px] leading-[1.7] text-[#606b76]">mDNA uses digital channels, content formats, communities and reputation platforms to help brands build visibility and credibility.</p></div>
 		</section>
 
-		<section className="branding-formats light-section" aria-labelledby="branding-formats-title">
-			<div className="branding-formats-heading"><div><p className="eyebrow"><span>04</span> / The newsroom</p><h2 id="branding-formats-title">One story.<br /><span>Many signals.</span></h2></div><p>Different formats. One connected brand presence.</p></div>
-			<div className="branding-format-grid">{brandingFormats.map(([number, name, description, style]) => <article className={`branding-format-card ${style}`} key={number}><span>{`FORMAT ${number}`}</span><h3>{name}</h3><p>{description}</p><b aria-hidden="true">↗</b></article>)}</div>
+		<section className="bg-[#0d151d] px-[max(48px,calc((100vw-1320px)/2))] pt-[84px] pb-[100px] text-[#f8f8f7] max-[767px]:px-5 max-[767px]:py-[68px]" id="branding-system" aria-labelledby="branding-system-title">
+			<div className="mb-[42px] grid grid-cols-[1fr_300px] items-end gap-[60px] max-[1023px]:grid-cols-1 max-[1023px]:gap-5 max-[767px]:gap-[18px]"><div><p className="mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-[#bd00f2] max-[767px]:mb-5 max-[767px]:text-[8px]"><span>02</span> / The service system</p><h2 className="m-0 max-w-[850px] text-[64px] leading-[1.04] max-[767px]:text-[42px]" id="branding-system-title">Four ways to create digital attention.</h2></div><p className="mb-1 text-[12px] leading-[1.7] text-[#a1a5ad]">Choose a format. See how it works. Move from attention to the next useful action.</p></div>
+			<div className="grid min-h-[500px] grid-cols-[34%_1fr] border border-white/[0.15] max-[767px]:grid-cols-1">
+				<div className="border-r border-white/[0.15] max-[767px]:border-r-0 max-[767px]:border-b" role="group" aria-label="Choose a branding service">{brandingServices.map(([number, name], index) => <button className={`grid min-h-[76px] w-full grid-cols-[34px_1fr_18px] items-center gap-3 border-0 border-b border-white/[0.15] px-[18px] text-left ${index === activeService ? 'bg-[#f8f8f7] text-[#101116]' : 'bg-transparent text-[#d1d3d8]'} max-[767px]:min-h-14 max-[767px]:px-3`} type="button" key={number} onClick={() => setActiveService(index)} aria-pressed={index === activeService}><span className={`font-mono text-[8px] ${index === activeService ? 'text-[#bd00f2]' : 'text-[#7a808a]'}`}>{number}</span><strong className="text-xs font-medium max-[767px]:text-[10px]">{name}</strong><b className={`font-normal ${index === activeService ? 'text-[#bd00f2]' : 'text-[#7a808a]'}`} aria-hidden="true">{index === activeService ? '×' : '+'}</b></button>)}</div>
+				<div className="relative flex min-h-[500px] flex-col justify-between overflow-hidden bg-[#141720] bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[length:58px_58px] px-[30px] py-6 max-[767px]:min-h-[390px] max-[767px]:p-[18px]" aria-live="polite"><span className="relative z-[1] font-mono text-[8px] text-[#7c828d]">{service[0]} / 04</span><span className="absolute top-6 right-6 z-[1] font-mono text-[8px] text-[#7c828d] max-[767px]:hidden">BRANDING SERVICES</span><div className="relative z-[1] w-[min(100%,540px)] px-2 py-6"><h3 className="mb-[10px] text-[44px] leading-[1.05] max-[767px]:text-[32px]">{service[1]}</h3><p className="mb-7 text-[13px] text-[#a4aab3]">{service[2]}</p><div className="mb-6 border-l border-[#bd00f2] pl-3"><span className="font-mono text-[8px] uppercase text-[#bd00f2]">Impact</span><p className="mt-[6px] text-[11px] text-[#d3d5da]">{service[3]}</p></div><Link to="/contact" className="inline-flex min-h-10 items-center gap-[14px] border border-current px-[17px] text-[9px] font-bold text-white no-underline">{service[4]} <span aria-hidden="true">↗</span></Link></div><span className="absolute right-[12%] bottom-[-120px] h-[240px] w-[240px] rotate-45 border border-[#bd00f2]/40" /></div>
+			</div>
 		</section>
 
-		<section className="branding-benefits light-section" aria-labelledby="branding-benefits-title">
-			<p className="eyebrow"><span>05</span> / Why branding</p><h2 id="branding-benefits-title">Attention is easy.<br />Credibility takes work.</h2>
-			<div className="branding-benefit-grid">{brandingBenefits.map(([label, title, description]) => <article key={label}><span>{label}</span><div><h3>{title}</h3><p>{description}</p></div><i aria-hidden="true" /></article>)}</div>
+		<section className="bg-[#f2f0ea] px-[max(48px,calc((100vw-1000px)/2))] pt-[92px] pb-[100px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="branding-journey-title">
+			<p className="mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-[#bd00f2] max-[767px]:mb-5 max-[767px]:text-[8px]"><span>03</span> / The journey</p>
+			<h2 className="mb-[50px] ml-auto max-w-[780px] text-[72px] leading-[1.04] max-[767px]:mt-6 max-[767px]:mb-9 max-[767px]:text-[42px]" id="branding-journey-title">From story to influence.</h2>
+			<div className="relative ml-auto max-w-[850px] before:absolute before:top-8 before:bottom-8 before:left-[31px] before:w-px before:bg-[#10161d]/[0.18] before:content-[''] max-[767px]:before:left-[25px]">{brandingJourney.map(([number, title, description], index) => <article className="relative grid min-h-[140px] grid-cols-[64px_1fr] items-center gap-6 max-[767px]:min-h-28 max-[767px]:grid-cols-[52px_1fr] max-[767px]:gap-[18px]" key={number}><span className={`z-[1] grid h-16 w-16 place-items-center border border-[#10161d]/20 bg-[#f2f0ea] font-mono text-[9px] max-[767px]:h-[52px] max-[767px]:w-[52px] ${index === 0 ? 'rotate-45 border-[#bd00f2] bg-[#bd00f2] text-white' : ''}`}><b className={`font-normal ${index === 0 ? 'rotate-[-45deg]' : ''}`}>{number}</b></span><div><strong className="text-[19px] font-semibold uppercase max-[767px]:text-[15px]">{title}</strong><p className="mt-[6px] mb-0 text-[12px] text-[#68727d]">{description}</p></div></article>)}</div>
 		</section>
 
-		<section className="branding-cta dark-section" aria-labelledby="branding-cta-title">
-			<p className="eyebrow"><span>06</span> / Start here</p><h2 id="branding-cta-title">Have a story worth<br /><span>amplifying?</span></h2><p>Let's turn it into something people notice, trust and remember.</p><Link className="button button-primary" to="/contact">Talk to mDNA <span aria-hidden="true">↗</span></Link><div className="branding-cta-diamond" />
+		<section className="bg-[#f2f0ea] px-[max(48px,calc((100vw-1260px)/2))] pt-[92px] pb-[104px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="branding-formats-title">
+			<div className="grid grid-cols-[1fr_280px] items-end gap-[60px] border-b border-[#10161d]/[0.18] pb-8 max-[1023px]:grid-cols-1 max-[1023px]:gap-5 max-[767px]:gap-[18px]"><div><p className="mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-[#bd00f2] max-[767px]:mb-5 max-[767px]:text-[8px]"><span>04</span> / The newsroom</p><h2 className="m-0 text-[72px] leading-[1.04] max-[767px]:text-[42px]" id="branding-formats-title">One story.<br /><span className="text-[#bd00f2]">Many signals.</span></h2></div><p className="mb-1 text-[12px] leading-[1.7] text-[#67727d]">Different formats. One connected brand presence.</p></div>
+			<div className="grid grid-cols-5 items-start gap-[22px] pt-12 max-[1023px]:grid-cols-3 max-[1023px]:gap-y-7 max-[767px]:grid-cols-2 max-[767px]:gap-x-[14px] max-[767px]:gap-y-[22px] max-[767px]:px-2 max-[767px]:pt-[30px] max-[767px]:pb-[10px]">{brandingFormats.map(([number, name, description], index) => <article className={`relative flex min-h-[300px] flex-col justify-between border border-[#10161d]/[0.28] px-4 py-[22px] ${index === 1 || index === 3 ? 'mt-12 rotate-[4deg] max-[767px]:mt-[30px]' : '-rotate-[3deg]'} ${index === 2 ? 'rotate-[-2deg] bg-[#111318] text-white' : ''} ${index === 3 ? 'rotate-[3deg] bg-[#d4d5d2]' : ''} ${index === 4 ? '-rotate-[6deg] bg-[#bd00f2] text-white' : 'bg-[#f2f0ea]'} max-[1023px]:min-h-[250px] max-[767px]:min-h-[220px] max-[767px]:px-3 max-[767px]:py-4`} key={number}><span className="font-mono text-[7px] text-[#78818a]">{`FORMAT ${number}`}</span><h3 className="mt-auto mb-2 text-xl max-[767px]:text-base">{name}</h3><p className="mb-0 min-h-[52px] text-[9px] leading-[1.55] opacity-[0.72] max-[767px]:text-[8px]">{description}</p><b className={`mt-4 self-end text-[13px] text-[#bd00f2] ${index === 4 ? 'text-white' : ''}`} aria-hidden="true">↗</b></article>)}</div>
+		</section>
+
+		<section className="bg-[#f2f0ea] px-[max(48px,calc((100vw-1160px)/2))] py-[90px] pb-[100px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="branding-benefits-title">
+			<p className="mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-[#bd00f2] max-[767px]:mb-5 max-[767px]:text-[8px]"><span>05</span> / Why branding</p><h2 className="mb-[54px] ml-auto max-w-[900px] text-[72px] leading-[1.04] max-[767px]:mt-6 max-[767px]:mb-8 max-[767px]:text-[42px]" id="branding-benefits-title">Attention is easy.<br />Credibility takes work.</h2>
+			<div className="grid grid-cols-3 border-y border-[#10161d]/[0.18] max-[767px]:grid-cols-1">{brandingBenefits.map(([label, title, description]) => <article className="relative flex min-h-[210px] flex-col justify-between border-r border-[#10161d]/[0.16] p-6 last:border-r-0 max-[767px]:min-h-40 max-[767px]:border-r-0 max-[767px]:border-b max-[767px]:p-[18px] max-[767px]:last:border-b-0" key={label}><span className="font-mono text-[8px] text-[#74808a]">{label}</span><div><h3 className="mb-2 text-xl">{title}</h3><p className="m-0 max-w-[240px] text-[11px] leading-[1.6] text-[#68727d]">{description}</p></div><i className="absolute right-5 bottom-4 h-7 w-7 rotate-45 border border-[#10161d]/[0.18]" aria-hidden="true" /></article>)}</div>
+		</section>
+
+		<section className="relative flex min-h-[520px] flex-col justify-center overflow-hidden bg-[#0d151d] px-[max(48px,calc((100vw-1320px)/2))] py-[82px] text-[#f8f8f7] max-[767px]:min-h-[440px] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="branding-cta-title">
+			<p className="relative z-[1] mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-[#bd00f2] max-[767px]:mb-5 max-[767px]:text-[8px]"><span>06</span> / Start here</p><h2 className="relative z-[1] mb-[18px] text-[68px] leading-[1.03] max-[767px]:text-[44px]" id="branding-cta-title">Have a story worth<br /><span className="text-[#bd00f2]">amplifying?</span></h2><p className="relative z-[1] mb-[22px] max-w-[430px] text-[12px] leading-[1.7] text-[#a5abb4]">Let's turn it into something people notice, trust and remember.</p><Link className="relative z-[1] inline-flex min-h-[45px] items-center gap-[14px] bg-[#f8f8f7] px-[17px] text-[11px] font-bold text-[#101116] no-underline transition-all duration-200 max-[767px]:text-[10px]" to="/contact">Talk to mDNA <span aria-hidden="true">↗</span></Link><div className="absolute top-[-100px] right-[18%] h-[300px] w-[300px] rotate-45 border border-[#bd00f2]/[0.35]" />
 		</section>
 	</div>
 }
