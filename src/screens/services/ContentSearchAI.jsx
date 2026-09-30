@@ -3,7 +3,8 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import NeedList from '../../components/common/NeedList/NeedList'
 import { contentCapabilities, contentHeroNeeds, contentImpacts, contentProcess, contentProblemNeeds, visibilityModes } from './data/serviceData'
-
+import { contentSearchAIData } from './data/toolsCatlog'
+import ToolsSection from './common/ToolSection/Toolsection'
 
 export default function ContentSearchAI() {
 	const [activeCapability, setActiveCapability] = useState(0)
@@ -80,5 +81,6 @@ export default function ContentSearchAI() {
 		<section className="content-ai-cta dark-section" aria-labelledby="content-ai-cta-title">
 			<p className="eyebrow"><span>07</span> / Start here</p><h2 id="content-ai-cta-title">Ready to be found?<br /><span>Let's make the signal clear.</span></h2><p>Start with the visibility problem you need to solve. We can map the relevant content, search and channel work from there.</p><Link className="button button-primary" to="/contact">Talk to mDNA <span aria-hidden="true">↗</span></Link><div className="content-ai-cta-diamond" />
 		</section>
+		  <ToolsSection tools={contentSearchAIData.tools} />
 	</div>
 }
