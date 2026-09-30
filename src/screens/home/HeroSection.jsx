@@ -1,6 +1,6 @@
 import React from "react";
 import "../../pages/Home/Home.css";
-import {nodes} from "./data/homedata";
+
 
 
 
