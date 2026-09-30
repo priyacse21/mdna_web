@@ -1,49 +1,16 @@
-// const needs = [
-//   'I need more qualified conversations.',
-//   'I need to be found on Google and AI.',
-//   'I need stronger digital credibility.',
-//   "I need to know what's working.",
-//   'I need a stronger marketing function.',
-// ]
-
-// const capabilities = [
-//   'Lead Generation',
-//   'Content, Search & AI Visibility',
-//   'Digital PR',
-//   'Audits & Diagnostics',
-//   'Consulting',
-// ]
-
-// export default function NeedsSection() {
-//   return <section className="needs-section light-section">
-//     <div className="section-heading">
-//       <div><p className="eyebrow">02 - Where should we start?</p><h2>What do you<br />need<br />to move<br />forward?</h2></div>
-//       <p>Choose the situation that sounds most like yours. We'll point you toward the mDNA capability built around that need.</p>
-//     </div>
-//     <div className="question-list">
-//       {needs.map((text, index) => <div className={`question-row ${index === 4 ? 'selected' : ''}`} key={text}>
-//         <small>0{index + 1}</small><strong>{text}</strong><em>{capabilities[index]}</em><b>-&gt;</b>
-//         {index === 4 && <p><b>Start with Consulting.</b><br />Build stronger marketing functions and make better decisions.</p>}
-//       </div>)}
-//     </div>
-//   </section>
-// }
-
-
-import "../../screens/home/home.css";
 import NeedList from "../../components/common/NeedList/NeedList";
-import {needs} from "./data/homedata";
+import { needs } from "./data/homedata";
 
 export default function NeedsSection() {
   return (
-    <section className="needs-section light-section">
-      <div className="section-heading">
+    <section className="bg-[#f2f0ea] text-[#10161d] block min-h-[680px] py-[90px] px-4 md:px-6 lg:py-[14vw] lg:px-[max(12vw,40px)]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-end gap-5 lg:gap-[7vw] mb-[42px]">
         <div>
           <p className="eyebrow">
             02 - Where should we start?
           </p>
 
-          <h2>
+          <h2 className="text-[clamp(3.3rem,6vw,6.8rem)] leading-[0.92] tracking-[-0.075em] uppercase font-bold text-balance mb-2">
             What do you
             <br />
             need
@@ -54,7 +21,7 @@ export default function NeedsSection() {
           </h2>
         </div>
 
-        <p>
+        <p className="max-w-[540px] mb-2 text-[#758595] text-[13px] leading-[1.75]">
           Choose the situation that sounds most like yours.
           We'll point you toward the mDNA capability built
           around that need.

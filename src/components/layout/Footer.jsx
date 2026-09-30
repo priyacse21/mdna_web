@@ -1,11 +1,8 @@
-// 
 import { Link } from "react-router-dom";
-
 import {
   getPrimaryNavigation,
   getServiceLinks,
 } from "../../data/navigation";
-
 import mdnaLogo from "../../assets/logo/mdna-logo-clean.png";
 
 export default function Footer() {
@@ -13,66 +10,84 @@ export default function Footer() {
   const serviceLinks = getServiceLinks();
 
   return (
-    <footer className="site-footer" id="footer-contact">
-      <div className="footer-inner">
-
+    <footer className="block bg-[#101116] text-[#f8f8f7]" id="footer-contact">
+      <div className="site-container min-h-[330px] mx-auto py-11 px-0 md:px-10 grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-[55px] lg:gap-20">
         {/* Logo */}
         <Link
-          className="footer-logo"
+          className="inline-flex items-center no-underline self-start"
           to="/"
           aria-label="mDNA home"
         >
           <img
             src={mdnaLogo}
             alt="mDNA.digital"
-            className="footer-logo-image"
+            className="w-[120px] md:w-[145px] h-auto block"
           />
         </Link>
 
         {/* Footer Navigation */}
-        <div className="footer-columns">
-
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-[30px] md:gap-[18px] lg:gap-9">
           {/* Explore */}
-          <div>
-            <p className="footer-heading">Explore</p>
+          <div className="flex flex-col items-start gap-[13px]">
+            <p className="my-[5px] text-[#79808c] font-mono text-[9px] tracking-[0.15em] uppercase">
+              Explore
+            </p>
 
             {primaryNavigation.slice(0, 5).map(({ label, path }) => (
-              <Link to={path} key={path}>
+              <Link
+                to={path}
+                key={path}
+                className="text-[#f8f8f7] text-[12px] no-underline hover:text-[#bd00f2] transition-colors"
+              >
                 {label}
               </Link>
             ))}
           </div>
 
           {/* Services */}
-          <div>
-            <p className="footer-heading">Services</p>
+          <div className="flex flex-col items-start gap-[13px]">
+            <p className="my-[5px] text-[#79808c] font-mono text-[9px] tracking-[0.15em] uppercase">
+              Services
+            </p>
 
             {serviceLinks.slice(0, 5).map(({ label, path }) => (
-              <Link to={path} key={path}>
+              <Link
+                to={path}
+                key={path}
+                className="text-[#f8f8f7] text-[12px] no-underline hover:text-[#bd00f2] transition-colors"
+              >
                 {label}
               </Link>
             ))}
           </div>
 
           {/* Connect */}
-          <div>
-            <p className="footer-heading">Connect</p>
+          <div className="flex flex-col items-start gap-[13px]">
+            <p className="my-[5px] text-[#79808c] font-mono text-[9px] tracking-[0.15em] uppercase">
+              Connect
+            </p>
 
-            <a href="mailto:hello@mdna.digital">
+            <a
+              href="mailto:hello@mdna.digital"
+              className="text-[#f8f8f7] text-[12px] no-underline hover:text-[#bd00f2] transition-colors"
+            >
               hello@mdna.digital
             </a>
 
             {primaryNavigation.slice(3).map(({ label, path }) => (
-              <Link to={path} key={path}>
+              <Link
+                to={path}
+                key={path}
+                className="text-[#f8f8f7] text-[12px] no-underline hover:text-[#bd00f2] transition-colors"
+              >
                 {label}
               </Link>
             ))}
           </div>
-
         </div>
       </div>
 
-      <div className="footer-bottom">
+      <div className="site-container mx-auto py-4 px-0 md:px-10 flex flex-wrap justify-between gap-3 border-t border-white/12 text-[#747c87] font-mono text-[8px] md:text-[9px]">
         <span>© 2026 mDNA.digital</span>
         <span>Marketing that moves business forward.</span>
       </div>

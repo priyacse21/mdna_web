@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import "../../screens/contact/Contact.css";
 
 const helpOptions = [
   "Marketing Strategy",
@@ -38,66 +37,66 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-page">
-      <main className="contact-main">
-        <div className="contact-eyebrow">Contact</div>
-        <h1 className="contact-title">
+    <div className="bg-[#f3f1eb] font-sans text-[#111318]">
+      <main className="px-[5vw] pt-[7vw] pb-[8vw] max-[760px]:px-7 max-[760px]:pt-[55px] max-[760px]:pb-[70px]">
+        <div className="font-mono text-[12px] tracking-[0.12em] uppercase">Contact</div>
+        <h1 className="m-0 mt-6 mb-[7vw] max-w-[1050px] text-[clamp(56px,9vw,145px)] leading-[0.88] tracking-[-0.065em] max-[760px]:mt-5 max-[760px]:mb-[70px] max-[760px]:text-[clamp(54px,18vw,90px)]">
           Start with
           <br />
           the question.
         </h1>
 
-        <section className="contact-grid">
-          <div className="contact-statement">
+        <section className="grid grid-cols-[1fr_1.15fr] items-start gap-[8vw] max-[760px]:grid-cols-1 max-[760px]:gap-[65px]">
+          <div className="max-w-[540px] text-[clamp(22px,2.4vw,38px)] leading-[1.12]">
             Tell us what you're trying to solve, understand or change. We'll
             start there.
           </div>
 
-          <form className="contact-form" noValidate onSubmit={handleSubmit(onSubmit)}>
-            <div className={`contact-field ${errors.name ? "has-error" : ""}`}>
-              <label htmlFor="contact-name">Name</label>
-              <input id="contact-name" {...register("name")} />
-              {errors.name && <span className="contact-error">{errors.name.message}</span>}
+          <form className="border-t border-[#111318]" noValidate onSubmit={handleSubmit(onSubmit)}>
+            <div className="border-b border-[#111318]/[0.18] py-5 focus-within:border-[#111318]">
+              <label className="mb-[9px] block font-mono text-[11px] tracking-[0.08em] uppercase" htmlFor="contact-name">Name</label>
+              <input className={`w-full border-0 bg-transparent text-[17px] outline-none [font-family:inherit] ${errors.name ? "text-[#c0392b]" : "text-[#111318]"}`} id="contact-name" {...register("name")} />
+              {errors.name && <span className="mt-[6px] block text-[11px] text-[#c0392b]">{errors.name.message}</span>}
             </div>
 
-            <div className={`contact-field ${errors.email ? "has-error" : ""}`}>
-              <label htmlFor="contact-email">Work Email</label>
-              <input id="contact-email" type="email" {...register("email")} />
-              {errors.email && <span className="contact-error">{errors.email.message}</span>}
+            <div className="border-b border-[#111318]/[0.18] py-5 focus-within:border-[#111318]">
+              <label className="mb-[9px] block font-mono text-[11px] tracking-[0.08em] uppercase" htmlFor="contact-email">Work Email</label>
+              <input className={`w-full border-0 bg-transparent text-[17px] outline-none [font-family:inherit] ${errors.email ? "text-[#c0392b]" : "text-[#111318]"}`} id="contact-email" type="email" {...register("email")} />
+              {errors.email && <span className="mt-[6px] block text-[11px] text-[#c0392b]">{errors.email.message}</span>}
             </div>
 
-            <div className={`contact-field ${errors.company ? "has-error" : ""}`}>
-              <label htmlFor="contact-company">Company</label>
-              <input id="contact-company" {...register("company")} />
-              {errors.company && <span className="contact-error">{errors.company.message}</span>}
+            <div className="border-b border-[#111318]/[0.18] py-5 focus-within:border-[#111318]">
+              <label className="mb-[9px] block font-mono text-[11px] tracking-[0.08em] uppercase" htmlFor="contact-company">Company</label>
+              <input className={`w-full border-0 bg-transparent text-[17px] outline-none [font-family:inherit] ${errors.company ? "text-[#c0392b]" : "text-[#111318]"}`} id="contact-company" {...register("company")} />
+              {errors.company && <span className="mt-[6px] block text-[11px] text-[#c0392b]">{errors.company.message}</span>}
             </div>
 
-            <div className={`contact-field ${errors.help ? "has-error" : ""}`}>
-              <label htmlFor="contact-help">What Can We Help With?</label>
-              <select id="contact-help" defaultValue="" {...register("help")}>
+            <div className="border-b border-[#111318]/[0.18] py-5 focus-within:border-[#111318]">
+              <label className="mb-[9px] block font-mono text-[11px] tracking-[0.08em] uppercase" htmlFor="contact-help">What Can We Help With?</label>
+              <select className={`w-full cursor-pointer appearance-none border-0 bg-transparent text-[17px] outline-none [font-family:inherit] ${errors.help ? "text-[#c0392b]" : "text-[#111318]"}`} id="contact-help" defaultValue="" {...register("help")}>
                 <option value="" disabled>Select one</option>
                 {helpOptions.map((option) => (
                   <option key={option} value={option}>{option}</option>
                 ))}
               </select>
-              {errors.help && <span className="contact-error">{errors.help.message}</span>}
+              {errors.help && <span className="mt-[6px] block text-[11px] text-[#c0392b]">{errors.help.message}</span>}
             </div>
 
-            <div className={`contact-field ${errors.context ? "has-error" : ""}`}>
-              <label htmlFor="contact-context">Your Context</label>
-              <textarea id="contact-context" {...register("context")} />
-              {errors.context && <span className="contact-error">{errors.context.message}</span>}
+            <div className="border-b border-[#111318]/[0.18] py-5 focus-within:border-[#111318]">
+              <label className="mb-[9px] block font-mono text-[11px] tracking-[0.08em] uppercase" htmlFor="contact-context">Your Context</label>
+              <textarea className={`min-h-[130px] w-full resize-y border-0 bg-transparent text-[17px] outline-none [font-family:inherit] ${errors.context ? "text-[#c0392b]" : "text-[#111318]"}`} id="contact-context" {...register("context")} />
+              {errors.context && <span className="mt-[6px] block text-[11px] text-[#c0392b]">{errors.context.message}</span>}
             </div>
 
-            <div className={`contact-field ${errors.website ? "has-error" : ""}`}>
-              <label htmlFor="contact-website">Optional Website</label>
-              <input id="contact-website" type="url" {...register("website")} />
-              {errors.website && <span className="contact-error">{errors.website.message}</span>}
+            <div className="border-b border-[#111318]/[0.18] py-5 focus-within:border-[#111318]">
+              <label className="mb-[9px] block font-mono text-[11px] tracking-[0.08em] uppercase" htmlFor="contact-website">Optional Website</label>
+              <input className={`w-full border-0 bg-transparent text-[17px] outline-none [font-family:inherit] ${errors.website ? "text-[#c0392b]" : "text-[#111318]"}`} id="contact-website" type="url" {...register("website")} />
+              {errors.website && <span className="mt-[6px] block text-[11px] text-[#c0392b]">{errors.website.message}</span>}
             </div>
 
-            <div className="contact-actions">
-              <span aria-live="polite" className="contact-status">{status}</span>
-              <button type="submit">Send Enquiry →</button>
+            <div className="flex items-center justify-between gap-5 pt-6 max-[760px]:flex-wrap">
+              <span aria-live="polite" className="min-h-4 font-mono text-[11px]">{status}</span>
+              <button className="cursor-pointer border-0 bg-[#111318] px-[23px] py-[15px] text-inherit transition-colors duration-[250ms] hover:bg-[#b400e8]" type="submit">Send Enquiry →</button>
             </div>
           </form>
         </section>

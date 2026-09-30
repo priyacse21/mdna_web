@@ -1,56 +1,27 @@
-// import { useState } from 'react'
-// import { Link } from 'react-router-dom'
-// import MobileMenu from './MobileMenu'
-// import { getPrimaryNavigation, getServiceLinks } from '../../data/navigation'
-
-// export default function Header() {
-//   const primaryNavigation = getPrimaryNavigation()
-//   const serviceLinks = getServiceLinks()
-//   const [menuOpen, setMenuOpen] = useState(false)
-//   const [servicesOpen, setServicesOpen] = useState(false)
-//   const closeMenus = () => { setMenuOpen(false); setServicesOpen(false) }
-
-//   return <>
-//     <header className="site-header"><div className="site-header-inner">
-//       <Link className="site-logo" to="/" onClick={closeMenus} aria-label="mDNA home"><span className="site-logo-mark">m</span><span className="site-logo-word">mDNA</span><span className="site-logo-dot" /></Link>
-//       <nav className="site-nav" aria-label="Main navigation">
-//         {primaryNavigation.slice(0, 1).map(({ label, path }) => <Link to={path} key={path}>{label}</Link>)}
-//         <div className={`services-nav ${servicesOpen ? 'open' : ''}`}>
-//           <button type="button" onClick={() => setServicesOpen(!servicesOpen)} aria-expanded={servicesOpen}>Services</button>
-//           <div className="services-menu">{serviceLinks.map(({ number, label, path }) => <Link to={path} key={path} onClick={closeMenus}><small>{number}</small>{label}</Link>)}</div>
-//         </div>
-//         {primaryNavigation.slice(1, -1).map(({ label, path }) => <Link to={path} key={path}>{label}</Link>)}
-//         <Link className="nav-contact" to="/contact">Contact <span aria-hidden="true">↗</span></Link>
-//       </nav>
-//       <button className="menu-button" type="button" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-controls="mobile-navigation" aria-label="Toggle navigation"><span></span><span></span></button>
-//     </div></header>
-//     <MobileMenu open={menuOpen} onClose={closeMenus} />
-//   </>
-// }
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
 import MobileMenu from "./MobileMenu";
 import { getPrimaryNavigation } from "../../data/navigation";
 import mdnaLogo from "../../assets/logo/mdna-logo-clean.png";
 
 export default function Header() {
   const primaryNavigation = getPrimaryNavigation();
-
   const [menuOpen, setMenuOpen] = useState(false);
 
   const closeMenus = () => {
     setMenuOpen(false);
   };
 
+  const navLinkClasses =
+    "relative inline-flex items-center min-h-[68px] p-0 text-inherit no-underline cursor-pointer after:content-[''] after:absolute after:right-full after:bottom-[19px] after:left-0 after:h-[1px] after:bg-[#bd00f2] hover:after:right-0 after:transition-[right] after:duration-200 after:ease-out";
+
   return (
     <>
-      <header className="site-header">
-        <div className="site-header-inner">
-
+      <header className="sticky top-0 z-20 min-h-[68px] bg-[#101116] text-[#f8f8f7] border-b border-white/12">
+        <div className="site-container min-h-[68px] mx-auto flex items-center justify-between gap-8">
           {/* Logo */}
           <Link
-            className="site-logo"
+            className="inline-flex items-center gap-[7px] text-[21px] md:text-[24px] tracking-[-0.08em] no-underline text-inherit"
             to="/"
             onClick={closeMenus}
             aria-label="mDNA home"
@@ -58,51 +29,49 @@ export default function Header() {
             <img
               src={mdnaLogo}
               alt="mDNA.digital"
-              className="site-logo-image"
+              className="w-[120px] md:w-[145px] h-auto block"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="site-nav" aria-label="Main navigation">
+          <nav className="hidden lg:flex items-center gap-7 text-[12px]" aria-label="Main navigation">
             {primaryNavigation.slice(0, 1).map(({ label, path }) => (
-              <Link to={path} key={path}>
+              <Link to={path} key={path} className={navLinkClasses}>
                 {label}
               </Link>
             ))}
 
-            <Link to="/services" onClick={closeMenus}>Services</Link>
+            <Link to="/services" onClick={closeMenus} className={navLinkClasses}>
+              Services
+            </Link>
 
             {primaryNavigation.slice(1, -1).map(({ label, path }) => (
-              <Link to={path} key={path}>
+              <Link to={path} key={path} className={navLinkClasses}>
                 {label}
               </Link>
             ))}
 
-            <Link className="nav-contact" to="/contact">
-              Contact <span aria-hidden="true">↗</span>
+            <Link className={`ml-[3px] ${navLinkClasses}`} to="/contact">
+              Contact <span className="ml-[7px] text-[#bd00f2] text-[16px]" aria-hidden="true">↗</span>
             </Link>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="menu-button"
+            className="grid lg:hidden gap-[5px] w-8 h-8 place-content-center p-0 border border-white/25 bg-transparent cursor-pointer"
             type="button"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-expanded={menuOpen}
             aria-controls="mobile-navigation"
             aria-label="Toggle navigation"
           >
-            <span></span>
-            <span></span>
+            <span className="block w-[15px] h-[1px] bg-[#f8f8f7]"></span>
+            <span className="block w-[15px] h-[1px] bg-[#f8f8f7]"></span>
           </button>
-
         </div>
       </header>
 
-      <MobileMenu
-        open={menuOpen}
-        onClose={closeMenus}
-      />
+      <MobileMenu open={menuOpen} onClose={closeMenus} />
     </>
   );
 }
