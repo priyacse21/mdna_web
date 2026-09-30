@@ -1,12 +1,9 @@
-const steps = [
-  ['Identify', 'Understand the business need in front of you.', 'Need'],
-  ['Focus', 'Determine what deserves attention now.', 'Priority'],
-  ['Act', 'Deploy the marketing capability that fits.', 'Action'],
-  ['Move', 'Measure, learn and determine the next move.', 'Direction'],
-]
+import {steps} from "./data/homedata";
+
 
 import React from "react";
 import ProcessSteps from "../../components/common/ProcessSteps/ProcessSteps";
+import "../../screens/home/home.css";
 
 export default function MovementSection() {
   return <section className="movement-section dark-section">

@@ -139,3 +139,22 @@
     font-size: 26px;
   }
 }
+
+
+/* Error state- validation */
+
+
+.contact-field.has-error input,
+.contact-field.has-error textarea,
+.contact-field.has-error select {
+  color: #c0392b;
+}
+
+
+
+.contact-error {
+  display: block;
+  color: #c0392b;
+  font-size: 11px;
+  margin-top: 6px;
+}

@@ -1,3 +1,5 @@
+
+import "../../screens/home/home.css";
 export default function ServicesOverview() {
   const services = [['01', 'Lead Generation', 'PIPELINE'], ['02', 'Content, Search & AI Visibility', 'VISIBILITY'], ['03', 'Digital PR', 'CREDIBILITY'], ['04', 'Audits & Diagnostics', 'CLARITY'], ['05', 'Consulting', 'CAPABILITY']]
   return <section className="system-section dark-section" id="system">

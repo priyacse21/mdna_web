@@ -1,23 +1,7 @@
 import NeedList from "../../components/common/NeedList/NeedList";
+import "../../screens/home/home.css";
+import {audits} from "./data/homedata";
 
-const audits = [
-  {
-    title: "Marketing Setup Audit",
-    description: "Full review of marketing operations.",
-  },
-  {
-    title: "Channel Performance Audit",
-    description: "Deep-dive into marketing channels and ROI.",
-  },
-  {
-    title: "AI Readiness (GEO) Audit",
-    description: "Assessment for AI visibility readiness.",
-  },
-  {
-    title: "Website Audit",
-    description: "Evaluate conversion, SEO and UX issues.",
-  },
-]
 
 export default function AuditSection() {
   return <section className="audit-section light-section">
