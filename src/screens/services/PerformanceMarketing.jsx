@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { performancePlatforms, performanceServices, performanceStages } from './data/serviceData'
-
+import { performanceData } from './data/toolsCatlog'
+import ToolsSection from './common/ToolSection/Toolsection'
 
 export default function PerformanceMarketing() {
 	return <div className="[&_h1]:tracking-normal [&_h1]:normal-case [&_h2]:tracking-normal [&_h2]:normal-case">
@@ -35,5 +36,6 @@ export default function PerformanceMarketing() {
 			<p className="font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-[#bd00f2] max-[767px]:text-[8px]"><span>06</span> / Performance marketing</p>
 			<div><h2 className="mb-4 text-[54px] leading-[1.05] max-[767px]:text-[40px]" id="performance-cta-title">Spend with purpose.<br /><span className="text-[#bd00f2]">Learn from every click.</span></h2><p className="mb-6 max-w-[520px] text-[12px] leading-[1.7] text-[#a4aab3]">Bring acquisition, conversion and measurement together in a performance system built to keep improving.</p><Link className="inline-flex min-h-[45px] items-center gap-[14px] bg-[#f8f8f7] px-[17px] text-[11px] font-bold text-[#101116] no-underline transition-all duration-200 max-[767px]:text-[10px]" to="/contact">Plan your next campaign <span aria-hidden="true">↗</span></Link></div>
 		</section>
+		<ToolsSection tools={performanceData.tools} />
 	</div>
 }

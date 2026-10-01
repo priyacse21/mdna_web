@@ -2,7 +2,8 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import NeedList from '../../components/common/NeedList/NeedList'
 import { consultingJourney, consultingLenses, consultingOffers, consultingOutcomes } from './data/serviceData'
-
+import { consultingData } from './data/toolsCatlog'
+import ToolsSection from './common/ToolSection/Toolsection'
 
 export default function Consulting() {
 	const [activeOffer, setActiveOffer] = useState(0)
@@ -84,5 +85,6 @@ export default function Consulting() {
 		<section className="relative flex min-h-[540px] flex-col justify-center overflow-hidden bg-[#0d151d] px-[max(48px,calc((100vw-1320px)/2))] py-[84px] text-[#f8f8f7] max-[767px]:min-h-[450px] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="consulting-cta-title">
 			<p className="relative z-[1] mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-[#bd00f2] max-[767px]:mb-5 max-[767px]:text-[8px]"><span className="mr-[10px] inline-block w-[26px] align-middle border-t border-[#bd00f2]" />05 / Consulting</p><h2 className="relative z-[1] mb-5 text-[68px] leading-[1.03] max-[767px]:text-[44px]" id="consulting-cta-title">Ready to turn<br />uncertainty into a<br /><span className="text-[#bd00f2]">route?</span></h2><p className="relative z-[1] mb-6 max-w-[480px] text-[12px] leading-[1.7] text-[#a4aab3]">Book a consulting call, request a research scope or book a segmentation review.</p><Link className="relative z-[1] inline-flex min-h-[45px] items-center gap-[14px] bg-[#f8f8f7] px-[17px] text-[11px] font-bold text-[#101116] no-underline transition-all duration-200 max-[767px]:text-[10px]" to="/contact">Talk to mDNA <span aria-hidden="true">↗</span></Link><div className="absolute top-1/2 right-[18%] h-[260px] w-[260px] -translate-y-1/2 rotate-45 border border-[#bd00f2]/40 max-[767px]:right-[-35%] max-[767px]:h-[200px] max-[767px]:w-[200px]" />
 		</section>
+		 <ToolsSection tools={consultingData.tools} />
 	</div>
 }
