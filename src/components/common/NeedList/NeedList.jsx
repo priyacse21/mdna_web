@@ -143,11 +143,6 @@ export default function NeedList({
         );
       })}
 
-      {showFooter && (
-        <em className="block mt-3 text-[#6b7580] font-mono text-[9px] uppercase not-italic">
-          The starting point matters.
-        </em>
-      )}
     </div>
   );
 }

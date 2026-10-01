@@ -67,12 +67,6 @@ export default function Footer() {
               Connect
             </p>
 
-            <a
-              href="mailto:hello@mdna.digital"
-              className="text-[#f8f8f7] text-[12px] no-underline hover:text-[#bd00f2] transition-colors"
-            >
-              hello@mdna.digital
-            </a>
 
             {primaryNavigation.slice(3).map(({ label, path }) => (
               <Link
