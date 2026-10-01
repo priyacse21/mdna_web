@@ -1,11 +1,10 @@
 import React from "react";
-<<<<<<< HEAD
-import "../../pages/Home/Home.css";
 
-=======
+
+
 import { Link } from "react-router-dom";
 import { nodes } from "./data/homedata";
->>>>>>> 507a211eda43794b8f2d9c7cbc7686e26d513518
+
 
 const nodePositions = {
   n1: "left-0 top-[9%] max-[600px]:-left-2 max-[600px]:top-[4%]",
