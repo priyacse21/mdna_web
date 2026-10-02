@@ -1,24 +1,36 @@
-import {steps} from "./data/homedata";
-
-
 import React from "react";
 import ProcessSteps from "../../components/common/ProcessSteps/ProcessSteps";
-import "../../screens/home/home.css";
+import { steps } from "./data/homedata";
 
 export default function MovementSection() {
-  return <section className="movement-section dark-section">
-    <div className="section-heading">
-      <div><p className="eyebrow">03 - How the system moves</p><h2>Start where<br />you are.<br />Move from<br />there.</h2></div>
-      <p>There is no single starting point. The route is simple: identify the need, focus the work, act on the right capability, then determine the next move.</p>
-    </div>
-    <ProcessSteps steps={steps.map(([title, description, label], index) => ({
-      number: `0${index + 1}`,
-      title,  
-      description,
-      tag: label
-    }))} />
-    {/* <div className="timeline">{steps.map(([title, description, label], index) => <div className="timeline-step" key={title}>
-      <div className="step-number">0{index + 1}</div><h3>{title}</h3><p>{description}</p><small>{label}</small>
-    </div>)}</div> */}
-  </section>
+  return (
+    <section className="bg-[#0d151d] text-[#f8f8f7] py-[90px] px-4 md:px-6 lg:py-[8vw] lg:px-[max(12vw,40px)]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-end gap-5 lg:gap-[7vw] mb-12 lg:mb-20">
+        <div>
+          <p className="mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-violet max-md:mb-5 max-md:text-[8px]">03 - How the system moves</p>
+          <h2 className="text-[clamp(3.3rem,6vw,6.8rem)] leading-[0.92] tracking-[-0.075em] uppercase font-bold text-balance mb-2">
+            Start where
+            <br />
+            you are.
+            <br />
+            Move from
+            <br />
+            there.
+          </h2>
+        </div>
+        <p className="max-w-[540px] mb-2 text-[#758595] text-[13px] leading-[1.75]">
+          There is no single starting point. The route is simple: identify the need, focus the work, act on the right capability, then determine the next move.
+        </p>
+      </div>
+
+      <ProcessSteps
+        steps={steps.map(([title, description, label], index) => ({
+          number: `0${index + 1}`,
+          title,
+          description,
+          tag: label,
+        }))}
+      />
+    </section>
+  );
 }

@@ -1,4 +1,4 @@
-const audits = [
+export const audits = [
   {
     title: "Marketing Setup Audit",
     description: "Full review of marketing operations.",
@@ -18,7 +18,7 @@ const audits = [
 ]
 
 
-const points = [
+export const points = [
   {
     key: "lead",
     tab: "PIPELINE",
@@ -63,7 +63,7 @@ const points = [
 
 
 
-const nodes = [
+export const nodes = [
   {
     num: "01",
     title: "LEAD GENERATION",
@@ -102,7 +102,7 @@ const nodes = [
 ];
 
 
-const steps = [
+export const steps = [
   ['Identify', 'Understand the business need in front of you.', 'Need'],
   ['Focus', 'Determine what deserves attention now.', 'Priority'],
   ['Act', 'Deploy the marketing capability that fits.', 'Action'],
@@ -111,7 +111,7 @@ const steps = [
 
 
 
-const needs = [
+export const needs = [
   {
     title: "I need more qualified conversations.",
     service: "LEAD GENERATION",
@@ -138,7 +138,7 @@ const needs = [
 ];
 
 
-const needs1 = [
+export const homeneeds = [
   {
     title: "More qualified conversations",
   },

@@ -9,6 +9,15 @@ import webflowLogo from "../../../assets/toolsLogo/webflow.svg";
 import googleAnalyticsLogo from "../../../assets/toolsLogo/googleAnalytics.svg";
 import googleTagManagerLogo from "../../../assets/toolsLogo/googleTagManager.svg";
 import googleSearchConsoleLogo from "../../../assets/toolsLogo/googleSearchConsole.svg";
+import adobePremiereLogo from "../../../assets/toolsLogo/adobePremiere.svg";
+import zoomLogo from "../../../assets/toolsLogo/zoom.svg";
+import googleAdsLogo from "../../../assets/toolsLogo/googleAds.svg";
+import googleCloudLogo from "../../../assets/toolsLogo/googleCloud.svg";
+import linkedinAdvertiseLogo from "../../../assets/toolsLogo/linkedinAdvertise.svg";
+import tiktokAdsLogo from "../../../assets/toolsLogo/tiktokAds.svg";
+import youtubeAdsLogo from "../../../assets/toolsLogo/youtubeAnalytics.svg";
+import metaAdsLogo from "../../../assets/toolsLogo/meta.svg";
+import microsoftClarityLogo from "../../../assets/toolsLogo/microsoftClarity.svg";
 
 export const leadGenerationData = {
   tools: ["apollo", "lusha", "hubspot", "zapier", "linkedinSalesNavigator", "clay"],
@@ -16,6 +25,19 @@ export const leadGenerationData = {
 export const contentSearchAIData = {
   tools: [ "semrush", "webflow", "HubSpot","googleAnalytics", "googleTagManager", "googleSearchConsole"],
 };
+export const BrandingData = {
+  tools: ["zoom", "adobePremiere"],
+};
+export const performanceData = {
+  tools: ["googleAds","meta" ,"linkedinAdvertise","tiktokAds","youtubeAds","googleTagManager"],
+};
+export  const consultingData = {
+  tools: ["hubspot", "zapier","googleCloud"],
+};
+export  const auditDiagnosticData = {
+  tools: ["semrush", "googleAnalytics","googleCloud","googleTagManager","microsoftClarity"],
+};
+
 
 export const toolsCatalog = {
   apollo: {
@@ -75,4 +97,41 @@ export const toolsCatalog = {
     name: "Google Search Console",
     logo: googleSearchConsoleLogo,
   },
+   adobePremiere: {
+    name: "Adobe Premiere",
+    logo: adobePremiereLogo,
+  },
+   zoom: {
+    name: "zoom",
+    logo: zoomLogo,
+  },
+     googleAds: {
+    name: "googleAds",
+    logo: googleAdsLogo,
+  },
+     googleCloud: {
+    name: "googleCloud",
+    logo: googleCloudLogo,
+  },
+     linkedinAdvertise: {
+    name: "linkedinAdvertise",
+    logo: linkedinAdvertiseLogo,
+  },
+     tiktokAds: {
+    name: "tiktokAds",
+    logo: tiktokAdsLogo,
+  },
+     youtubeAds: {
+    name: "youtubeAds",
+    logo: youtubeAdsLogo,
+  },
+  meta:{
+    name:"metaAds",
+    logo:metaAdsLogo,
+  },
+   microsoftClarity:{
+    name:"microsoftClarity",
+    logo:microsoftClarityLogo,
+  },
+  
 };  

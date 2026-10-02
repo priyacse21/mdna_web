@@ -1,29 +1,37 @@
+import React from "react";
 
-import  React from "react";
-import "./OurStory.css";
-
-const OurStoryHero = () => {
+export default function OurStoryHero() {
   return (
-    <section className="ourstory-hero">
-      <div className="wrap ourstory-hero-grid">
+    <section className="bg-[#10171e] text-white py-10 md:py-[54px] md:pb-[62px] font-['Poppins',Arial,sans-serif]">
+      <div className="w-[calc(100%-48px)] lg:w-[calc(100%-clamp(24px,5vw,72px)*2)] max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-[1.15fr_0.85fr] gap-7 md:gap-[6vw] items-center">
         <div>
-          <div className="eyebrow">01 — Our Story</div>
-          <h1>Great businesses can still struggle to get on the map.</h1>
-          <p>
+          <div className="font-mono text-[10px] font-medium tracking-[0.16em] uppercase text-[#a604d6]">
+            01 — Our Story
+          </div>
+          <h1 className="text-[clamp(40px,5vw,72px)] leading-[1.03] tracking-[-0.045em] font-bold my-3.5 mb-[18px]">
+            Great businesses can still struggle to get on the map.
+          </h1>
+          <p className="text-[17px] leading-[1.6] text-[#d6d9de] max-w-[650px] m-0">
             mDNA began with a simple observation — and a different way of
             responding to the challenges businesses face when going to
             market.
           </p>
         </div>
 
-        <div aria-hidden="true" className="ourstory-map">
-          <i className="pin p1"></i>
-          <i className="pin p2"></i>
-          <i className="pin p3"></i>
+        <div
+          aria-hidden="true"
+          className="h-[170px] md:h-[260px] relative before:content-[''] before:absolute before:inset-[12%] before:border before:border-white/17 before:-skew-y-[10deg] before:-rotate-5"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px)",
+            backgroundSize: "36px 36px",
+          }}
+        >
+          <i className="absolute w-[11px] h-[11px] rounded-full bg-[#a604d6] shadow-[0_0_0_8px_rgba(166,4,214,0.13)] left-[28%] top-[34%]" />
+          <i className="absolute w-[11px] h-[11px] rounded-full bg-[#a604d6] shadow-[0_0_0_8px_rgba(166,4,214,0.13)] left-[67%] top-[58%]" />
+          <i className="absolute w-[11px] h-[11px] rounded-full bg-[#a604d6] shadow-[0_0_0_8px_rgba(166,4,214,0.13)] left-[48%] top-[77%]" />
         </div>
       </div>
     </section>
   );
-};
-
-export default OurStoryHero;
+}
