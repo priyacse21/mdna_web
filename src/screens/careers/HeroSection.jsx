@@ -1,7 +1,7 @@
 
 const HeroSection = () => {
   return (
-    <section className="flex min-h-[690px] items-center overflow-hidden bg-[#111318] py-[130px] pb-[75px] font-sans text-white max-[900px]:pt-[110px] max-[560px]:pt-[110px]">
+    <section className="flex min-h-[690px] items-center overflow-hidden bg-[#111318] py-[40px] sm:py-[60px] lg:py-[100px] font-sans text-white">
       <div className="box-border grid w-full max-w-[1380px] grid-cols-[1.05fr_0.95fr] items-center gap-[65px] mx-auto px-12 max-[900px]:grid-cols-1 max-[900px]:gap-[30px] max-[900px]:px-7 max-[560px]:px-6">
         <div>
           <div className="mb-6 font-mono text-[11px] tracking-[0.08em] uppercase text-[#d5d2ca]">

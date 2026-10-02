@@ -55,7 +55,7 @@ const Contact = () => {
 
   return (
     <div className="bg-[#f3f1eb] font-sans text-[#111318]">
-      <main className="px-[4vw] pt-[3vw] pb-[8vw] max-[760px]:px-7 max-[760px]:pt-[55px] max-[760px]:pb-[70px]">
+      <main className="px-[4vw] py-[40px] sm:py-[60px] lg:py-[100px] max-[760px]:px-7">
 
         
         <section className="grid grid-cols-[minmax(0,1fr)_minmax(0,1fr)] items-start gap-[7vw] max-[760px]:grid-cols-1 max-[760px]:gap-[65px]">

@@ -14,7 +14,8 @@ export default function HeroSection() {
   return (
     <section
       aria-labelledby="hero-title"
-      className="min-h-screen relative flex items-center overflow-hidden pt-[114px] pb-[58px] sm:pt-[128px] sm:pb-[70px] lg:pt-[142px] lg:pb-[78px] bg-[#10171e] text-white font-['Poppins',Arial,sans-serif]"
+  className="relative flex items-center overflow-hidden py-[40px] sm:py-[60px] lg:py-[100px] bg-[#10171e] text-white font-['Poppins',Arial,sans-serif]"
+
     >
       {/* Background grid */}
       <div
@@ -81,7 +82,7 @@ export default function HeroSection() {
         {/* Marketing system map */}
         <div
           aria-label="Illustrative mDNA marketing system map"
-          className="relative min-h-[410px] sm:min-h-[430px] md:min-h-[470px] lg:min-h-[520px] max-[600px]:mt-2.5"
+         className="relative min-h-[380px] sm:min-h-[390px] md:min-h-[420px] lg:min-h-[450px] max-[600px]:mt-2.5" 
         >
           <div className="absolute inset-0">
             {/* Diamond outer frame */}

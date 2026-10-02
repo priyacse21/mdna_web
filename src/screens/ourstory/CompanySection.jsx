@@ -1,6 +1,6 @@
 export default function CompanySection() {
   return (
-    <section className="bg-[#f5f4f7] text-[#171b20] py-10 md:py-12 font-['Poppins',Arial,sans-serif]">
+    <section className="bg-[#f5f4f7] text-[#171b20] py-[40px] sm:py-[60px] lg:py-[100px]  md:py-12 font-['Poppins',Arial,sans-serif]">
       <div className="w-[calc(100%-48px)] lg:w-[calc(100%-clamp(24px,5vw,72px)*2)] max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-[1fr_0.65fr] gap-7 md:gap-[6vw] items-center">
         <div>
           <div className="font-mono text-[10px] font-medium tracking-[0.16em] uppercase text-[#a604d6]">

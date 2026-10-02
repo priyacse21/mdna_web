@@ -209,4 +209,3 @@ export const performanceStages = [
 	['03', 'Improve', 'Use what the data reveals to refine spend, creative and conversion.'],
 ]
 
-export const performancePlatforms = ['Google Ads', 'Meta Ads', 'LinkedIn Ads', 'TikTok Ads', 'YouTube', 'Google Analytics 4', 'Google Tag Manager']

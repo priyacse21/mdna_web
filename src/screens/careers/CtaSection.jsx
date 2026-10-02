@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const CtaSection = () => {
   return (
-    <section className="bg-[#b400e8] py-[75px] pb-20 font-sans text-white max-[560px]:py-[62px]">
+    <section className="bg-[#b400e8] py-[40px] sm:py-[60px] lg:py-[100px] font-sans text-white">
       <div className="mx-auto grid w-full max-w-[1380px] grid-cols-[1fr_auto] items-end gap-[50px] px-12 max-[900px]:grid-cols-1 max-[900px]:gap-6 max-[900px]:px-7 max-[560px]:px-6">
         <div>
           <div className="font-mono text-[11px] tracking-[0.08em] uppercase">04 / WHAT'S NEXT</div>

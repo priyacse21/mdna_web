@@ -99,10 +99,10 @@ export default function LeadGeneration() {
 			</div>
 		</section>
 
-		<section className="bg-[#f2f0ea] px-[max(48px,calc((100vw-1300px)/2))] py-[90px] pb-[100px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="lead-targeting-title">
+		<section className="bg-[#f5f4f7] px-[max(48px,calc((100vw-1300px)/2))] py-[90px] pb-[100px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="lead-targeting-title">
 			<div className="mb-[34px] grid grid-cols-[1fr_280px] items-center gap-16 max-[1023px]:grid-cols-1 max-[1023px]:gap-5">
 				<div>
-					<p className="mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-[#bd00f2] max-[767px]:mb-5 max-[767px]:text-[8px]"><span>05</span> / Signature interaction</p>
+					<p className=" mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-[#bd00f2] max-[767px]:mb-5 max-[767px]:text-[8px]"><span>05</span> / Signature interaction</p>
 					<h2 className="m-0 text-[64px] leading-[1.03] max-[767px]:text-[42px]" id="lead-targeting-title">The account targeting board.</h2>
 				</div>
 				<p className="mb-[6px] text-[13px] leading-[1.7] text-[#65717c] max-[1023px]:max-w-[520px]">Lead generation is not a list of names. It is a system for deciding who deserves attention, then connecting the right signals.</p>

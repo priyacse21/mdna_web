@@ -5,7 +5,7 @@ import { faqs } from "./data/insightsData";
 
 const FAQContactSection = () => {
   return (
-    <div className="grid grid-cols-2 gap-[70px] bg-[#111318] px-[7vw] pt-[55px] pb-[45px] font-sans text-white max-[900px]:grid-cols-1 max-[900px]:gap-[42px] max-[900px]:px-6 max-[900px]:py-[45px]">
+    <div className="grid grid-cols-2 gap-[70px] bg-[#111318] px-[7vw] py-[40px] sm:py-[60px] lg:py-[100px] font-sans text-white max-[900px]:grid-cols-1 max-[900px]:gap-[42px] max-[900px]:px-6">
       <section aria-labelledby="faq-title">
         <div className="font-mono text-[10px] leading-[1.2] tracking-[0.14em] uppercase text-white/40">04 / FAQs</div>
         <h2 className="mt-[10px] mb-5 text-[clamp(38px,4vw,58px)] leading-[0.95] tracking-[-0.055em] font-bold">

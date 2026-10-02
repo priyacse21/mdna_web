@@ -3,11 +3,11 @@ import { toolsCatalog } from "../../data/toolsCatlog";
 export default function ToolsSection({ tools = [] }) {
   return (
     <section
-      className="w-full py-4 pb-8 bg-[#f5f3ed] border-t border-[#9a9a94]"
+      className="border-t border-[#10161d]/[0.18] bg-[#f2f0ea] px-[max(48px,calc((100vw-1300px)/2))] py-[82px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]"
       aria-labelledby="tools-title"
     >
-      <div className="w-[min(calc(100%-32px),1680px)] sm:w-[min(calc(100%-40px),1680px)] md:w-[min(calc(100%-60px),1680px)] mx-auto">
-        <div className="block md:grid md:grid-cols-[80px_minmax(0,1fr)] items-start mb-[22px] md:mb-[26px]">
+      <div className="mx-auto w-full">
+        <div className="mb-[22px] block items-start md:mb-[26px] md:grid md:grid-cols-[80px_minmax(0,1fr)]">
           <p className="mt-[2px] mb-3 md:mb-0 text-[8px] leading-none tracking-[0.12em] uppercase text-[#6b7078] font-mono">
             TOOLS
           </p>

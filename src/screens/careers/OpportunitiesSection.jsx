@@ -2,7 +2,7 @@
 
 const OpportunitiesSection = () => {
   return (
-    <section className="bg-[#111318] py-[90px] pb-[95px] font-sans text-white max-[560px]:py-[70px]">
+    <section className="bg-[#111318] py-[40px] sm:py-[60px] lg:py-[100px] font-sans text-white">
       <div className="mx-auto w-full max-w-[1380px] px-12 max-[900px]:px-7 max-[560px]:px-6">
         <div className="mb-12 flex items-end justify-between gap-[60px] max-[900px]:grid max-[900px]:grid-cols-1 max-[900px]:gap-6">
           <div>

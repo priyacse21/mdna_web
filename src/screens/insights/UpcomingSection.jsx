@@ -3,7 +3,7 @@ import { drafts } from "./data/insightsData";
 
 const UpcomingSection = () => {
   return (
-    <section aria-labelledby="upcoming-title" className="mt-[54px] border-t border-[#111318]/[0.15] pt-12 font-sans">
+    <section aria-labelledby="upcoming-title" className="border-t border-[#111318]/[0.15]  py-[40px] sm:py-[60px] lg:py-[100px] font-sans">
       <div className="mx-auto w-[min(calc(100%-72px),1440px)] max-[900px]:w-[min(calc(100%-48px),1440px)] max-[600px]:w-[calc(100%-48px)]">
         <div className="mb-[25px] grid grid-cols-[25%_1fr] gap-[50px] max-[900px]:grid-cols-1 max-[900px]:gap-1">
           <div className="pt-[5px] font-mono text-[10px] leading-[1.2] tracking-[0.14em] uppercase text-[#747980] max-[900px]:pt-0">

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 export default function CtaSection() {
   return (
     <section
-      className="relative min-h-[620px] bg-[#0d151d] text-[#f8f8f7] grid place-items-center content-center text-center py-[100px] px-[30px] overflow-hidden before:content-[''] before:absolute before:w-[680px] before:h-[680px] before:border before:border-white/8 before:rounded-full before:pointer-events-none"
+      className="relative min-h-[600px] bg-[#0d151d] text-[#f8f8f7] grid place-items-center content-center text-center py-[100px] px-[30px] overflow-hidden before:content-[''] before:absolute before:w-[680px] before:h-[680px] before:border before:border-white/8 before:rounded-full before:pointer-events-none"
       id="contact"
     >
       <div
@@ -12,8 +12,6 @@ export default function CtaSection() {
       />
 
       <div className="relative z-1 max-w-3xl flex flex-col items-center">
-        <p className="mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-violet max-md:mb-5 max-md:text-[8px]">07 - The next move</p>
-
         <h2 className="text-[clamp(3.3rem,6.5vw,7.4rem)] leading-[0.92] tracking-[-0.075em] uppercase font-bold text-balance mb-5">
           Ready to make
           <br />

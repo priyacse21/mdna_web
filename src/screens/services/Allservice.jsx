@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { servicePortfolios } from './data/serviceData'
 
 export default function Allservice() {
-	return <section className="min-h-[calc(100vh-68px)] bg-[#f2f0ea] px-[30px] pt-[74px] pb-[90px] max-[767px]:px-4 max-[767px]:pt-[58px] max-[767px]:pb-16" aria-labelledby="all-services-title">
+	return <section className="min-h-[calc(100vh-68px)] bg-[#f2f0ea] px-[30px] py-[40px] sm:py-[60px] lg:py-[100px] max-[767px]:px-4" aria-labelledby="all-services-title">
 		<header className="grid grid-cols-[1fr_320px] items-end gap-16 pb-12 max-[800px]:grid-cols-1 max-[800px]:gap-6 max-[767px]:gap-[18px] max-[767px]:pb-[30px]">
 			<div>
 				<p className="mb-[30px] font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-[#69737d]"><span className="text-[#b400e8]">03</span> / Services</p>

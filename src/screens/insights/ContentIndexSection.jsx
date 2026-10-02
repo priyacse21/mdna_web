@@ -7,7 +7,7 @@ const ContentIndexSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="bg-[#f3f1eb] py-[72px] pb-[68px] font-sans text-[#111318] max-[600px]:py-[58px] max-[600px]:pb-[55px]">
+    <section className="bg-[#f3f1eb] py-[40px] sm:py-[60px] lg:py-[100px] font-sans text-[#111318]">
       <div className="mx-auto w-[min(calc(100%-72px),1440px)] max-[900px]:w-[min(calc(100%-48px),1440px)] max-[600px]:w-[calc(100%-48px)]">
         <div className="grid grid-cols-[25%_1fr] gap-[50px] max-[900px]:grid-cols-1 max-[900px]:gap-5">
           <div className="pt-[5px] font-mono text-[10px] leading-[1.2] tracking-[0.14em] uppercase text-[#747980] max-[900px]:pt-0">

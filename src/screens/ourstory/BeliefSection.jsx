@@ -2,7 +2,7 @@ import React from "react";
 
 export default function BeliefSection() {
   return (
-    <section className="py-[50px] font-['Poppins',Arial,sans-serif] text-[#171b20]">
+    <section className="py-[40px] sm:py-[60px] lg:py-[100px] font-['Poppins',Arial,sans-serif] text-[#171b20]">
       <div className="w-[calc(100%-48px)] lg:w-[calc(100%-clamp(24px,5vw,72px)*2)] max-w-[1400px] mx-auto">
         <div className="font-mono text-[10px] font-medium tracking-[0.16em] uppercase text-[#a604d6]">
           05 — The Belief

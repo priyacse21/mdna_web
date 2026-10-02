@@ -33,7 +33,7 @@ export default function ExplorerSection() {
   };
 
   return (
-    <section aria-labelledby="signature-title" className="relative bg-[#121b23] text-white overflow-hidden py-[88px] lg:py-[126px] font-['Poppins',Arial,sans-serif]">
+    <section aria-labelledby="signature-title" className="relative bg-[#121b23] text-white overflow-hidden py-[88px] lg:py-[100px] font-['Poppins',Arial,sans-serif]">
       <div className="w-[min(calc(100%-52px),1440px)] sm:w-[min(calc(100%-64px),1440px)] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[0.78fr_1.22fr] gap-5 lg:gap-[60px] items-end">
           <div>
