@@ -4,6 +4,9 @@ import NeedList from '../../components/common/NeedList/NeedList'
 import { contentCapabilities, contentHeroNeeds, contentImpacts, contentProcess, contentProblemNeeds, visibilityModes } from './data/serviceData'
 import { contentSearchAIData } from './data/toolsCatlog'
 import ToolsSection from './common/ToolSection/Toolsection'
+import ServiceShowcase from './common/ServiceShowcase/ServiceShowcase'
+
+import { SERVICES_ContentSearchAI } from './data/serviceData'
 
 export default function ContentSearchAI() {
 	const [activeCapability, setActiveCapability] = useState(0)
@@ -39,22 +42,17 @@ export default function ContentSearchAI() {
 			</div>
 		</section>
 
-		<section className="bg-[#0d151d] px-[max(48px,calc((100vw-1320px)/2))] pt-[86px] pb-[100px] text-[#f8f8f7] max-[767px]:px-5 max-[767px]:py-[68px]" id="visibility-system" aria-labelledby="content-ai-system-title">
-			<div className="mb-11 grid grid-cols-[1fr_310px] items-end gap-[60px] max-[1023px]:grid-cols-1 max-[1023px]:gap-5"><div><p className="mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-[#bd00f2] max-[767px]:mb-5 max-[767px]:text-[8px]"><span>03</span> / Visibility system</p><h2 className="m-0 max-w-[820px] text-[64px] leading-[1.04] max-[767px]:text-[40px]" id="content-ai-system-title">One visibility system. Six ways to activate it.</h2></div>
-				<p className="mb-[5px] text-[12px] leading-[1.7] text-[#a1a5ad] max-[1023px]:max-w-[500px]">Explore the approved mDNA service components. Select a capability to see what it is, the client impact it defines and its next-step action.</p>
-			</div>
-			<div className="grid min-h-[500px] grid-cols-[34%_1fr] border border-white/[0.15] max-[767px]:grid-cols-1">
-				<div className="border-r border-white/[0.15] max-[767px]:border-r-0 max-[767px]:border-b" role="group" aria-label="Select a visibility capability">
-					{contentCapabilities.map(([number, name], index) => <button className={`grid min-h-[58px] w-full grid-cols-[28px_1fr_18px] items-center gap-3 border-0 border-b border-white/[0.14] px-4 text-left ${index === activeCapability ? 'bg-[#f8f8f7] text-[#101116]' : 'bg-transparent text-[#d0d1d5]'} max-[767px]:min-h-[50px]`} type="button" key={number} onClick={() => setActiveCapability(index)} aria-pressed={index === activeCapability}><span className={`font-mono text-[8px] ${index === activeCapability ? 'text-[#bd00f2]' : 'text-[#6f7480]'}`}>{number}</span><strong className="text-[11px] font-medium">{name}</strong><b className={`font-normal ${index === activeCapability ? 'text-[#bd00f2]' : 'text-[#70747d]'}`} aria-hidden="true">{index === activeCapability ? '×' : '+'}</b></button>)}
-				</div>
-				<div className="relative flex min-h-[500px] flex-col justify-between overflow-hidden bg-[#141720] bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[length:58px_58px] px-[30px] py-6 max-[767px]:min-h-[390px] max-[767px]:p-[18px]" aria-live="polite">
-					<span className="z-[1] font-mono text-[8px] text-[#7d828c]">{capability[0]} / 06</span><span className="absolute top-6 right-6 z-[1] font-mono text-[8px] text-[#7d828c] max-[767px]:hidden">VIS / CONTENT</span>
-					<div className="relative z-[1] w-[min(100%,540px)] px-2 py-6"><h3 className="mb-2 text-[38px] max-[767px]:text-[30px]">{capability[1]}</h3><p className="mb-6 text-[12px] text-[#a2a8b0]">{capability[2]}</p><div className="mb-6 border-l border-[#bd00f2] pl-3"><span className="font-mono text-[8px] uppercase text-[#bd00f2]">Impact for client</span><p className="mt-[6px] text-[11px] leading-[1.6] text-[#d3d5da]">{capability[3]}</p></div></div>
-					<Link to="/contact" className="relative z-[1] self-end font-mono text-[9px] uppercase text-[#f8f8f7] no-underline">Get a content plan <span aria-hidden="true">↗</span></Link>
-					<span className="absolute right-[11%] bottom-[-110px] h-[220px] w-[220px] rotate-45 border border-[#bd00f2]/[0.45]" />
-				</div>
-			</div>
-		</section>
+
+ <ServiceShowcase
+			eyebrowIndex="03"
+			eyebrowLabel=" Visibility system"
+			heading="One visibility system. Six ways to activate it.."
+			description="Explore the approved mDNA service components. Select a capability to see what it is, the client impact defined in the portfolio, and its next-step action."
+			panelLabel="VIS / CONTENT"
+			codePrefix="SERVICE COMPONENT"
+			items={SERVICES_ContentSearchAI}
+		/>
+	
 
 		<section className="bg-[#f2f0ea] px-[max(48px,calc((100vw-1020px)/2))] pt-[88px] pb-[100px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="content-ai-process-title">
 			<div className="mb-12"><p className="mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-[#bd00f2] max-[767px]:mb-5 max-[767px]:text-[8px]"><span>04</span> / Process</p><h2 className="mb-0 ml-auto max-w-[780px] text-[64px] leading-[1.04] max-[1023px]:text-[56px] max-[767px]:mt-6 max-[767px]:text-[42px]" id="content-ai-process-title">From useful ideas to sustained visibility.</h2></div>

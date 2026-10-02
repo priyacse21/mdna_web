@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom'
 import { brandingBenefits, brandingFormats, brandingJourney, brandingServices } from './data/serviceData'
 import { BrandingData } from './data/toolsCatlog'
 import ToolsSection from './common/ToolSection/Toolsection'
+import ServiceShowcase from './common/ServiceShowcase/ServiceShowcase'
 
+
+
+import { SERVICES_branding } from './data/serviceData'
 
 export default function Branding() {
 	const [activeService, setActiveService] = useState(0)
@@ -31,13 +35,15 @@ export default function Branding() {
 			<div className="ml-auto max-w-[1030px] border-b border-[#10161d]/[0.18] pb-[42px] max-[767px]:mt-6 max-[767px]:pb-7"><h2 className="m-0 max-w-[900px] text-[72px] leading-[1.04] max-[767px]:text-[42px]" id="branding-premise-title">PR that moves beyond press releases.</h2><p className="mt-6 mb-0 max-w-[640px] text-[14px] leading-[1.7] text-[#606b76]">mDNA uses digital channels, content formats, communities and reputation platforms to help brands build visibility and credibility.</p></div>
 		</section>
 
-		<section className="bg-[#0d151d] px-[max(48px,calc((100vw-1320px)/2))] pt-[84px] pb-[100px] text-[#f8f8f7] max-[767px]:px-5 max-[767px]:py-[68px]" id="branding-system" aria-labelledby="branding-system-title">
-			<div className="mb-[42px] grid grid-cols-[1fr_300px] items-end gap-[60px] max-[1023px]:grid-cols-1 max-[1023px]:gap-5 max-[767px]:gap-[18px]"><div><p className="mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-[#bd00f2] max-[767px]:mb-5 max-[767px]:text-[8px]"><span>02</span> / The service system</p><h2 className="m-0 max-w-[850px] text-[64px] leading-[1.04] max-[767px]:text-[42px]" id="branding-system-title">Four ways to create digital attention.</h2></div><p className="mb-1 text-[12px] leading-[1.7] text-[#a1a5ad]">Choose a format. See how it works. Move from attention to the next useful action.</p></div>
-			<div className="grid min-h-[500px] grid-cols-[34%_1fr] border border-white/[0.15] max-[767px]:grid-cols-1">
-				<div className="border-r border-white/[0.15] max-[767px]:border-r-0 max-[767px]:border-b" role="group" aria-label="Choose a branding service">{brandingServices.map(([number, name], index) => <button className={`grid min-h-[76px] w-full grid-cols-[34px_1fr_18px] items-center gap-3 border-0 border-b border-white/[0.15] px-[18px] text-left ${index === activeService ? 'bg-[#f8f8f7] text-[#101116]' : 'bg-transparent text-[#d1d3d8]'} max-[767px]:min-h-14 max-[767px]:px-3`} type="button" key={number} onClick={() => setActiveService(index)} aria-pressed={index === activeService}><span className={`font-mono text-[8px] ${index === activeService ? 'text-[#bd00f2]' : 'text-[#7a808a]'}`}>{number}</span><strong className="text-xs font-medium max-[767px]:text-[10px]">{name}</strong><b className={`font-normal ${index === activeService ? 'text-[#bd00f2]' : 'text-[#7a808a]'}`} aria-hidden="true">{index === activeService ? '×' : '+'}</b></button>)}</div>
-				<div className="relative flex min-h-[500px] flex-col justify-between overflow-hidden bg-[#141720] bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[length:58px_58px] px-[30px] py-6 max-[767px]:min-h-[390px] max-[767px]:p-[18px]" aria-live="polite"><span className="relative z-[1] font-mono text-[8px] text-[#7c828d]">{service[0]} / 04</span><span className="absolute top-6 right-6 z-[1] font-mono text-[8px] text-[#7c828d] max-[767px]:hidden">BRANDING SERVICES</span><div className="relative z-[1] w-[min(100%,540px)] px-2 py-6"><h3 className="mb-[10px] text-[44px] leading-[1.05] max-[767px]:text-[32px]">{service[1]}</h3><p className="mb-7 text-[13px] text-[#a4aab3]">{service[2]}</p><div className="mb-6 border-l border-[#bd00f2] pl-3"><span className="font-mono text-[8px] uppercase text-[#bd00f2]">Impact</span><p className="mt-[6px] text-[11px] text-[#d3d5da]">{service[3]}</p></div><Link to="/contact" className="inline-flex min-h-10 items-center gap-[14px] border border-current px-[17px] text-[9px] font-bold text-white no-underline">{service[4]} <span aria-hidden="true">↗</span></Link></div><span className="absolute right-[12%] bottom-[-120px] h-[240px] w-[240px] rotate-45 border border-[#bd00f2]/40" /></div>
-			</div>
-		</section>
+	<ServiceShowcase
+				eyebrowIndex="02"
+				eyebrowLabel=" THE SERVICE SYSTEM"
+				heading="Six Ways We Create Digital Attention."
+				description="Choose a format. See how it works. Move from attention to the next useful action.."
+				panelLabel="Digital PR services"
+				codePrefix="mDNA / PR "
+				items={SERVICES_branding}
+			/>
 
 		<section className="bg-[#f2f0ea] px-[max(48px,calc((100vw-1000px)/2))] pt-[92px] pb-[100px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="branding-journey-title">
 			<p className="mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-[#bd00f2] max-[767px]:mb-5 max-[767px]:text-[8px]"><span>03</span> / The journey</p>
