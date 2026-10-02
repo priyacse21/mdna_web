@@ -3,10 +3,32 @@ import { Link } from 'react-router-dom'
 import { accountNodes, leadMethods, leadOutcomes, leadPathway } from './data/serviceData'
 import { leadGenerationData } from './data/toolsCatlog'
 import ToolsSection from './common/ToolSection/Toolsection'
+import ServiceShowcase from './common/ServiceShowcase/ServiceShowcase'
+
+import {SERVICES} from './data/serviceData'
+
+const ACCOUNT_NODES = [
+  { id: 1, title: "Priority target", x: 10, y: 16, tilt: -4 },
+  { id: 2, title: "Ideal buyer group", x: 38, y: 12, tilt: 4 },
+  { id: 3, title: "Decision-maker", x: 78, y: 28, tilt: -3 },
+  { id: 4, title: "Target prospect", x: 23, y: 72, tilt: 3 },
+  { id: 5, title: "Qualified signal", x: 62, y: 70, tilt: -4 },
+];
+ 
+// purple connector lines, in % of container: [x1, y1, x2, y2]
+const ACCOUNT_LINES = [
+  [25, 31, 45, 28.5],
+  [50, 32, 68, 48],
+  [40, 66, 56, 49],
+];
+
+ 
+const pad = (n) => String(n).padStart(2, "0");
 
 export default function LeadGeneration() {
-	const [activeMethod, setActiveMethod] = useState(0)
-	const selectedMethod = leadMethods[activeMethod]
+	const [activeId, setActiveId] = useState(SERVICES[0].id);
+  const activeIndex = SERVICES.findIndex((s) => s.id === activeId);
+  const active = SERVICES[activeIndex];
 	const accountPositions = [
 		'top-[17%] left-[10%] max-[767px]:left-[4%]',
 		'top-[13%] left-[43%] max-[767px]:top-[12%] max-[767px]:left-auto max-[767px]:right-[4%]',
@@ -14,6 +36,8 @@ export default function LeadGeneration() {
 		'bottom-[15%] left-[23%] max-[767px]:bottom-[12%] max-[767px]:left-[4%]',
 		'bottom-[16%] right-[25%] max-[767px]:bottom-[12%] max-[767px]:right-[4%]',
 	]
+
+ const [activeNode, setActiveNode] = useState(2);
 
 	return <main className="[&_h1]:tracking-normal [&_h1]:normal-case [&_h2]:tracking-normal [&_h2]:normal-case [&_.eyebrow_span]:text-[#bd00f2]">
 		<section className="grid min-h-[700px] grid-cols-[minmax(400px,0.92fr)_minmax(460px,1.08fr)] bg-[#101116] text-white max-[1023px]:grid-cols-1" aria-labelledby="lead-title">
@@ -50,36 +74,17 @@ export default function LeadGeneration() {
 				</div>
 			</div>
 		</section>
+     
 
-		<section className="bg-[#0d151d] px-[max(48px,calc((100vw-1300px)/2))] pt-20 pb-[100px] text-[#f8f8f7] max-[767px]:px-5 max-[767px]:py-[68px]" id="lead-system" aria-labelledby="lead-system-title">
-			<div className="mb-11 grid grid-cols-[1fr_320px] items-end gap-16 max-[1023px]:grid-cols-1 max-[1023px]:gap-5">
-				<div>
-					<p className="mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-[#bd00f2] max-[767px]:mb-5 max-[767px]:text-[8px]"><span>03</span> / The lead generation system</p>
-					<h2 className="m-0 max-w-[780px] text-[64px] leading-[1.05] max-[767px]:text-[40px]" id="lead-system-title">Three ways to move from target to conversation.</h2>
-				</div>
-				<p className="mb-[6px] text-[13px] leading-[1.7] text-[#9ca2aa] max-[1023px]:max-w-[520px]">Choose the mechanism that fits the problem. See what it does, what it changes and where the next conversation starts.</p>
-			</div>
-			<div className="grid min-h-[470px] grid-cols-[34%_1fr] border border-white/[0.14] max-[767px]:grid-cols-1" aria-label="Lead generation methods">
-				<div className="border-r border-white/[0.14] max-[767px]:border-r-0 max-[767px]:border-b">
-					{leadMethods.map((method, index) => <button className={`grid min-h-[55px] w-full grid-cols-[28px_1fr_20px] items-center gap-[14px] border-0 border-b border-white/[0.14] bg-transparent px-[18px] text-left text-[#c5c8ce] ${index === activeMethod ? 'bg-[#f8f8f7] text-[#101116]' : ''}`} type="button" key={method.number} onClick={() => setActiveMethod(index)} aria-pressed={index === activeMethod}>
-						<span className={`font-mono text-[9px] ${index === activeMethod ? 'text-[#bd00f2]' : 'text-[#686d76]'}`}>{method.number}</span><strong className="text-[12px] font-medium">{method.name}</strong><b className={`font-normal ${index === activeMethod ? 'text-[#bd00f2]' : 'text-[#737782]'}`} aria-hidden="true">+</b>
-					</button>)}
-				</div>
-				<div className="relative flex min-h-[470px] flex-col justify-between overflow-hidden bg-[#141720] bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[length:58px_58px] px-7 py-[22px] max-[767px]:min-h-[390px] max-[767px]:p-[18px]" aria-live="polite">
-					<span className="z-[1] font-mono text-[8px] text-[#777e89]">{selectedMethod.number} / 03</span>
-					<span className="absolute top-[22px] right-6 z-[1] font-mono text-[8px] text-[#777e89] max-[767px]:hidden">LEAD GENERATION / SERVICE SYSTEM</span>
-					<div className="relative z-[1] w-[min(100%,500px)] px-[10px] py-[26px]">
-						<h3 className="mb-2 text-[38px] max-[767px]:text-[30px]">{selectedMethod.name}</h3>
-						<p className="mb-[18px] text-[13px] text-[#a7adb6]">{selectedMethod.description}</p>
-						<div className="mb-5 border-l border-[#bd00f2] pl-3"><span className="font-mono text-[8px] uppercase text-[#bd00f2]">Impact</span><p className="mt-[6px] text-[12px] leading-[1.6] text-[#d4d7dd]">{selectedMethod.impact}</p></div>
-						<Link className="inline-flex min-h-[38px] items-center gap-[14px] border border-current px-[17px] text-[9px] font-bold text-white no-underline" to="/contact">Talk through your pipeline <span aria-hidden="true">↗</span></Link>
-					</div>
-					<span className="z-[1] font-mono text-[8px] text-[#777e89]">mDNA / LG / {selectedMethod.number}</span>
-					<span className="absolute right-6 bottom-[22px] z-[1] font-mono text-[8px] text-[#777e89]">TARGET · MESSAGE · CONVERSATION</span>
-					<div className="absolute right-[-100px] bottom-[-230px] h-[400px] w-[400px] rounded-full border border-[#bd00f2]/[0.45] shadow-[0_0_0_60px_rgba(189,0,242,0.035),0_0_0_120px_rgba(189,0,242,0.025)]" />
-				</div>
-			</div>
-		</section>
+		  <ServiceShowcase
+      eyebrowIndex="03"
+      eyebrowLabel="The lead generation system"
+      heading="Three ways to move from target to conversation."
+      description="Choose the mechanism that fits the problem. See what it does, what it changes and where the next conversation starts."
+      panelLabel="Lead generation / Service system"
+      codePrefix="mDNA / LG"
+      items={SERVICES}
+    />
 
 		<section className="bg-[#f2f0ea] px-[max(48px,calc((100vw-1300px)/2))] py-[90px] pb-[100px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="lead-pathway-title">
 			<div className="mb-[78px] ml-auto grid max-w-[940px] grid-cols-[1fr_2fr] gap-10 max-[767px]:mb-[42px] max-[767px]:grid-cols-1 max-[767px]:gap-5">
@@ -119,6 +124,116 @@ export default function LeadGeneration() {
 				<span className="absolute right-5 bottom-[14px] font-mono text-[8px] text-[#68727d]">STATUS: <b className="text-[#bd00f2]">FOCUS ACTIVE</b></span>
 			</div>
 		</section>
+		<section className="px-6 py-16">
+       <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#111218]/60">
+        <span className="text-[#b400e6]">05</span> / Signature interaction
+      </p>
+ 
+      {/* Heading + description */}
+      <div className="mt-4 grid gap-8 lg:grid-cols-[1fr_350px] lg:items-end">
+        <h2 className="max-w-[800px] text-5xl font-semibold leading-[0.95] tracking-tighter text-[#111218] sm:text-7xl lg:text-[88px]">
+          The account targeting board.
+        </h2>
+        <p className="text-lg leading-relaxed text-[#111218]/60 lg:pb-4">
+          Lead generation is not a list of names. It is a system for deciding
+          who deserves attention, then connecting the right signals.
+        </p>
+      </div>
+      <div className="overflow-x-auto">
+        <div className="relative h-[650px] min-w-[1000px] overflow-hidden border-y border-black/15 bg-[#faf9f6]">
+          {/* Perspective grid */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -inset-[10%] bg-[linear-gradient(to_right,rgba(17,18,24,0.07)_1px,transparent_1px),linear-gradient(to_bottom,rgba(17,18,24,0.07)_1px,transparent_1px)] bg-[size:130px_130px] [transform:perspective(900px)_rotateX(10deg)]"
+          />
+ 
+          {/* Top-left label */}
+          <p className="absolute left-6 top-6 font-mono text-[10px] uppercase leading-4 tracking-[0.12em] text-[#111218]/60">
+            Account map / Live view
+            <br />
+            Select a node
+          </p>
+ 
+          {/* Crosshair */}
+          <div
+            aria-hidden
+            className="absolute left-1/2 top-[7%] h-[86%] w-px bg-[#111218]/25"
+          />
+          <div
+            aria-hidden
+            className="absolute left-[5%] top-[54%] h-px w-[90%] bg-[#111218]/25"
+          />
+ 
+          {/* Purple connector lines */}
+          <svg
+            aria-hidden
+            className="pointer-events-none absolute inset-0 h-full w-full"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+          >
+            {ACCOUNT_LINES.map(([x1, y1, x2, y2], i) => (
+              <line
+                key={i}
+                x1={x1}
+                y1={y1}
+                x2={x2}
+                y2={y2}
+                stroke="#b400e6"
+                strokeOpacity="0.75"
+                strokeWidth="1"
+                vectorEffect="non-scaling-stroke"
+              />
+            ))}
+          </svg>
+ 
+          {/* Center focus diamond */}
+          <div className="absolute left-1/2 top-[54%] -translate-x-1/2 -translate-y-1/2">
+            <div className="grid h-[104px] w-[104px] rotate-45 place-items-center bg-[#b400e6]/15">
+              <div className="grid h-[78px] w-[78px] place-items-center border border-[#b400e6]/60 bg-[#111218]">
+                <span className="-rotate-45 text-[10px] text-white">Focus</span>
+              </div>
+            </div>
+          </div>
+ 
+          {/* Node cards */}
+          {ACCOUNT_NODES.map((n) => {
+            const isActive = n.id === activeNode;
+            return (
+              <button
+                key={n.id}
+                type="button"
+                onMouseEnter={() => setActiveNode(n.id)}
+                onFocus={() => setActiveNode(n.id)}
+                onClick={() => setActiveNode(n.id)}
+                style={{
+                  left: `${n.x}%`,
+                  top: `${n.y}%`,
+                  transform: isActive ? `rotate(${n.tilt}deg) scale(1.03)` : "none",
+                }}
+                className={`absolute flex h-[105px] w-[170px] flex-col items-center justify-center gap-2 border bg-white/90 transition-all duration-300 ease-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b400e6] ${
+                  isActive
+                    ? "z-10 border-[#b400e6] shadow-[0_24px_40px_-12px_rgba(17,18,24,0.25)]"
+                    : "border-[#111218]/30"
+                }`}
+              >
+                <span className="absolute right-3 top-3 h-1.5 w-1.5 rounded-full bg-[#b400e6]" />
+                <span className="font-mono text-[8px] uppercase tracking-[0.15em] text-[#111218]/60">
+                  Account / {String(n.id).padStart(2, "0")}
+                </span>
+                <span className="text-[15px] font-medium text-[#111218]">
+                  {n.title}
+                </span>
+              </button>
+            );
+          })}
+ 
+          {/* Status */}
+          <p className="absolute bottom-5 right-6 font-mono text-[10px] uppercase tracking-[0.12em] text-[#111218]/60">
+            Status: <span className="text-[#b400e6]">Focus active</span>
+          </p>
+        </div>
+      </div>
+    </section>
 
 		<section className="bg-[#f2f0ea] px-[max(48px,calc((100vw-1150px)/2))] py-[90px] pb-[100px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="lead-outcomes-title">
 			<p className="mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-[#bd00f2] max-[767px]:mb-5 max-[767px]:text-[8px]"><span>06</span> / What changes</p>

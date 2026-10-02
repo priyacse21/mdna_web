@@ -151,24 +151,27 @@ export const contentProblemNeeds = [
 
 
 export const leadMethods = [
-	{
-		number: '01',
-		name: 'ABM',
-		description: 'Identify, target and message ideal buyers.',
-		impact: 'Identify and use the best-performing channels to get sales-ready conversations.',
-	},
-	{
-		number: '02',
-		name: 'Cold Email Outreach',
-		description: 'Start relevant conversations with the right people.',
-		impact: 'Build focused outreach around the needs, timing and language of each audience.',
-	},
-	{
-		number: '03',
-		name: 'Researched Lead Lists',
-		description: 'Reach decision-makers with useful, verified data.',
-		impact: 'Give your team a reliable starting point with researched accounts and contacts.',
-	},
+  {
+    number: '01',
+    name: 'ABM',
+    description: 'Identify, target and message ideal buyers.',
+    impact: 'Identify and use the best-performing channels to get sales-ready conversations.',
+    cta: 'Book a pipeline audit',
+  },
+  {
+    number: '02',
+    name: 'Cold Email Outreach',
+    description: 'Start relevant conversations with the right people.',
+    impact: 'Build focused outreach around the needs, timing and language of each audience.',
+    cta: 'Book a pipeline audit',
+  },
+  {
+    number: '03',
+    name: 'Researched Lead Lists',
+    description: 'Reach decision-makers with useful, verified data.',
+    impact: 'Give your team a reliable starting point with researched accounts and contacts.',
+    cta: 'Request a sample list',
+  },
 ]
 
 export const leadPathway = [
@@ -209,3 +212,227 @@ export const performanceStages = [
 	['03', 'Improve', 'Use what the data reveals to refine spend, creative and conversion.'],
 ]
 
+export const performancePlatforms = ['Google Ads', 'Meta Ads', 'LinkedIn Ads', 'TikTok Ads', 'YouTube', 'Google Analytics 4', 'Google Tag Manager']
+
+
+// services page common component data//
+
+export const SERVICES = [
+  {
+    id: "abm",
+    title: "ABM",
+    tagline: "Identify, target and message ideal buyers.",
+    impact:
+      "Identify and use the best-performing channels to get sales-ready conversations.",
+    ctaLabel: "Book a pipeline audit",
+    ctaHref: "#contact",
+
+    footerFlow: "Target → Message → Conversation",
+  },
+  {
+    id: "cold-email",
+    title: "Cold Email Outreach",
+    tagline: "Reach decision-makers with messages worth replying to.",
+    impact: "Turn cold inboxes into booked meetings with relevant outreach.",
+    ctaLabel: "Book a pipeline audit",
+    ctaHref: "#contact",
+    footerFlow: "Write → Send → Reply",
+  },
+  {
+    id: "lead-lists",
+    title: "Researched Lead Lists",
+    tagline: "Verified contacts matched to your ideal customer profile.",
+    impact: "Start every campaign with accurate, ready-to-use prospect data.",
+    ctaLabel: "Book a pipeline audit",
+    ctaHref: "#contact",
+    footerFlow: "Research → Verify → Deliver",
+  },
+];
+
+
+ export const SERVICES_ContentSearchAI = [
+  {
+    id: "content-marketing",
+    title: "Content Marketing",
+    tagline: "Blogs, guides, thought-leadership content.",
+    impact: "Builds lasting inbound traffic.",
+    ctaLabel: "Get a Content Plan",
+    ctaHref: "#contact",
+    footerFlow: "Create → Publish → Grow",
+  },
+
+  {
+    id: "seo-geo",
+    title: "SEO & GEO",
+    tagline: "Classic SEO + Generative Engine Optimization.",
+    impact: "Found by Google and recommended by AI.",
+    ctaLabel: "Get a Visibility Audit",
+    ctaHref: "#contact",
+    footerFlow: "Optimize → Rank → Discover",
+  },
+
+  {
+    id: "paid-digital-advertising",
+    title: "Paid Digital Advertising",
+    tagline: "Google, LinkedIn, Meta ads managed end-to-end.",
+    impact: "Immediate traffic and leads.",
+    ctaLabel: "Request an Ad Audit",
+    ctaHref: "#contact",
+    footerFlow: "Target → Advertise → Convert",
+  },
+
+  {
+    id: "email-marketing",
+    title: "Email Marketing & Newsletters",
+    tagline: "Ongoing campaigns and newsletters.",
+    impact: "Keeps brand top-of-mind.",
+    ctaLabel: "See a Sample Newsletter",
+    ctaHref: "#contact",
+    footerFlow: "Write → Send → Engage",
+  },
+
+  {
+    id: "targeted-marketing",
+    title: "Targeted Marketing Campaigns",
+    tagline: "Personalized marketing for high-value accounts.",
+    impact: "Focuses budget for faster closes.",
+    ctaLabel: "Book Campaign Strategy Call",
+    ctaHref: "#contact",
+    footerFlow: "Target → Personalize → Convert",
+  },
+
+  {
+    id: "organic-social-media",
+    title: "Organic Social Media",
+    tagline: "Consistent social content that builds brand presence.",
+    impact: "Builds engagement and long-term brand visibility.",
+    ctaLabel: "Build a Social Plan",
+    ctaHref: "#contact",
+    footerFlow: "Create → Engage → Grow",
+  },
+];
+
+
+export const LENSES = [
+  {
+    id: "function",
+    label: "Function",
+    title: "Build the function you can hand over.",
+    text: "Marketing Function Setup & Handover — build and hand over an in-house marketing division for a fully operational, self-sufficient team.",
+    nodes: [
+      { label: "Capability", x: 13, y: 60 },
+      { label: "Choice", x: 40, y: 50 },
+      { label: "Context", x: 61, y: 33 },
+      { label: "Move", x: 76, y: 64 },
+    ],
+  },
+  
+  {
+    id: "market",
+    label: "Market",
+    title: "See the market before you move.",
+    text: "Market Research — understand demand, competitors and openings before committing budget.",
+    nodes: [
+      { label: "Signal", x: 15, y: 55 },
+      { label: "Segment", x: 42, y: 40 },
+      { label: "Gap", x: 65, y: 62 },
+      { label: "Move", x: 80, y: 35 },
+    ],
+  },
+  {
+    id: "customer",
+    label: "Customer",
+    title: "Know who you are really serving.",
+    text: "Customer Insights — turn conversations and data into clear decisions about who matters.",
+    nodes: [
+      { label: "Need", x: 14, y: 45 },
+      { label: "Behaviour", x: 38, y: 62 },
+      { label: "Value", x: 60, y: 38 },
+      { label: "Move", x: 78, y: 58 },
+    ],
+  },
+  {
+    id: "direction",
+    label: "Direction",
+    title: "Choose the route, then commit.",
+    text: "Consulting — set direction with a clear view of options, trade-offs and next steps.",
+    nodes: [
+      { label: "Option", x: 16, y: 64 },
+      { label: "Trade-off", x: 41, y: 45 },
+      { label: "Decide", x: 63, y: 30 },
+      { label: "Build", x: 77, y: 66 },
+    ],
+  },
+];
+ 
+
+export const LINES = [
+  [13, 60, 54, 25],
+  [40, 50, 76, 10],
+  [40, 50, 75, 79],
+  [61, 33, 82, 85],
+];
+
+
+export const SERVICES_branding = [
+  {
+    id: "webinars-digital-events",
+    title: "Webinars & Digital Events",
+    tagline: "Planning, promotion and hosting webinars and digital events.",
+    impact: "Generates leads and positions teams as experts.",
+    ctaLabel: "Plan a Webinar",
+    ctaHref: "#contact",
+    footerFlow: "Plan → Promote → Host",
+  },
+
+  {
+    id: "video-production",
+    title: "Video Production",
+    tagline: "Scripting, filming and editing videos for digital channels.",
+    impact: "Higher engagement across channels.",
+    ctaLabel: "Request a Video Quote",
+    ctaHref: "#contact",
+    footerFlow: "Script → Film → Edit",
+  },
+
+  {
+    id: "podcast-setup-production",
+    title: "Podcast Setup & Production",
+    tagline: "Setup and ongoing production of a branded podcast.",
+    impact: "Builds a durable content asset.",
+    ctaLabel: "Explore Podcast Options",
+    ctaHref: "#contact",
+    footerFlow: "Setup → Produce → Publish",
+  },
+
+  {
+    id: "community-forum-engagement",
+    title: "Community & Forum Engagement",
+    tagline: "Authentic participation in relevant online communities.",
+    impact: "Builds trust and word-of-mouth.",
+    ctaLabel: "Get a Community Plan",
+    ctaHref: "#contact",
+    footerFlow: "Engage → Build → Grow",
+  },
+
+  {
+    id: "reviews-comparison-platform-management",
+    title: "Reviews & Comparison Platform Management",
+    tagline: "Manage your presence on G2, Capterra, and comparison platforms.",
+    impact: "Buyers trust peer reviews more than ads.",
+    ctaLabel: "Get a Reputation Audit",
+    ctaHref: "#contact",
+    footerFlow: "Monitor → Manage → Build Trust",
+  },
+
+  {
+    id: "rapid-response-pr",
+    title: "Rapid Response PR",
+    tagline:
+      "Fast-turnaround PR support for time-sensitive moments, both external and internal.",
+    impact: "Controls the narrative fast to protect reputation.",
+    ctaLabel: "Talk to Us Now",
+    ctaHref: "#contact",
+    footerFlow: "Respond → Protect → Recover",
+  },
+];
