@@ -1,4 +1,5 @@
 import NeedList from "../../components/common/NeedList/NeedList";
+import SectionEyebrow from "../../components/common/SectionEyebrow";
 import { needs } from "./data/homedata";
 
 export default function NeedsSection() {
@@ -6,9 +7,9 @@ export default function NeedsSection() {
     <section className="bg-[#f2f0ea] text-[#10161d] block min-h-[680px] py-[40px] px-4 md:px-6 lg:py-[100px] lg:px-[max(12vw,40px)]">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-end gap-5 lg:gap-[7vw] mb-[42px]">
         <div>
-          <p className="mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-violet max-md:mb-5 max-md:text-[8px]">
-            02 - Where should we start?
-          </p>
+          <SectionEyebrow className="mb-7 max-md:mb-5">
+            Where should we start?
+          </SectionEyebrow>
 
           <h2 className="text-[clamp(3.3rem,6vw,6.8rem)] leading-[0.92] tracking-[-0.075em] uppercase font-bold text-balance mb-2">
             What do you

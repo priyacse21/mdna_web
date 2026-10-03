@@ -1,5 +1,6 @@
 
 import { audits } from "./data/ourworkData";
+import SectionEyebrow from "../../components/common/SectionEyebrow";
 
 const ClaritySection = () => {
   return (
@@ -10,7 +11,9 @@ const ClaritySection = () => {
     >
       <div className="ourwork-container ourwork-audit-grid">
         <div>
-          <div className="ourwork-section-label">04 — Start with clarity</div>
+          <SectionEyebrow className="ourwork-section-label">
+            Start with clarity
+          </SectionEyebrow>
           <h2 id="audit-title">
             DON'T KNOW
             <br />

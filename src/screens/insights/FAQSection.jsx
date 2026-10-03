@@ -1,13 +1,14 @@
 
 import { Link } from "react-router-dom";
 import { faqs } from "./data/insightsData";
+import SectionEyebrow from "../../components/common/SectionEyebrow";
 
 
 const FAQContactSection = () => {
   return (
     <div className="grid grid-cols-2 gap-[70px] bg-[#111318] px-[7vw] py-[40px] sm:py-[60px] lg:py-[100px] font-sans text-white max-[900px]:grid-cols-1 max-[900px]:gap-[42px] max-[900px]:px-6">
       <section aria-labelledby="faq-title">
-        <div className="font-mono text-[10px] leading-[1.2] tracking-[0.14em] uppercase text-white/40">04 / FAQs</div>
+        <SectionEyebrow>FAQs</SectionEyebrow>
         <h2 className="mt-[10px] mb-5 text-[clamp(38px,4vw,58px)] leading-[0.95] tracking-[-0.055em] font-bold">
           A little more <span className="text-[#b400e8]">context.</span>
         </h2>
@@ -22,7 +23,7 @@ const FAQContactSection = () => {
 
       <section aria-labelledby="cta-title" className="flex items-end justify-between gap-[30px] max-[900px]:flex-col max-[900px]:items-start">
         <div>
-          <div className="mb-3 font-mono text-[10px] leading-[1.2] tracking-[0.14em] uppercase text-white/40">05 / KEEP IN TOUCH</div>
+          <SectionEyebrow className="mb-3">KEEP IN TOUCH</SectionEyebrow>
           <h2 className="m-0 max-w-[700px] text-[clamp(30px,4vw,55px)] leading-[0.95] tracking-[-0.055em] font-bold" id="cta-title">
             Have a question worth <span className="text-[#b400e8]">exploring?</span>
           </h2>

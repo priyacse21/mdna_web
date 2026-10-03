@@ -17,6 +17,8 @@ const labelPositions = [
   "left-1/2 top-[7%] -translate-x-1/2",
 ];
 
+import SectionEyebrow from "../../components/common/SectionEyebrow";
+
 export default function ExplorerSection() {
   const [activeKey, setActiveKey] = useState("lead");
   const tabRefs = useRef([]);
@@ -37,9 +39,9 @@ export default function ExplorerSection() {
       <div className="w-[min(calc(100%-52px),1440px)] sm:w-[min(calc(100%-64px),1440px)] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[0.78fr_1.22fr] gap-5 lg:gap-[60px] items-end">
           <div>
-            <div className="font-mono uppercase tracking-[1.8px] text-[10px] text-[#a604d6] mb-4">
-              05 — One business. Different starting points.
-            </div>
+            <SectionEyebrow className="mb-4">
+              One business. Different starting points.
+            </SectionEyebrow>
             <h2 className="text-[44px] lg:text-[clamp(44px,5.8vw,82px)] leading-[0.96] tracking-[-2.5px] lg:tracking-[-4px] font-medium m-0" id="signature-title">
               CHOOSE YOUR
               <br />

@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
+import SectionEyebrow from '../../components/common/SectionEyebrow'
 import { servicePortfolios } from './data/serviceData'
 
 export default function Allservice() {
 	return <section className="min-h-[calc(100vh-68px)] bg-[#f2f0ea] px-[30px] py-[40px] sm:py-[60px] lg:py-[100px] max-[767px]:px-4" aria-labelledby="all-services-title">
 		<header className="grid grid-cols-[1fr_320px] items-end gap-16 pb-12 max-[800px]:grid-cols-1 max-[800px]:gap-6 max-[767px]:gap-[18px] max-[767px]:pb-[30px]">
 			<div>
-				<p className="mb-[30px] font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-[#69737d]"><span className="text-[#b400e8]">03</span> / Services</p>
-				<p className="mb-[14px] font-mono text-[9px] tracking-[0.1em] uppercase text-[#68727d]">One connected portfolio</p>
+				<SectionEyebrow className="mb-[30px]"> Services</SectionEyebrow>
+				{/* <p className="mb-[14px] font-mono text-[9px] tracking-[0.1em] uppercase text-[#68727d]">One connected portfolio</p> */}
 				<h1 className="m-0 text-[76px] leading-[1.02] tracking-normal font-bold normal-case max-[800px]:text-[60px] max-[767px]:text-[44px]" id="all-services-title">Marketing work,<br /><span className="text-[#b400e8]">built to connect.</span></h1>
 			</div>
 			<p className="mb-2 max-w-[320px] text-[15px] leading-[1.6] text-[#20232a] max-[800px]:max-w-[500px] max-[767px]:text-[13px]">Six service portfolios. Each built around a different growth problem, and designed to work with the others when the problem needs more than one answer.</p>

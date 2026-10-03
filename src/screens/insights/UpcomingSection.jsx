@@ -1,14 +1,15 @@
 
 import { drafts } from "./data/insightsData";
+import SectionEyebrow from "../../components/common/SectionEyebrow";
 
 const UpcomingSection = () => {
   return (
     <section aria-labelledby="upcoming-title" className="border-t border-[#111318]/[0.15]  py-[40px] sm:py-[60px] lg:py-[100px] font-sans">
       <div className="mx-auto w-[min(calc(100%-72px),1440px)] max-[900px]:w-[min(calc(100%-48px),1440px)] max-[600px]:w-[calc(100%-48px)]">
         <div className="mb-[25px] grid grid-cols-[25%_1fr] gap-[50px] max-[900px]:grid-cols-1 max-[900px]:gap-1">
-          <div className="pt-[5px] font-mono text-[10px] leading-[1.2] tracking-[0.14em] uppercase text-[#747980] max-[900px]:pt-0">
-            <b className="font-medium text-[#b400e8]">03</b> / UPCOMING
-          </div>
+          <SectionEyebrow className="pt-[5px] max-[900px]:pt-0">
+            <b className="font-medium text-[#b400e8]"></b>UPCOMING
+          </SectionEyebrow>
           <div>
             <h2 className="mt-[7px] mb-3 text-[clamp(38px,5vw,68px)] leading-[0.94] tracking-[-0.06em] font-bold max-[600px]:text-[45px]" id="upcoming-title">Perspectives in the works.</h2>
             <p className="mb-0 max-w-[530px] text-[14px] leading-[1.55] text-[#656a70]">

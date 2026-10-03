@@ -1,13 +1,14 @@
 import React from "react";
+import SectionEyebrow from "../../components/common/SectionEyebrow";
 
 export default function OurStoryHero() {
   return (
     <section className="bg-[#10171e] text-white py-[40px] sm:py-[60px] lg:py-[100px] font-['Poppins',Arial,sans-serif]">
       <div className="w-[calc(100%-48px)] lg:w-[calc(100%-clamp(24px,5vw,72px)*2)] max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-[1.15fr_0.85fr] gap-7 md:gap-[6vw] items-center">
         <div>
-          <div className="font-mono text-[10px] font-medium tracking-[0.16em] uppercase text-[#a604d6]">
-            01 — Our Story
-          </div>
+          <SectionEyebrow>
+            Our Story
+          </SectionEyebrow>
           <h1 className="text-[clamp(40px,5vw,72px)] leading-[1.03] tracking-[-0.045em] font-bold my-3.5 mb-[18px]">
             Great businesses can still struggle to get on the map.
           </h1>

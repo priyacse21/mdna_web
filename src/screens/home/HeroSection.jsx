@@ -4,6 +4,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 import { nodes } from "./data/homedata";
+import SectionEyebrow from "../../components/common/SectionEyebrow";
 
 
 const nodePositions = {
@@ -41,8 +42,8 @@ export default function HeroSection() {
 
       <div className="w-[min(calc(100%-52px),1440px)] sm:w-[min(calc(100%-64px),1440px)] mx-auto grid grid-cols-1 lg:grid-cols-[1.03fr_0.97fr] gap-[54px] items-center relative z-2">
         <div>
-          <div className="font-mono uppercase tracking-[1.8px] text-[10px] text-[#b9c1c7] flex items-center gap-3 mb-[26px] before:content-[''] before:w-[31px] before:h-[1px] before:bg-[#a604d6]">
-            mDNA.digital <span className="text-[#a604d6]">Marketing that moves business forward</span>
+          <div className="font-mono uppercase tracking-[1.8px] text-[10px] text-[#b9c1c7] flex items-center gap-3 mb-[26px] ">
+             <span className="text-[#a604d6]"><SectionEyebrow> Marketing that moves business forward </SectionEyebrow></span>
           </div>
 
           <h1

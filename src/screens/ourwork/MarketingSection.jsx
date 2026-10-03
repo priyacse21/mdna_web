@@ -1,4 +1,5 @@
 import { signals } from "./data/ourworkData";
+import SectionEyebrow from "../../components/common/SectionEyebrow";
 
 export default function MarketingSection() {
   return (
@@ -6,9 +7,9 @@ export default function MarketingSection() {
       <div className="w-[min(calc(100%-52px),1440px)] sm:w-[min(calc(100%-64px),1440px)] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[0.88fr_1.12fr] gap-10 sm:gap-[55px] lg:gap-20 items-end">
           <div>
-            <div className="font-mono uppercase tracking-[1.8px] text-[10px] text-[#a604d6] mb-4">
-              00 — The marketing problem
-            </div>
+            <SectionEyebrow className="mb-4">
+               The marketing problem
+            </SectionEyebrow>
             <h2 className="text-[clamp(32px,4.3vw,60px)] leading-[1.03] tracking-[-3px] font-medium m-0" id="problem-title">
               MORE MARKETING
               <br />

@@ -1,12 +1,14 @@
 
+import SectionEyebrow from "../../components/common/SectionEyebrow";
+
 const HeroSection = () => {
   return (
     <section className="flex min-h-[690px] items-center overflow-hidden bg-[#111318] py-[40px] sm:py-[60px] lg:py-[100px] font-sans text-white">
       <div className="box-border grid w-full max-w-[1380px] grid-cols-[1.05fr_0.95fr] items-center gap-[65px] mx-auto px-12 max-[900px]:grid-cols-1 max-[900px]:gap-[30px] max-[900px]:px-7 max-[560px]:px-6">
         <div>
-          <div className="mb-6 font-mono text-[11px] tracking-[0.08em] uppercase text-[#d5d2ca]">
-            <b className="font-medium text-[#b400e8]">01</b> / CAREERS
-          </div>
+          <SectionEyebrow className="mb-6">
+            <b className="font-medium text-[#b400e8]"></b> CAREERS
+          </SectionEyebrow>
           <h1 className="m-0 mb-7 text-[clamp(55px,6.6vw,100px)] leading-[0.93] tracking-[-0.065em] font-extrabold max-[560px]:text-[clamp(50px,14vw,68px)]">
             Come make
             <br />
@@ -52,7 +54,7 @@ const HeroSection = () => {
             <circle cx="350" cy="300" r="3" fill="#b400e8" />
 
             <text x="64" y="88" fill="#a7a6a3" fontFamily="DM Mono, monospace" fontSize="11" letterSpacing="0.08em">
-              01 / INPUT
+              INPUT
             </text>
             <text x="230" y="148" fill="#fff" fontFamily="DM Mono, monospace" fontSize="11" letterSpacing="0.08em">
               CONTRIBUTE
@@ -67,7 +69,7 @@ const HeroSection = () => {
               MOMENTUM
             </text>
             <text x="135" y="360" fill="#a7a6a3" fontFamily="DM Mono, monospace" fontSize="11" letterSpacing="0.08em">
-              02 / CONNECT
+              CONNECT
             </text>
           </svg>
         </div>

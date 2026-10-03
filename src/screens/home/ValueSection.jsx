@@ -1,7 +1,9 @@
+import SectionEyebrow from "../../components/common/SectionEyebrow";
+
 export default function ValueSection() {
   return (
     <section className="bg-[#f2f0ea] text-[#10161d] block min-h-[620px] py-[40px] px-4 md:px-6 lg:py-[100px] lg:px-[max(12vw,40px)]">
-      <p className="mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-violet max-md:mb-5 max-md:text-[8px]">06 - The value of the system</p>
+      <SectionEyebrow className="mb-7 max-md:mb-5">The value of the system</SectionEyebrow>
       <h2 className="text-[clamp(3.2rem,12vw,6rem)] lg:text-[clamp(3.3rem,6vw,6.8rem)] leading-[0.92] tracking-[-0.075em] uppercase font-bold text-balance max-w-[850px] mb-6">
         The starting point
         <br />

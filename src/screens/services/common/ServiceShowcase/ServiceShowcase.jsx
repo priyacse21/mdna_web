@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SectionEyebrow from "../../../../components/common/SectionEyebrow";
 
 const pad = (n) => String(n).padStart(2, "0");
 
@@ -38,9 +39,9 @@ export default function ServiceShowcase({
   return (
     <section className="bg-[#111218] px-6 py-16 text-white">
       {/* Eyebrow */}
-      <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/50">
+      <SectionEyebrow>
         <span className="text-[#b400e6]">{eyebrowIndex}</span> / {eyebrowLabel}
-      </p>
+      </SectionEyebrow>
 
       {/* Heading + description */}
       <div className="mt-4 grid gap-8 lg:grid-cols-2 lg:items-end">

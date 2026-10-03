@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { systemNodes } from "./data/ourworkData";
+import SectionEyebrow from "../../components/common/SectionEyebrow";
 
 const nodePositions = [
   "left-[10%]",
@@ -18,9 +19,9 @@ export default function SystemSection() {
       <div className="w-[min(calc(100%-52px),1440px)] sm:w-[min(calc(100%-64px),1440px)] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[0.75fr_1.25fr] gap-[60px] items-end">
           <div>
-            <div className="font-mono uppercase tracking-[1.8px] text-[10px] text-[#a604d6] mb-4">
-              01 — The mDNA system
-            </div>
+            <SectionEyebrow className="mb-4">
+              The mDNA system
+            </SectionEyebrow>
             <h2 className="text-[clamp(44px,5.8vw,82px)] leading-[0.96] tracking-[-4px] font-medium m-0" id="system-title">
               FIVE ENTRY POINTS.
               <br />

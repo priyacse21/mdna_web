@@ -1,13 +1,15 @@
 
+import SectionEyebrow from "../../components/common/SectionEyebrow";
+
 const InsightsHero = () => {
   return (
     <section aria-labelledby="page-title" className="relative grid min-h-[78svh] grid-cols-[minmax(0,1.04fr)_minmax(360px,0.96fr)] overflow-hidden bg-[#111318] font-sans text-white max-[900px]:grid-cols-1 max-[900px]:min-h-0">
       <div className="relative z-[2] flex items-end py-[40px] sm:py-[60px] lg:py-[100px] pr-[7vw] pl-[max(36px,calc((100vw-1440px)/2))] max-[900px]:min-h-[59svh] max-[900px]:px-6">
         <div>
-          <div className="font-mono text-[10px] leading-[1.2] tracking-[0.14em] uppercase text-white/[0.48]">01 / Insights</div>
-          <h1 className="mt-5 mb-6 max-w-[850px] text-[clamp(58px,7.2vw,108px)] leading-[0.9] tracking-[-0.065em] font-bold max-[600px]:text-[clamp(48px,15vw,72px)]" id="page-title">
+          <SectionEyebrow>Insights</SectionEyebrow>
+          <h2 className="mt-5 mb-6 max-w-[850px] text-[clamp(58px,7.2vw,108px)] leading-[0.9] tracking-[-0.065em] font-bold max-[600px]:text-[clamp(48px,15vw,72px)]" id="page-title">
             Insights for sharper <span className="block text-[#b400e8]">marketing decisions.</span>
-          </h1>
+          </h2>
           <p className="m-0 max-w-[540px] text-[clamp(16px,1.25vw,19px)] leading-[1.55] text-white/[0.62] max-[600px]:text-[15px]">Draft articles are being prepared. More perspectives are coming soon.</p>
         </div>
       </div>

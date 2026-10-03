@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-
+import SectionEyebrow from "../../components/common/SectionEyebrow";
 const helpOptions = [
   "Marketing Strategy",
   "Demand Generation",
@@ -62,7 +62,9 @@ const Contact = () => {
           <div className="sticky top-[3vw] max-[760px]:static">
    
             <div className="font-mono text-[12px] tracking-[0.12em] uppercase">
+              <SectionEyebrow>
               Contact
+              </SectionEyebrow>
             </div>
 
             <h1 className="m-0 mt-6 mb-[2.5vw] max-w-[1050px] text-[clamp(56px,9vw,145px)] leading-[0.88] tracking-[-0.065em] max-[760px]:mt-5 max-[760px]:mb-[40px] max-[760px]:text-[clamp(54px,18vw,90px)]">

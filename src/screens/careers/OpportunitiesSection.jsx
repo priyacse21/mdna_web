@@ -1,14 +1,16 @@
 
 
+import SectionEyebrow from "../../components/common/SectionEyebrow";
+
 const OpportunitiesSection = () => {
   return (
     <section className="bg-[#111318] py-[40px] sm:py-[60px] lg:py-[100px] font-sans text-white">
       <div className="mx-auto w-full max-w-[1380px] px-12 max-[900px]:px-7 max-[560px]:px-6">
         <div className="mb-12 flex items-end justify-between gap-[60px] max-[900px]:grid max-[900px]:grid-cols-1 max-[900px]:gap-6">
           <div>
-            <div className="font-mono text-[11px] tracking-[0.08em] uppercase text-[#aaa9a5]">
-              <span className="text-[#b400e8]">03</span> / OPPORTUNITIES
-            </div>
+            <SectionEyebrow>
+            OPPORTUNITIES
+            </SectionEyebrow>
             <h2 className="mt-[9px] mb-0 text-[clamp(44px,5vw,72px)] leading-none tracking-[-0.055em] font-bold max-[560px]:text-[43px]">
               We're building
               <br />
