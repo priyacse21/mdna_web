@@ -1,16 +1,11 @@
-/**
- * steps     : [{ number, title, description, eyebrow?, tag? }]
- * direction : "horizontal" | "vertical"
- * theme     : "light" | "dark"
- * marker    : look of the active number box -> "fill" | "outline" | "diamond"
- * activeIndex : which step is highlighted (default 0 = first)
- */
+
 export default function ProcessSteps({
   steps,
   direction = "horizontal",
   theme = "dark",
   marker = "fill",
   activeIndex = 0,
+  progressTrack = false,
 }) {
   const isLight = theme === "light";
   const isHorizontal = direction === "horizontal";
@@ -23,14 +18,27 @@ export default function ProcessSteps({
 
   return (
     <ol
-      className={`list-none m-0 p-0 font-sans ${textColor} ${
+      className={`relative list-none m-0 p-0 font-sans ${textColor} ${
         isHorizontal
           ? "grid grid-cols-1 md:grid-flow-col md:auto-cols-fr gap-9 md:gap-0"
           : "grid gap-0"
       }`}
     >
+      {progressTrack && isHorizontal && (
+        <li
+          aria-hidden="true"
+          className={`pointer-events-none absolute top-6 right-[12.5%] left-[12.5%] hidden h-px md:block ${lineColor}`}
+        >
+          <span
+            className="block h-full bg-[#bd00f2]"
+            style={{
+              width: `${steps.length > 1 ? Math.min(activeIndex / (steps.length - 1), 1) * 100 : 100}%`,
+            }}
+          />
+        </li>
+      )}
       {steps.map((step, index) => {
-        const isActive = index === activeIndex;
+        const isActive = index <= activeIndex;
         const isLast = index === steps.length - 1;
 
         // Shape/styling for number box
@@ -59,7 +67,7 @@ export default function ProcessSteps({
             }`}
           >
             {/* Connecting line to next step */}
-            {!isLast && (
+            {!isLast && !progressTrack && (
               <span
                 aria-hidden="true"
                 className={`absolute ${lineColor} ${
@@ -74,7 +82,7 @@ export default function ProcessSteps({
             {!isLast && isHorizontal && (
               <span
                 aria-hidden="true"
-                className={`absolute ${lineColor} md:hidden top-[48px] -bottom-[36px] left-[24px] w-[1px]`}
+                className={`absolute ${progressTrack && index < activeIndex ? "bg-[#bd00f2]" : lineColor} md:hidden top-[48px] -bottom-[36px] left-[24px] w-[1px]`}
               />
             )}
 

@@ -436,3 +436,49 @@ export const SERVICES_branding = [
     footerFlow: "Respond → Protect → Recover",
   },
 ];
+
+export const auditItems = [
+  {
+    id: 'marketing-setup',
+    title: 'Marketing Setup Audit',
+    tagline: 'Full review of marketing operations',
+    impact: 'Find the gaps in tracking, priorities and workflows before they quietly drain growth.',
+    ctaLabel: 'Book a free audit',
+    ctaHref: '/contact',
+    footerFlow: 'Assess → Identify → Clear',
+  },
+  {
+    id: 'channel-performance',
+    title: 'Channel Performance Audit',
+    tagline: 'Deep-dive into marketing channels and ROI',
+    impact: 'Understand which channels deserve attention and where spend is working harder than it should.',
+    ctaLabel: 'Review channel mix',
+    ctaHref: '/contact',
+    footerFlow: 'Measure → Compare → Prioritize',
+  },
+  {
+    id: 'ai-readiness',
+    title: 'AI Readiness Audit',
+    tagline: 'Assessment for AI visibility and readiness',
+    impact: 'Check if your brand, content and infrastructure are prepared to compete in AI-driven discovery.',
+    ctaLabel: 'Get an AI readiness review',
+    ctaHref: '/contact',
+    footerFlow: 'Scan → Structure → Recommend',
+  },
+  {
+    id: 'website-audit',
+    title: 'Website Audit',
+    tagline: 'Evaluate website fit for conversion, SEO and UX',
+    impact: 'Turn friction, weak signals or underperforming pages into a clearer path to action.',
+    ctaLabel: 'Book a website review',
+    ctaHref: '/contact',
+    footerFlow: 'Inspect → Fix → Convert',
+  },
+];
+
+export const steps = [
+  { number: '01', title: 'Detect', text: 'Review the relevant marketing layer and surface the issues that need attention.', helper: 'Find the signal' },
+  { number: '02', title: 'Diagnose', text: 'Examine operations, channel performance and AI visibility in context.', helper: 'Understand the cause' },
+  { number: '03', title: 'Prioritize', text: 'Turn findings into a clear, ranked list of what matters and what deserves attention.', helper: 'Order the fixes' },
+  { number: '04', title: 'Fix', text: 'Use the audit output as the basis for the next action, from quick wins to broader changes.', helper: 'Move with clarity' },
+];
