@@ -23,7 +23,7 @@ export default function PerformanceMarketing() {
 				<div className="max-[767px]:col-start-2 max-[767px]:mt-[10px]">
 					<span className="mb-[7px] block font-mono text-[12px] tracking-[0.1em] uppercase text-[#bd00f2]">Impact</span>
 					<p className="m-0 max-w-[600px] text-[18px] leading-[1.65] text-[#3B4452] max-[767px]:text-[12px]">{impact}</p>
-					<Link className="mt-[17px] inline-flex items-center gap-[14px] border-t border-[#111318] pt-[9px] font-mono text-[13px] text-[#111318] no-underline" to={prefill ? `/contact?service=${encodeURIComponent(prefill)}` : '/contact'}>{action}<b className="text-[11px] font-normal text-[#bd00f2]" aria-hidden="true">↗</b></Link></div>
+					<Link className="mt-[17px] inline-flex items-center gap-[14px] border-t border-[#111318] pt-[9px] font-mono text-[13px] text-[#111318] no-underline" to={prefill ? `/contact?help=${encodeURIComponent(prefill)}` : '/contact'}>{action}<b className="text-[11px] font-normal text-[#bd00f2]" aria-hidden="true">↗</b></Link></div>
 			</article>)}
 		</section>
 

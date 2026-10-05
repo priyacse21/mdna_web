@@ -48,7 +48,6 @@ export default function LeadGeneration() {
 				<p className="mb-[26px] max-w-[430px] text-[18px] leading-[1.7] text-[#B8C1CC] max-[767px]:text-[18px]">Identify ideal buyers, reach them through targeted channels and create a more focused path to sales-ready conversations.</p>
 				<div className="flex flex-wrap gap-[10px]">
 					<Link className="inline-flex min-h-[45px] items-center gap-[14px] bg-[#f8f8f7] px-[17px] text-[11px] font-bold text-[#101116] no-underline transition-all duration-200 max-[767px]:text-[10px]" to="/contact">Talk to us <span aria-hidden="true">↗</span></Link>
-					<a className="inline-flex min-h-[45px] items-center gap-[14px] border border-current px-[17px] text-[11px] font-bold text-white no-underline transition-all duration-200 max-[767px]:text-[10px]" href="#lead-system">Explore the system <span aria-hidden="true">↓</span></a>
 				</div>
 			</div>
 			<div className="relative min-h-[700px] overflow-hidden border-l border-white/[0.14] bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[length:76px_76px] before:absolute before:top-[4%] before:bottom-[5%] before:left-1/2 before:w-px before:bg-[#bd00f2]/75 before:content-[''] after:absolute after:top-1/2 after:right-[9%] after:left-[9%] after:h-px after:bg-[#bd00f2]/75 after:content-[''] max-[1023px]:min-h-[520px] max-[1023px]:border-t max-[1023px]:border-l-0 max-[767px]:min-h-[390px]" aria-label="A visual map of targeted conversations">

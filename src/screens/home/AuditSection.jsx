@@ -1,5 +1,6 @@
 import NeedList from "../../components/common/NeedList/NeedList";
 import SectionTitle from "../../components/common/SectionTitle";
+import { Link } from "react-router-dom";
 import { audits } from "./data/homedata";
 
 export default function AuditSection() {
@@ -20,18 +21,18 @@ export default function AuditSection() {
           Understand what is working, what isn't and what deserves attention before you invest further.
         </p>
         <div className="flex flex-wrap gap-2.5">
-          <a
+          <Link
             className="inline-flex min-h-[45px] cursor-pointer items-center gap-[14px] px-[17px] text-[11px] font-bold no-underline transition-all duration-200 max-md:text-[10px] bg-violet text-white"
-            href="#contact"
+            to="/contact?help=Website%20Audit"
           >
             Book a Free Audit -&gt;
-          </a>
-          <a
+          </Link>
+          <Link
             className="inline-flex min-h-[45px] cursor-pointer items-center gap-[14px] px-[17px] text-[11px] font-bold no-underline transition-all duration-200 max-md:text-[10px] border border-current text-[#10161d] hover:bg-[#10161d] hover:text-white transition-colors"
-            href="#contact"
+            to="/services/audits"
           >
             Explore Audits &amp; Diagnostics -&gt;
-          </a>
+          </Link>
         </div>
       </div>
 

@@ -4,14 +4,20 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { useSearchParams } from "react-router-dom";
 import SectionTitle from "../../components/common/SectionTitle";
 const helpOptions = [
-  "Marketing Strategy",
-  "Demand Generation",
-  "Content & Visibility",
-  "Digital PR",
-  "Research",
-  "Something Else",
+  "Lead Generation",
+  "Pipeline Audit",
+  "Researched Lead Lists",
+  "Website Audit",
+  "Channel Performance Audit",
+  "AI Readiness (GEO) Audit",
+  "Paid Search Advertising",
+  "Paid Social Campaigns",
+  "Conversion Rate Optimization",
+  "Creative Asset Production",
+
 ];
 
 const schema = z.object({
@@ -37,6 +43,8 @@ const schema = z.object({
 
 const Contact = () => {
   const [status, setStatus] = useState("");
+  const [searchParams] = useSearchParams();
+  const requestedHelp = searchParams.get("help");
 
   const {
     register,
@@ -44,6 +52,9 @@ const Contact = () => {
     formState: { errors },
   } = useForm({
     resolver: zodResolver(schema),
+    defaultValues: {
+      help: helpOptions.includes(requestedHelp) ? requestedHelp : "",
+    },
   });
 
   const onSubmit = (data) => {
@@ -166,7 +177,6 @@ const Contact = () => {
 
               <select
                 id="contact-help"
-                defaultValue=""
                 className={`w-full cursor-pointer appearance-none border-0 bg-transparent text-[17px] outline-none [font-family:inherit] ${
                   errors.help ? "text-[#c0392b]" : "text-[#111318]"
                 }`}

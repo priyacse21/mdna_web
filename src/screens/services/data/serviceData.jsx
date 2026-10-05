@@ -203,12 +203,12 @@ export const leadOutcomes = [
 
 
 export const performanceServices = [
-	['01', 'Paid Search Advertising (PPC)', 'Manage search engine ads to capture high-intent users.', 'Get in front of people actively searching for what you offer, right when they are ready to buy.', 'Request a PPC audit', 'Paid Search Advertising (PPC)'],
+	['01', 'Paid Search Advertising (PPC)', 'Manage search engine ads to capture high-intent users.', 'Get in front of people actively searching for what you offer, right when they are ready to buy.', 'Request a PPC audit', 'Paid Search Advertising'],
 	['02', 'Paid Social Campaigns', 'Run targeted video and image ads across Meta, LinkedIn and other social platforms.', 'Reach the right audience with the right message, wherever they are already scrolling.', 'Get a paid social plan', 'Paid Social Campaigns'],
 	['03', 'Display & Programmatic Advertising', 'Place automated banner and video ads to retarget visitors or reach new, similar audiences.', 'Stay visible to people who have shown interest, and find more people like them.', 'Request a retargeting plan'],
-	['04', 'Conversion Rate Optimisation (CRO)', 'Test and improve landing pages, forms and website layouts.', 'Turn more existing traffic into paying customers without spending more on ads.', 'Book a CRO audit', 'Conversion Rate Optimization (CRO)'],
+	['04', 'Conversion Rate Optimisation (CRO)', 'Test and improve landing pages, forms and website layouts.', 'Turn more existing traffic into paying customers without spending more on ads.', 'Book a CRO audit', 'Conversion Rate Optimization'],
 	['05', 'Analytics & Tracking Setup', 'Implement reliable analytics, server-side tracking and conversion APIs.', 'Know exactly what your marketing spend is returning.', 'Book a tracking audit'],
-	['06', 'Creative Asset Production', 'Design ad copy, banners and video variations built to test and improve engagement.', 'Create ads that are made to be tested and improved, not just published once.', 'Request a creative sample'],
+	['06', 'Creative Asset Production', 'Design ad copy, banners and video variations built to test and improve engagement.', 'Create ads that are made to be tested and improved, not just published once.', 'Request a creative sample', 'Creative Asset Production'],
 	['07', 'Affiliate & Partner Marketing', 'Set up commission-based networks with publishers, blogs and creators.', 'Pay for performance and acquire customers at a predictable, performance-based cost.', 'Explore affiliate options'],
 ]
 
@@ -231,7 +231,7 @@ export const SERVICES = [
     impact:
       "Identify and use the best-performing channels to get sales-ready conversations.",
     ctaLabel: "Book a pipeline audit",
-    ctaHref: "#contact",
+    ctaHref: "/contact?help=Pipeline%20Audit",
 
     footerFlow: "Target → Message → Conversation",
   },
@@ -241,7 +241,7 @@ export const SERVICES = [
     tagline: "Reach decision-makers with messages worth replying to.",
     impact: "Turn cold inboxes into booked meetings with relevant outreach.",
     ctaLabel: "Book a pipeline audit",
-    ctaHref: "#contact",
+    ctaHref: "/contact?help=Pipeline%20Audit",
     footerFlow: "Write → Send → Reply",
   },
   {
@@ -249,8 +249,8 @@ export const SERVICES = [
     title: "Researched Lead Lists",
     tagline: "Verified contacts matched to your ideal customer profile.",
     impact: "Start every campaign with accurate, ready-to-use prospect data.",
-    ctaLabel: "Book a pipeline audit",
-    ctaHref: "#contact",
+    ctaLabel: "Request a sample list",
+    ctaHref: "/contact?help=Researched%20Lead%20Lists",
     footerFlow: "Research → Verify → Deliver",
   },
 ];
@@ -438,7 +438,7 @@ export const SERVICES_branding = [
       "Fast-turnaround PR support for time-sensitive moments, both external and internal.",
     impact: "Controls the narrative fast to protect reputation.",
     ctaLabel: "Talk to Us Now",
-    ctaHref: "#contact",
+    ctaHref: "/contact",
     footerFlow: "Respond → Protect → Recover",
   },
 ];
@@ -450,7 +450,7 @@ export const auditItems = [
     tagline: 'Full review of marketing operations',
     impact: 'Find the gaps in tracking, priorities and workflows before they quietly drain growth.',
     ctaLabel: 'Book a free audit',
-    ctaHref: '/contact',
+    ctaHref: '/contact?help=Website%20Audit',
     footerFlow: 'Assess → Identify → Clear',
   },
   {
@@ -458,8 +458,8 @@ export const auditItems = [
     title: 'Channel Performance Audit',
     tagline: 'Deep-dive into marketing channels and ROI',
     impact: 'Understand which channels deserve attention and where spend is working harder than it should.',
-    ctaLabel: 'Review channel mix',
-    ctaHref: '/contact',
+    ctaLabel: 'Book a channel audit',
+    ctaHref: '/contact?help=Channel%20Performance%20Audit',
     footerFlow: 'Measure → Compare → Prioritize',
   },
   {
@@ -467,8 +467,8 @@ export const auditItems = [
     title: 'AI Readiness Audit',
     tagline: 'Assessment for AI visibility and readiness',
     impact: 'Check if your brand, content and infrastructure are prepared to compete in AI-driven discovery.',
-    ctaLabel: 'Get an AI readiness review',
-    ctaHref: '/contact',
+    ctaLabel: 'Book an AI readiness audit',
+    ctaHref: '/contact?help=AI%20Readiness%20(GEO)%20Audit',
     footerFlow: 'Scan → Structure → Recommend',
   },
   {
@@ -476,8 +476,8 @@ export const auditItems = [
     title: 'Website Audit',
     tagline: 'Evaluate website fit for conversion, SEO and UX',
     impact: 'Turn friction, weak signals or underperforming pages into a clearer path to action.',
-    ctaLabel: 'Book a website review',
-    ctaHref: '/contact',
+    ctaLabel: 'Book a website audit',
+    ctaHref: '/contact?help=Website%20Audit',
     footerFlow: 'Inspect → Fix → Convert',
   },
 ];
