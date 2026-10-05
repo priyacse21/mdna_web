@@ -1,12 +1,7 @@
-export default function SectionTitle({ eyebrow, children, className = '' }) {
+export default function SectionTitle({ children, className = "" }) {
   return (
-    <div className={`grid grid-cols-1 lg:grid-cols-2 items-end gap-[7vw] ${className}`.trim()}>
-      <div>
-        <p className="mb-7 font-mono text-[10px] leading-[1.4] font-medium tracking-[0.16em] uppercase text-violet max-md:mb-5 max-md:text-[8px]">{eyebrow}</p>
-        <h2 className="text-[clamp(3.3rem,6vw,6.8rem)] leading-[0.92] tracking-[-0.075em] uppercase font-bold text-balance mb-[34px]">
-          {children}
-        </h2>
-      </div>
-    </div>
+    <p className={`m-0 inline-flex min-h-10 items-center gap-[10px] font-mono text-[22px] leading-[1.4] font-medium tracking-[0.24em] uppercase text-violet before:h-px before:w-5 before:shrink-0 before:bg-violet before:content-[''] max-md:min-h-8 max-md:gap-2 max-md:text-[8px] max-md:tracking-[0.18em] max-md:before:w-3 ${className}`.trim()}>
+      {children}
+    </p>
   );
 }

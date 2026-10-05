@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SectionEyebrow from "../../components/common/SectionEyebrow";
+import SectionTitle from "../../components/common/SectionTitle";
 
 const qualities = ["Resourceful", "Hands-on", "Fast-moving", "Effective"];
 
@@ -9,25 +9,25 @@ export default function ObservationSection() {
   return (
     <section className=" text-[#171b20] py-[40px] sm:py-[60px] lg:py-[100px] font-['Poppins',Arial,sans-serif]">
       <div className="w-[calc(100%-48px)] lg:w-[calc(100%-clamp(24px,5vw,72px)*2)] max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-[0.3fr_1fr] gap-7 md:gap-[6vw]">
-        <SectionEyebrow>
+        <SectionTitle>
           The Observation
-        </SectionEyebrow>
+        </SectionTitle>
 
         <div>
           <h2 className="text-[clamp(28px,3.2vw,45px)] leading-[1.1] tracking-[-0.035em] font-semibold m-0 mb-4">
             Getting on the map is harder than it looks.
           </h2>
-          <p className="text-[15px] leading-[1.7] max-w-[850px] m-0">
+          <p className="text-[15px] text-[#3B4452]leading-[1.7] max-w-[850px] m-0">
             Our founders saw this firsthand while working with clients
             navigating the challenges of going to market — figuring out how
             to tell their story, reach the right people and build a
             presence that matched the value they offered.
           </p>
 
-          <SectionEyebrow className="mt-7">
+          <SectionTitle className="mt-7">
             The Approach
-          </SectionEyebrow>
-          <p className="text-[15px] leading-[1.7] max-w-[850px] m-0 mt-2">
+          </SectionTitle>
+          <p className="text-[15px] text-[#3B4452] leading-[1.7] max-w-[850px] m-0 mt-2">
             What stood out was not just the challenge, but the approach our
             team took to solving it:
           </p>

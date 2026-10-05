@@ -17,7 +17,7 @@ const labelPositions = [
   "left-1/2 top-[7%] -translate-x-1/2",
 ];
 
-import SectionEyebrow from "../../components/common/SectionEyebrow";
+import SectionTitle from "../../components/common/SectionTitle";
 
 export default function ExplorerSection() {
   const [activeKey, setActiveKey] = useState("lead");
@@ -39,16 +39,16 @@ export default function ExplorerSection() {
       <div className="w-[min(calc(100%-52px),1440px)] sm:w-[min(calc(100%-64px),1440px)] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[0.78fr_1.22fr] gap-5 lg:gap-[60px] items-end">
           <div>
-            <SectionEyebrow className="mb-4">
+            <SectionTitle className="mb-4">
               One business. Different starting points.
-            </SectionEyebrow>
+            </SectionTitle>
             <h2 className="text-[44px] lg:text-[clamp(44px,5.8vw,82px)] leading-[0.96] tracking-[-2.5px] lg:tracking-[-4px] font-medium m-0" id="signature-title">
               CHOOSE YOUR
               <br />
               STARTING POINT.
             </h2>
           </div>
-          <p className="max-w-[680px] text-[#8d979f] leading-[1.85] text-[15px] font-light m-0 mt-6 lg:mt-0">
+          <p className="max-w-[680px] text-[#B8C1CC] leading-[1.85] text-[18px] font-light m-0 mt-6 lg:mt-0">
             The right entry point changes with the problem. Select one to see
             how that starting point connects into the wider mDNA system.
           </p>

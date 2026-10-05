@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import SectionEyebrow from '../../components/common/SectionEyebrow'
+import SectionTitle from '../../components/common/SectionTitle'
 import { accountNodes, leadMethods, leadOutcomes, leadPathway } from './data/serviceData'
 import { leadGenerationData } from './data/toolsCatlog'
 import ToolsSection from './common/ToolSection/Toolsection'
@@ -43,9 +43,9 @@ export default function LeadGeneration() {
 	return <main className="[&_h1]:tracking-normal [&_h1]:normal-case [&_h2]:tracking-normal [&_h2]:normal-case [&_.eyebrow_span]:text-[#bd00f2]">
 		<section className="grid min-h-[700px] grid-cols-[minmax(400px,0.92fr)_minmax(460px,1.08fr)] bg-[#101116] text-white max-[1023px]:grid-cols-1" aria-labelledby="lead-title">
 			<div className="max-w-[700px] self-center py-[72px] pr-12 pl-[max(48px,calc((100vw-1440px)/2))] max-[1023px]:max-w-[760px] max-[1023px]:px-6 max-[1023px]:pt-[86px] max-[1023px]:pb-12 max-[767px]:px-5 max-[767px]:pt-[70px] max-[767px]:pb-[42px]">
-				<SectionEyebrow className="mb-7 max-[767px]:mb-5">Lead generation</SectionEyebrow>
+				<SectionTitle className="mb-7 max-[767px]:mb-5">Lead generation</SectionTitle>
 				<h1 className="m-0 mb-7 text-[88px] leading-[0.98] max-[1023px]:text-[72px] max-[767px]:text-5xl" id="lead-title">Find the<br />right buyers.<br /><span className="text-[#bd00f2]">Start the right conversations.</span></h1>
-				<p className="mb-[26px] max-w-[430px] text-[14px] leading-[1.7] text-[#a6a7ad] max-[767px]:text-[13px]">Identify ideal buyers, reach them through targeted channels and create a more focused path to sales-ready conversations.</p>
+				<p className="mb-[26px] max-w-[430px] text-[18px] leading-[1.7] text-[#B8C1CC] max-[767px]:text-[18px]">Identify ideal buyers, reach them through targeted channels and create a more focused path to sales-ready conversations.</p>
 				<div className="flex flex-wrap gap-[10px]">
 					<Link className="inline-flex min-h-[45px] items-center gap-[14px] bg-[#f8f8f7] px-[17px] text-[11px] font-bold text-[#101116] no-underline transition-all duration-200 max-[767px]:text-[10px]" to="/contact">Talk to us <span aria-hidden="true">↗</span></Link>
 					<a className="inline-flex min-h-[45px] items-center gap-[14px] border border-current px-[17px] text-[11px] font-bold text-white no-underline transition-all duration-200 max-[767px]:text-[10px]" href="#lead-system">Explore the system <span aria-hidden="true">↓</span></a>
@@ -66,12 +66,12 @@ export default function LeadGeneration() {
 		</section>
 
 		<section className="bg-[#f2f0ea] px-[max(48px,calc((100vw-1300px)/2))] py-[100px] pb-[110px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="lead-opportunity-title">
-			<SectionEyebrow className="mb-0"> The opportunity</SectionEyebrow>
+			<SectionTitle className="mb-0"> The opportunity</SectionTitle>
 			<div className="ml-auto max-w-[980px] max-[767px]:mt-[25px]">
 				<h2 className="m-0 text-[78px] leading-[1.03] max-[767px]:text-[42px]" id="lead-opportunity-title">More outreach doesn't automatically mean <span className="text-[#85898f]">more opportunity.</span></h2>
 				<div className="mt-[46px] grid grid-cols-2 gap-10 border-t border-[#10161d]/[0.18] pt-6 max-[767px]:mt-7 max-[767px]:grid-cols-1 max-[767px]:gap-[18px]">
-					<p className="m-0 max-w-[440px] text-[14px] leading-[1.8] text-[#5b6570]">Lead generation starts with knowing who you want to reach, then choosing the channels and messages that make those buyers worth pursuing.</p>
-					<p className="font-mono text-[9px] leading-[2] text-[#68737d]">TARGET / CHANNEL / MESSAGE / CONVERSATION<br />BUILD FOCUS BEFORE ADDING VOLUME.</p>
+					<p className="m-0 max-w-[440px] text-[18px] leading-[1.8] text-[#3B4452]">Lead generation starts with knowing who you want to reach, then choosing the channels and messages that make those buyers worth pursuing.</p>
+					<p className="font-mono text-[15px] leading-[2] text-[#68737d]">TARGET / CHANNEL / MESSAGE / CONVERSATION<br />BUILD FOCUS BEFORE ADDING VOLUME.</p>
 				</div>
 			</div>
 		</section>
@@ -89,18 +89,18 @@ export default function LeadGeneration() {
 
 		<section className="bg-[#f2f0ea] px-[max(48px,calc((100vw-1300px)/2))] py-[90px] pb-[100px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="lead-pathway-title">
 			<div className="mb-[78px] ml-auto grid max-w-[940px] grid-cols-[1fr_2fr] gap-10 max-[767px]:mb-[42px] max-[767px]:grid-cols-1 max-[767px]:gap-5">
-				<SectionEyebrow className="mt-3 max-[767px]:mt-0">The pathway</SectionEyebrow>
+				<SectionTitle className="mt-3 max-[767px]:mt-0">The pathway</SectionTitle>
 				<div>
 					<h2 className="m-0 text-[78px] leading-[1.03] max-[767px]:text-[42px]" id="lead-pathway-title">From market to a working pipeline.</h2>
-					<p className="mt-[18px] mb-0 max-w-[440px] text-[13px] leading-[1.7] text-[#65717c]">The service components can work independently or as part of a connected lead generation system: identify the buyers, reach them with targeted outreach and work from researched decision-maker lists.</p>
+					<p className="mt-[18px] mb-0 max-w-[440px] text-[15px] leading-[1.7] text-[#3B4452]">The service components can work independently or as part of a connected lead generation system: identify the buyers, reach them with targeted outreach and work from researched decision-maker lists.</p>
 				</div>
 			</div>
 			<div className="grid grid-cols-4 border-y border-[#10161d]/[0.18] max-[767px]:grid-cols-2">
 				{leadPathway.map(([number, title, description, label], index) => <article className={`min-h-[290px] border-r border-[#10161d]/[0.14] px-6 py-7 last:border-r-0 max-[1023px]:px-4 max-[767px]:min-h-[260px] max-[767px]:border-b max-[767px]:px-[14px] max-[767px]:py-[22px] max-[767px]:nth-[2]:border-r-0 max-[767px]:nth-last-[-n+2]:border-b-0`} key={number}>
 					<span className={`mx-auto mb-[38px] grid h-[76px] w-[76px] rotate-45 place-items-center border ${index === 0 ? 'border-[#bd00f2] bg-[#bd00f2] shadow-[0_0_0_8px_rgba(189,0,242,0.1)]' : 'border-[#7d8389]'} max-[767px]:mb-[30px] max-[767px]:h-[58px] max-[767px]:w-[58px]`}><b className="rotate-[-45deg] font-mono text-[9px] text-[#17191e]">{number}</b></span>
 					<h3 className="mb-2 text-base uppercase">{title}</h3>
-					<p className="mb-3 min-h-12 max-w-[220px] text-[12px] leading-[1.55] text-[#68727d] max-[767px]:min-h-[60px] max-[767px]:text-[11px]">{description}</p>
-					<span className="font-mono text-[9px] leading-[2] text-[#68737d] max-[767px]:text-[7px]">{label}</span>
+					<p className="mb-3 min-h-12 max-w-[220px] text-[15px] leading-[1.55] text-[#3B4452] max-[767px]:min-h-[60px] max-[767px]:text-[11px]">{description}</p>
+					<span className="font-mono text-[12px] leading-[2] text-[#68737d] max-[767px]:text-[7px]">{label}</span>
 				</article>)}
 			</div>
 		</section>
@@ -108,10 +108,10 @@ export default function LeadGeneration() {
 		<section className="bg-[#f5f4f7] px-[max(48px,calc((100vw-1300px)/2))] py-[90px] pb-[100px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="lead-targeting-title">
 			<div className="mb-[34px] grid grid-cols-[1fr_280px] items-center gap-16 max-[1023px]:grid-cols-1 max-[1023px]:gap-5">
 				<div>
-					<SectionEyebrow className="mb-7 max-[767px]:mb-5"> Signature interaction</SectionEyebrow>
+					<SectionTitle className="mb-7 max-[767px]:mb-5"> Signature interaction</SectionTitle>
 					<h2 className="m-0 text-[64px] leading-[1.03] max-[767px]:text-[42px]" id="lead-targeting-title">The account targeting board.</h2>
 				</div>
-				<p className="mb-[6px] text-[13px] leading-[1.7] text-[#65717c] max-[1023px]:max-w-[520px]">Lead generation is not a list of names. It is a system for deciding who deserves attention, then connecting the right signals.</p>
+				<p className="mb-[6px] text-[16px] leading-[1.7] text-[#3B4452] max-[1023px]:max-w-[520px]">Lead generation is not a list of names. It is a system for deciding who deserves attention, then connecting the right signals.</p>
 			</div>
 			<div className="relative min-h-[490px] overflow-hidden border-y border-[#10161d]/[0.15] bg-[#f7f6f2] bg-[linear-gradient(rgba(16,22,29,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(16,22,29,0.035)_1px,transparent_1px)] bg-[length:88px_80px] max-[767px]:min-h-[400px]" role="img" aria-label="Five priority account signals connected around a focus account">
 				<span className="absolute top-5 left-5 z-[2] font-mono text-[8px] text-[#68727d]">ACCOUNT MAP / LIVE VIEW<br />SELECT A NODE</span>
@@ -237,21 +237,21 @@ export default function LeadGeneration() {
     </section>
 
 		<section className="bg-[#f2f0ea] px-[max(48px,calc((100vw-1150px)/2))] py-[90px] pb-[100px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="lead-outcomes-title">
-			<SectionEyebrow className="mb-7 max-[767px]:mb-5"> What changes</SectionEyebrow>
+			<SectionTitle className="mb-7 max-[767px]:mb-5"> What changes</SectionTitle>
 			<h2 className="mb-[50px] ml-auto max-w-[790px] text-[66px] leading-[1.03] max-[767px]:mb-[34px] max-[767px]:text-[42px]" id="lead-outcomes-title">Turn prospecting into a more focused system.</h2>
 			<div className="grid grid-cols-3 border-y border-[#10161d]/[0.18] max-[767px]:grid-cols-1">
 				{leadOutcomes.map(([label, title, description], index) => <article className={`relative flex min-h-[220px] flex-col justify-between border-r border-[#10161d]/[0.14] p-[22px] last:border-r-0 max-[767px]:min-h-[170px] max-[767px]:border-r-0 max-[767px]:border-b max-[767px]:last:border-b-0`} key={label}>
-					<span className="font-mono text-[8px] text-[#75808b]">{label}</span>
-					<div><h3 className="mb-[10px] text-[19px]">{title}</h3><p className="m-0 max-w-[290px] text-[12px] leading-[1.6] text-[#68727d]">{description}</p></div>
+					<span className="font-mono text-[12px] text-violet">{label}</span>
+					<div><h3 className="mb-[10px] text-[19px]">{title}</h3><p className="m-0 max-w-[290px] text-[15px] leading-[1.6] text-[#3B4452]">{description}</p></div>
 					<i className="absolute right-4 bottom-[15px] h-7 w-7 rotate-45 border border-[#10161d]/[0.18]" aria-hidden="true" />
 				</article>)}
 			</div>
 		</section>
 
 		<section className="relative flex min-h-[550px] flex-col items-center justify-center overflow-hidden bg-[#0d151d] px-6 py-[90px] text-center text-[#f8f8f7] max-[767px]:min-h-[460px] max-[767px]:px-5 max-[767px]:py-[70px]" aria-labelledby="lead-cta-title">
-			<SectionEyebrow className="relative z-[1] mb-7 max-[767px]:mb-5"> Start here</SectionEyebrow>
+			<SectionTitle className="relative z-[1] mb-7 max-[767px]:mb-5"> Start here</SectionTitle>
 			<h2 className="relative z-[1] m-0 mb-[18px] text-[68px] leading-[1.05] max-[767px]:text-[42px]" id="lead-cta-title">Know who you want to reach?<br /><span className="text-[#bd00f2]">Let's build the path.</span></h2>
-			<p className="relative z-[1] mb-6 max-w-[490px] text-[13px] leading-[1.65] text-[#a6adb6]">Tell us what you are trying to solve. We’ll help identify the right starting point for your lead generation system.</p>
+			<p className="relative z-[1] mb-6 max-w-[490px] text-[18px] leading-[1.65] text-[#B8C1CC]">Tell us what you are trying to solve. We’ll help identify the right starting point for your lead generation system.</p>
 			<Link className="relative z-[1] inline-flex min-h-[45px] items-center gap-[14px] bg-[#f8f8f7] px-[17px] text-[11px] font-bold text-[#101116] no-underline transition-all duration-200 max-[767px]:text-[10px]" to="/contact">Talk to mDNA <span aria-hidden="true">↗</span></Link>
 			<div className="absolute right-[15%] bottom-[-360px] h-[640px] w-[640px] rotate-45 border border-[#bd00f2]/[0.32]" />
 		</section>

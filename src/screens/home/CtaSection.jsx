@@ -20,7 +20,7 @@ export default function CtaSection() {
           <span className="text-[#bd00f2]">marketing move?</span>
         </h2>
 
-        <p className="max-w-[520px] text-[#8997a3] text-[12px] leading-[1.7] mb-7">
+        <p className="max-w-[520px] text-[#B8C1CC] text-[18px] leading-[1.7] mb-7">
           Start with the need that matters most - pipeline, visibility, credibility, clarity or capability.
         </p>
 

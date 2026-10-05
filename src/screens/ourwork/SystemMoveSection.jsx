@@ -1,5 +1,5 @@
 import { steps } from "./data/ourworkData";
-import SectionEyebrow from "../../components/common/SectionEyebrow";
+import SectionTitle from "../../components/common/SectionTitle";
 
 export default function SystemMoveSection() {
   return (
@@ -7,9 +7,9 @@ export default function SystemMoveSection() {
       <div className="w-[min(calc(100%-52px),1440px)] sm:w-[min(calc(100%-64px),1440px)] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[0.82fr_1.18fr] gap-6 lg:gap-[60px] items-end mb-12 lg:mb-[74px]">
           <div>
-            <SectionEyebrow className="mb-4">
+            <SectionTitle className="mb-4">
                How the system moves
-            </SectionEyebrow>
+            </SectionTitle>
             <h2 className="text-[clamp(44px,5.8vw,82px)] leading-[0.96] tracking-[-4px] font-medium m-0" id="journey-title">
               START WHERE YOU ARE.
               <br />

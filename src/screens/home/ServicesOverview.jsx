@@ -1,4 +1,4 @@
-import SectionEyebrow from "../../components/common/SectionEyebrow";
+import SectionTitle from "../../components/common/SectionTitle";
 
 export default function ServicesOverview() {
   const services = [
@@ -13,7 +13,7 @@ export default function ServicesOverview() {
     <section className="bg-[#0d151d] text-[#f8f8f7] py-[50px] px-4 md:px-6 lg:py-[100px] lg:px-[max(12vw,40px)]" id="system">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-end gap-5 lg:gap-[7vw]">
         <div>
-          <SectionEyebrow className="mb-7 max-md:mb-5">The mDNA system</SectionEyebrow>
+          <SectionTitle className="mb-7 max-md:mb-5">The mDNA system</SectionTitle>
           <h2 className="text-[clamp(3.3rem,6vw,6.8rem)] leading-[0.92] tracking-[-0.075em] uppercase font-bold text-balance mb-2">
             Five entry points.
             <br />
@@ -22,7 +22,7 @@ export default function ServicesOverview() {
             system.
           </h2>
         </div>
-        <p className="max-w-[540px] mb-2 text-[#758595] text-[13px] leading-[1.75]">
+        <p className="max-w-[540px] mb-2 text-[#B8C1CC] text-[18px] leading-[1.75]">
           Five capabilities, connected around different business needs. Start with the one that matters now; move into the wider system when the need changes.
         </p>
       </div>

@@ -126,7 +126,7 @@ export default function ProcessSteps({
               </h3>
 
               <p
-                className={`m-0 text-[13px] leading-[1.65] ${mutedColor} ${
+                className={`m-0 text-[14px] text-[#3B4452] leading-[1.65] ${mutedColor} ${
                   isHorizontal ? "max-w-[245px]" : "max-w-[600px] text-[14px] leading-[1.7]"
                 }`}
               >

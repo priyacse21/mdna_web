@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { items } from "./data/insightsData";
-import SectionEyebrow from "../../components/common/SectionEyebrow";
+import SectionTitle from "../../components/common/SectionTitle";
 
 
 const ContentIndexSection = () => {
@@ -11,9 +11,9 @@ const ContentIndexSection = () => {
     <section className="bg-[#f3f1eb] py-[40px] sm:py-[60px] lg:py-[100px] font-sans text-[#111318]">
       <div className="mx-auto w-[min(calc(100%-72px),1440px)] max-[900px]:w-[min(calc(100%-48px),1440px)] max-[600px]:w-[calc(100%-48px)]">
         <div className="grid grid-cols-[25%_1fr] gap-[50px] max-[900px]:grid-cols-1 max-[900px]:gap-5">
-          <SectionEyebrow className="pt-[5px] max-[900px]:pt-0">
+          <SectionTitle className="pt-[5px] max-[900px]:pt-0">
             <b className="font-medium text-[#b400e8]"></b> CONTENT INDEX
-          </SectionEyebrow>
+          </SectionTitle>
 
           <div>
             <div className="border-t border-[#111318]/[0.15]">
@@ -28,7 +28,7 @@ const ContentIndexSection = () => {
                   <span className="font-mono text-[10px] leading-[1.2] tracking-[0.14em] uppercase text-[#747980]">{item.num}</span>
                   <span>
                     <h2 className={`m-0 text-[clamp(24px,3vw,42px)] leading-none tracking-[-0.045em] font-semibold transition duration-300 ease-[cubic-bezier(0.2,0.7,0.2,1)] group-hover:translate-x-2 ${activeIndex === index ? "translate-x-2" : ""}`}>{item.title}</h2>
-                    <p className="mt-[6px] mb-0 text-[13px] leading-[1.45] text-[#666b70]">{item.desc}</p>
+                    <p className="mt-[6px] mb-0 text-[18px] leading-[1.45] text-[#3B4452]">{item.desc}</p>
                   </span>
                   <span className="font-mono text-[10px] leading-[1.2] tracking-[0.14em] uppercase whitespace-nowrap text-[#b400e8] max-[600px]:col-start-2 max-[600px]:mt-[-4px] max-[600px]:text-[9px]">COMING SOON</span>
                 </button>

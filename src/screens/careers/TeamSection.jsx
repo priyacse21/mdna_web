@@ -1,14 +1,14 @@
 
 
-import SectionEyebrow from "../../components/common/SectionEyebrow";
+import SectionTitle from "../../components/common/SectionTitle";
 
 const TeamSection = () => {
   return (
     <section className="bg-[#f3f1eb] py-[40px] sm:py-[60px] lg:py-[100px] font-sans text-[#111318]">
       <div className="mx-auto grid w-full max-w-[1380px] grid-cols-[0.35fr_1fr] gap-[65px] px-12 max-[900px]:grid-cols-1 max-[900px]:gap-6 max-[900px]:px-7 max-[560px]:px-6">
-        <SectionEyebrow className="pt-2">
+        <SectionTitle className="pt-2">
           THE TEAM
-        </SectionEyebrow>
+        </SectionTitle>
         <div>
           <p className="mb-7 max-w-[1000px] text-[clamp(40px,4.8vw,72px)] leading-[1.03] tracking-[-0.055em] font-bold max-[560px]:text-[38px]">
             Different questions. Different problems. Room to contribute.

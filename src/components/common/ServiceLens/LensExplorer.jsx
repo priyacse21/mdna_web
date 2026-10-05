@@ -31,7 +31,7 @@ export default function LensExplorer({
         <h2 className="whitespace-pre-line text-5xl font-semibold leading-[0.95] tracking-tighter sm:text-7xl lg:text-[80px]">
           {heading}
         </h2>
-        <p className="max-w-[300px] text-sm leading-relaxed text-[#111218]/60">
+        <p className="max-w-[300px] text-[18px] leading-relaxed text-[#1113B4452218]/60">
           {description}
         </p>
       </div>

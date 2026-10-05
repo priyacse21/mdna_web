@@ -85,6 +85,12 @@ export const consultingJourney = [
 	['04', 'Move', 'Hand over the capability or use the result clarity to take the next action.'],
 ]
 
+export const consultingOpportunityCards = [
+	['01 / FUNCTION', 'Build the capability.', 'A marketing function can be built and handed over as a fully operational, self-sufficient team.'],
+	['02 / MARKET', 'Know the context.', 'Industry reports and competitive benchmarking provide a basis for data-backed decisions.'],
+	['03 / CUSTOMER', 'See the segments.', 'Customer behaviour can be analysed to define audience segments for more targeted campaigns.'],
+]
+
 export const consultingLenses = [
 	['Function', 'Build the function you can hand over.', 'Marketing Function Setup & Handover - build and hand over an in-house marketing division.', 'CAPABILITY'],
 	['Market', 'Know the market before you move.', 'Market Research - use industry reports and competitive benchmarking to support decisions.', 'CONTEXT'],

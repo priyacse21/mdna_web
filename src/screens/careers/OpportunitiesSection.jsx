@@ -1,6 +1,6 @@
 
 
-import SectionEyebrow from "../../components/common/SectionEyebrow";
+import SectionTitle from "../../components/common/SectionTitle";
 
 const OpportunitiesSection = () => {
   return (
@@ -8,9 +8,9 @@ const OpportunitiesSection = () => {
       <div className="mx-auto w-full max-w-[1380px] px-12 max-[900px]:px-7 max-[560px]:px-6">
         <div className="mb-12 flex items-end justify-between gap-[60px] max-[900px]:grid max-[900px]:grid-cols-1 max-[900px]:gap-6">
           <div>
-            <SectionEyebrow>
+            <SectionTitle>
             OPPORTUNITIES
-            </SectionEyebrow>
+            </SectionTitle>
             <h2 className="mt-[9px] mb-0 text-[clamp(44px,5vw,72px)] leading-none tracking-[-0.055em] font-bold max-[560px]:text-[43px]">
               We're building
               <br />
@@ -27,7 +27,7 @@ const OpportunitiesSection = () => {
           <div className="text-[44px] tracking-[-0.05em] font-bold text-[#b400e8] max-[560px]:self-start max-[560px]:pt-[30px] max-[560px]:text-[32px]">00</div>
           <div>
             <div className="mb-2 text-[clamp(29px,3vw,44px)] tracking-[-0.04em] font-bold max-[560px]:text-[28px]">Open opportunities</div>
-            <div className="text-[14px] text-[#aaa9a5]">
+            <div className="text-[18px] text-[#B8C1CC]">
               Nothing listed yet. Check back soon.
             </div>
           </div>

@@ -29,7 +29,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[30px] md:gap-[18px] lg:gap-9">
           {/* Explore */}
           <div className="flex flex-col items-start gap-[13px]">
-            <p className="my-[5px] text-[#79808c] font-mono text-[9px] tracking-[0.15em] uppercase">
+            <p className="my-[5px]  text-violet font-mono text-[15px] tracking-[0.15em] uppercase">
               Explore
             </p>
 
@@ -46,7 +46,7 @@ export default function Footer() {
 
           {/* Services */}
           <div className="flex flex-col items-start gap-[13px]">
-            <p className="my-[5px] text-[#79808c] font-mono text-[9px] tracking-[0.15em] uppercase">
+            <p className="my-[5px]  text-violet font-mono text-[15px] tracking-[0.15em] uppercase">
               Services
             </p>
 
@@ -63,7 +63,7 @@ export default function Footer() {
 
           {/* Connect */}
           <div className="flex flex-col items-start gap-[13px]">
-            <p className="my-[5px] text-[#79808c] font-mono text-[9px] tracking-[0.15em] uppercase">
+            <p className="my-[5px]  text-violet font-mono text-[15px] tracking-[0.15em] uppercase">
               Connect
             </p>
 

@@ -1,5 +1,5 @@
 import { signals } from "./data/ourworkData";
-import SectionEyebrow from "../../components/common/SectionEyebrow";
+import SectionTitle from "../../components/common/SectionTitle";
 
 export default function MarketingSection() {
   return (
@@ -7,9 +7,9 @@ export default function MarketingSection() {
       <div className="w-[min(calc(100%-52px),1440px)] sm:w-[min(calc(100%-64px),1440px)] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[0.88fr_1.12fr] gap-10 sm:gap-[55px] lg:gap-20 items-end">
           <div>
-            <SectionEyebrow className="mb-4">
+            <SectionTitle className="mb-4">
                The marketing problem
-            </SectionEyebrow>
+            </SectionTitle>
             <h2 className="text-[clamp(32px,4.3vw,60px)] leading-[1.03] tracking-[-3px] font-medium m-0" id="problem-title">
               MORE MARKETING
               <br />
@@ -40,10 +40,6 @@ export default function MarketingSection() {
                   <i className="w-[7px] h-[7px] bg-[#a604d6] block" />
                 </div>
               ))}
-            </div>
-
-            <div className="absolute bottom-[22px] sm:bottom-7 left-6 sm:left-[34px] text-[#8a9297] font-mono text-[9px]">
-              THE STARTING POINT MATTERS.
             </div>
           </div>
         </div>

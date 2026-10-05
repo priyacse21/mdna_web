@@ -1,9 +1,9 @@
-import SectionEyebrow from "../../components/common/SectionEyebrow";
+import SectionTitle from "../../components/common/SectionTitle";
 
 export default function ValueSection() {
   return (
     <section className="bg-[#f2f0ea] text-[#10161d] block min-h-[620px] py-[40px] px-4 md:px-6 lg:py-[100px] lg:px-[max(12vw,40px)]">
-      <SectionEyebrow className="mb-7 max-md:mb-5">The value of the system</SectionEyebrow>
+      <SectionTitle className="mb-7 max-md:mb-5">The value of the system</SectionTitle>
       <h2 className="text-[clamp(3.2rem,12vw,6rem)] lg:text-[clamp(3.3rem,6vw,6.8rem)] leading-[0.92] tracking-[-0.075em] uppercase font-bold text-balance max-w-[850px] mb-6">
         The starting point
         <br />
@@ -13,7 +13,7 @@ export default function ValueSection() {
         <br />
         stays clear.
       </h2>
-      <p className="max-w-[550px] text-[#52667c] text-[13px] leading-[1.7] m-0 mb-10">
+      <p className="max-w-[550px] text-[#3B4452] text-[18px] leading-[1.7] m-0 mb-10">
         You do not need to start everywhere. Start with the need that matters now, then use the wider capability set as the business evolves.
       </p>
 

@@ -9,7 +9,7 @@ export default function ToolsSection({ tools = [] }) {
       <div className="mx-auto w-full">
         <div className="mb-[22px] block items-start md:mb-[26px] md:grid md:grid-cols-[80px_minmax(0,1fr)]">
           <p className="mt-[2px] mb-3 md:mb-0 text-[8px] leading-none tracking-[0.12em] uppercase text-[#6b7078] font-mono">
-            TOOLS
+           
           </p>
           <div className="max-w-[900px]">
             <h2
@@ -18,7 +18,7 @@ export default function ToolsSection({ tools = [] }) {
             >
               Tools our teams work with.
             </h2>
-            <p className="max-w-[620px] m-0 mt-2 text-[13px] leading-[1.5] text-[#666c74]">
+            <p className="max-w-[620px] m-0 mt-2 text-[15px] leading-[1.5] text-[#3B4452]">
               We leverage industry-leading tools to help us find the right audience,
               create meaningful content and drive measurable results.
             </p>

@@ -1,17 +1,17 @@
-import SectionEyebrow from "../../components/common/SectionEyebrow";
+import SectionTitle from "../../components/common/SectionTitle";
 
 export default function CompanySection() {
   return (
     <section className="bg-[#f5f4f7] text-[#171b20] py-[40px] sm:py-[60px] lg:py-[100px]  md:py-12 font-['Poppins',Arial,sans-serif]">
       <div className="w-[calc(100%-48px)] lg:w-[calc(100%-clamp(24px,5vw,72px)*2)] max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-[1fr_0.65fr] gap-7 md:gap-[6vw] items-center">
         <div>
-          <SectionEyebrow>
+          <SectionTitle>
             The Company
-          </SectionEyebrow>
+          </SectionTitle>
           <h2 className="text-[clamp(28px,3.2vw,45px)] leading-[1.1] tracking-[-0.035em] font-semibold m-0 my-4">
             That approach became mDNA.
           </h2>
-          <p className="text-[15px] leading-[1.7] max-w-[850px] m-0">
+          <p className="text-[18px] text-[#3B4452] leading-[1.7] max-w-[850px] m-0">
             Today, we are a small, dynamic team with a big appetite for
             getting things done. We bring together people who genuinely
             love what they do — and who are constantly deepening their

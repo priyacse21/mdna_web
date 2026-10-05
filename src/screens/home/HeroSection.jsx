@@ -4,7 +4,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 import { nodes } from "./data/homedata";
-import SectionEyebrow from "../../components/common/SectionEyebrow";
+import SectionTitle from "../../components/common/SectionTitle";
 
 
 const nodePositions = {
@@ -43,7 +43,7 @@ export default function HeroSection() {
       <div className="w-[min(calc(100%-52px),1440px)] sm:w-[min(calc(100%-64px),1440px)] mx-auto grid grid-cols-1 lg:grid-cols-[1.03fr_0.97fr] gap-[54px] items-center relative z-2">
         <div>
           <div className="font-mono uppercase tracking-[1.8px] text-[10px] text-[#b9c1c7] flex items-center gap-3 mb-[26px] ">
-             <span className="text-[#a604d6]"><SectionEyebrow> Marketing that moves business forward </SectionEyebrow></span>
+             <span className="text-[#a604d6]"><SectionTitle> Marketing that moves business forward </SectionTitle></span>
           </div>
 
           <h1
@@ -57,7 +57,7 @@ export default function HeroSection() {
             <em className="not-italic text-[#a604d6]">BUSINESS.</em>
           </h1>
 
-          <p className="max-w-[650px] text-[#aeb7be] text-[13px] sm:text-[16px] leading-[1.75] sm:leading-[1.85] font-light mt-[30px] mb-0">
+          <p className="max-w-[650px] text-[#B8C1CC] text-[18px] sm:text-[16px] leading-[1.75] sm:leading-[1.85] font-light mt-[30px] mb-0">
             From qualified conversations and visibility to credibility,
             diagnosis and strategy — mDNA brings the right marketing moves
             together.
