@@ -6,6 +6,7 @@ export default function ProcessSteps({
   marker = "fill",
   activeIndex = 0,
   progressTrack = false,
+  centered = false,
 }) {
   const isLight = theme === "light";
   const isHorizontal = direction === "horizontal";
@@ -62,7 +63,9 @@ export default function ProcessSteps({
             key={step.number}
             className={`relative ${
               isHorizontal
-                ? "md:pr-6 grid grid-cols-[48px_1fr] md:block gap-5 md:gap-0"
+                ? centered
+                  ? "flex flex-col items-center text-center gap-5 md:gap-0"
+                  : "md:pr-6 grid grid-cols-[48px_1fr] md:block gap-5 md:gap-0"
                 : "grid grid-cols-[62px_1fr] sm:grid-cols-[80px_1fr] gap-[18px] sm:gap-[27px] min-h-[180px] sm:min-h-[210px] pb-12 last:pb-0 last:min-h-[170px]"
             }`}
           >
@@ -72,7 +75,9 @@ export default function ProcessSteps({
                 aria-hidden="true"
                 className={`absolute ${lineColor} ${
                   isHorizontal
-                    ? "top-[24px] left-[48px] right-0 h-[1px] hidden md:block"
+                    ? centered
+                      ? "top-[24px] left-1/2 right-[-50%] h-[1px] hidden md:block"
+                      : "top-[24px] left-[48px] right-0 h-[1px] hidden md:block"
                     : "top-[62px] sm:top-[80px] bottom-0 left-[31px] sm:left-[40px] w-[1px]"
                 }`}
               />
@@ -82,7 +87,7 @@ export default function ProcessSteps({
             {!isLast && isHorizontal && (
               <span
                 aria-hidden="true"
-                className={`absolute ${progressTrack && index < activeIndex ? "bg-[#bd00f2]" : lineColor} md:hidden top-[48px] -bottom-[36px] left-[24px] w-[1px]`}
+                className={`absolute ${progressTrack && index < activeIndex ? "bg-[#bd00f2]" : lineColor} md:hidden top-[48px] -bottom-[36px] ${centered ? "left-1/2 -translate-x-1/2" : "left-[24px]"} w-[1px]`}
               />
             )}
 
@@ -106,7 +111,7 @@ export default function ProcessSteps({
             </div>
 
             {/* Step Content */}
-            <div className={isHorizontal ? "mt-0 md:mt-7" : ""}>
+            <div className={`${isHorizontal ? "mt-0 md:mt-7" : ""} ${centered && isHorizontal ? "w-full" : ""}`}>
               {step.eyebrow && (
                 <small
                   className={`block font-mono text-[10px] leading-tight tracking-[0.13em] uppercase mb-[11px] ${mutedColor}`}
@@ -118,7 +123,7 @@ export default function ProcessSteps({
               <h3
                 className={`font-medium tracking-[-0.03em] ${
                   isHorizontal
-                    ? "text-[24px] leading-[1.1] mb-[10px]"
+                    ? `text-[24px] leading-[1.1] mb-[10px] ${centered ? "text-center" : ""}`
                     : "text-[22px] sm:text-[28px] mt-[3px] mb-[10px]"
                 }`}
               >

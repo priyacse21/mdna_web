@@ -28,9 +28,10 @@ const FAQContactSection = () => {
             Have a question worth <span className="text-[#b400e8]">exploring?</span>
           </h2>
         </div>
-        <Link className="inline-flex min-h-11 items-center justify-center gap-[11px] border border-white bg-white px-4 font-mono text-[10px] leading-none tracking-[0.1em] uppercase text-[#111318] no-underline transition duration-200 hover:border-[#b400e8] hover:bg-[#b400e8] hover:text-white" to="/contact">
-          Talk to Us <span className="text-[14px]">↗</span>
-        </Link>
+        <Link
+       className="inline-flex min-h-12 items-center justify-center gap-[12px] whitespace-nowrap border border-white bg-white px-8 font-mono text-[10px] tracking-[0.1em] uppercase text-[#111318] no-underline transition duration-200 hover:border-[#b400e8] hover:bg-[#b400e8] hover:text-white"
+         to="/contact"> Talk to Us <span className="text-[14px]">↗</span>
+          </Link>
       </section>
     </div>
   );

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function NeedList({
   title,
   needs = [],
@@ -100,12 +102,17 @@ export default function NeedList({
               );
             }
 
+            const Item = item.href ? Link : Row;
+            const itemProps = item.href ? { to: item.href } : {};
+
             return (
-              <Row
+              <Item
                 key={item.title}
+                {...itemProps}
+                aria-label={item.href ? `${item.title} — ${item.service}` : undefined}
                 className={`grid grid-cols-[28px_minmax(0,1fr)_22px] md:grid-cols-[32px_minmax(0,1fr)_minmax(100px,150px)_24px] lg:grid-cols-[40px_minmax(0,1fr)_minmax(120px,220px)_30px] items-center w-full min-h-[76px] py-3.5 sm:py-4 px-2 sm:px-3.5 border-t border-[#10161d]/18 last:border-b last:border-[#10161d]/18 box-border transition-colors ${
                   active ? "bg-[#bd00f2]/[0.045]" : ""
-                }`}
+                } ${item.href ? "text-inherit no-underline hover:bg-[#bd00f2]/[0.045] focus-visible:outline-2 focus-visible:outline-[#bd00f2]" : ""}`}
               >
                 <small className="self-start pt-1 text-[#bd00f2] font-mono text-[10px]">
                   {number}
@@ -134,7 +141,7 @@ export default function NeedList({
                 >
                   →
                 </b>
-              </Row>
+              </Item>
             );
           })}
         </div>

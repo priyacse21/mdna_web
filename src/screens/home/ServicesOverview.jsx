@@ -1,13 +1,11 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import SectionTitle from "../../components/common/SectionTitle";
+import { services } from "./data/homedata";
 
 export default function ServicesOverview() {
-  const services = [
-    ['01', 'Lead Generation', 'PIPELINE'],
-    ['02', 'Content, Search & AI Visibility', 'VISIBILITY'],
-    ['03', 'Digital PR', 'CREDIBILITY'],
-    ['04', 'Audits & Diagnostics', 'CLARITY'],
-    ['05', 'Consulting', 'CAPABILITY'],
-  ];
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeService = services[activeIndex];
 
   return (
     <section className="bg-[#0d151d] text-[#f8f8f7] py-[50px] px-4 md:px-6 lg:py-[100px] lg:px-[max(12vw,40px)]" id="system">
@@ -38,40 +36,48 @@ export default function ServicesOverview() {
           Select a node / explore a capability
         </p>
 
-        {services.map(([number, title, label], index) => {
-          const isActive = index === 0;
+        {services.map((service, index) => {
+          const isActive = index === activeIndex;
           return (
-            <div className="text-center" key={number}>
+            <button
+              aria-pressed={isActive}
+              className="text-center text-inherit bg-transparent border-0 p-0 cursor-pointer focus-visible:outline-2 focus-visible:outline-[#bd00f2]"
+              key={service.number}
+              onClick={() => setActiveIndex(index)}
+              type="button"
+            >
               <div
                 className={`w-[90px] h-[90px] mx-auto mb-5 grid place-items-center rotate-45 border transition-colors ${
-                  isActive ? "border-[#bd00f2]" : "border-white/14"
+                  isActive
+                    ? "border-[#bd00f2] bg-[#bd00f2]/[0.06]"
+                    : "border-white/14 hover:border-[#bd00f2]/60"
                 }`}
               >
                 <small className="-rotate-45 block text-[#bd00f2] font-mono text-[10px]">
-                  {number}
+                  {service.number}
                 </small>
               </div>
               <strong className="block text-[10px] not-italic font-semibold text-white">
-                {title}
+                {service.title}
               </strong>
               <em className="block mt-1.5 text-[#607080] font-mono text-[9px] not-italic uppercase">
-                {label}
+                {service.label}
               </em>
-            </div>
+            </button>
           );
         })}
 
-        <div className="col-span-full text-center mt-4">
-          <h3 className="m-0 text-[17px] font-semibold">Lead Generation</h3>
+        <div aria-live="polite" className="col-span-full text-center mt-4">
+          <h3 className="m-0 text-[17px] font-semibold">{activeService.title}</h3>
           <p className="my-1.5 text-[#73818e] text-[10px]">
-            Identify, target and message ideal buyers.
+            {activeService.description}
           </p>
-          <a
-            href="#contact"
+          <Link
+            to={activeService.href}
             className="text-[#bd00f2] font-mono text-[10px] hover:underline"
           >
-            Explore Lead Generation ↗
-          </a>
+            Explore {activeService.title} ↗
+          </Link>
         </div>
       </div>
     </section>
