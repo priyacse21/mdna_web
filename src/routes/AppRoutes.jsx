@@ -10,7 +10,7 @@ import Services from "../pages/Services";
 
 import LeadGeneration from "../screens/services/leadGeneration";
 import ContentSearchAI from "../screens/services/ContentSearchAI";
-import DigitalPR from "../screens/services/DigitalPR";
+
 import Audits from "../screens/services/Audits";
 import Consulting from "../screens/services/Consulting";
 import Branding from "../screens/services/Branding";
@@ -38,10 +38,6 @@ export default function AppRoutes() {
             element={<ContentSearchAI />}
           />
 
-          <Route
-            path="digital-pr"
-            element={<DigitalPR />}
-          />
 
           <Route
             path="audits"

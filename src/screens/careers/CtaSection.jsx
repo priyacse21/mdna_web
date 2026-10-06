@@ -14,9 +14,9 @@ const CtaSection = () => {
         </div>
 
         <div className="flex flex-wrap gap-[10px]">
-          <a className="border border-white bg-white px-[18px] py-[14px] text-[13px] font-bold text-[#111318] no-underline" href="/our-work">
-            Explore Our Work →
-          </a>
+          <Link className="border border-white bg-white px-[18px] py-[14px] text-[13px] font-bold text-[#111318] no-underline" to="/services">
+            Explore Our Services →
+          </Link>
           <Link className="border border-white bg-transparent px-[18px] py-[14px] text-[13px] font-bold text-white no-underline" to="/contact">
             Talk to Us →
           </Link>
