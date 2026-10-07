@@ -1,11 +1,12 @@
 // src/pages/Contact/Contact.jsx
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useSearchParams } from "react-router-dom";
 import SectionTitle from "../../components/common/SectionTitle";
+import { toServiceSlug } from "../../utils/serviceSlug";
 const helpOptions = [
   "Lead Generation",
   "Pipeline Audit",
@@ -17,7 +18,19 @@ const helpOptions = [
   "Paid Social Campaigns",
   "Conversion Rate Optimization",
   "Creative Asset Production",
-
+  "Content Plan",
+  "Visibility Audit",
+  "Sample Newsletter",
+  "Campaign Strategy Call",
+  "Social Plan", 
+  "Webinar Plan",
+  "Video Production",
+  "Podcast Options",
+  "Community Plan",
+  "Reputation Audit",
+  "Retargeting Plan",
+  "Tracking Audit",
+  "Explore Affiliate"
 ];
 
 const schema = z.object({
@@ -39,19 +52,31 @@ const schema = z.object({
 const Contact = () => {
   const [status, setStatus] = useState("");
   const [searchParams] = useSearchParams();
+  const requestedService = searchParams.get("service");
   const requestedHelp = searchParams.get("help");
+  const requestedServiceSlug = requestedService
+    ? toServiceSlug(requestedService)
+    : "";
+  const selectedHelp =
+    helpOptions.find((option) => toServiceSlug(option) === requestedServiceSlug) ??
+    (helpOptions.includes(requestedHelp) ? requestedHelp : "");
 
   const {
     register,
     handleSubmit,
     reset,
+    resetField,
     formState: { errors },
   } = useForm({
     resolver: zodResolver(schema),
     defaultValues: {
-      help: helpOptions.includes(requestedHelp) ? requestedHelp : "",
+      help: selectedHelp,
     },
   });
+
+  useEffect(() => {
+    resetField("help", { defaultValue: selectedHelp });
+  }, [selectedHelp, resetField]);
 
   const handleCancel = () => {
     reset();
