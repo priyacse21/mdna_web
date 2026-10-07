@@ -56,47 +56,52 @@ export default function Terms() {
             </p>
           </section>
 
-          {/* About mDNA */}
-          <section className="terms-section" id="terms-about">
-            <h2 className="terms-h2">About mDNA</h2>
-            <p>
-              mDNA is a growth marketing and GTM execution company that provides
-              modular, execution-ready marketing solutions including branding,
-              account-based marketing (ABM), product marketing, performance
-              marketing, and GenAI-powered marketing execution services.
-            </p>
-          </section>
+          <div className="relative left-1/2 w-screen -translate-x-1/2 bg-[linear-gradient(135deg,rgba(189,0,242,0.14),rgba(189,0,242,0.07),rgba(189,0,242,0.02))] px-6 py-10 sm:px-10">
+            <div className="mx-auto w-full max-w-[820px]">
+              {/* About mDNA */}
+              <section className="terms-section !border-0" id="terms-about">
+                <h2 className="terms-h2">About mDNA</h2>
+                <p>
+                  mDNA is a growth marketing and GTM execution company that
+                  provides modular, execution-ready marketing solutions including
+                  branding, account-based marketing (ABM), product marketing,
+                  performance marketing, and GenAI-powered marketing execution
+                  services.
+                </p>
+              </section>
 
-          {/* Services Description */}
+              {/* Services Description */}
             <div className="absolute middle-[50%] right-[-4%] h-[300px] w-[300px] rotate-45 border border-[#bd00f2]/[0.35]" />
-          <section className="terms-section" id="terms-services">
-            <h2 className="terms-h2">Services Description</h2>
+              <section className="terms-section" id="terms-services">
+                <h2 className="terms-h2">Services Description</h2>
 
-            <h3 className="terms-h3">Core Services</h3>
-            <p>We provide the following primary services:</p>
-            <ul className="terms-list">
-              <li>
-                <strong>Branding Services:</strong> Brand development and
-                positioning
-              </li>
-              <li>
-                <strong>Account-Based Marketing (ABM):</strong> Targeted B2B
-                marketing campaigns
-              </li>
-              <li>
-                <strong>Product Marketing:</strong> Product positioning,
-                messaging, and launch strategies
-              </li>
-              <li>
-                <strong>Performance Marketing:</strong> Data-driven marketing
-                campaigns optimized for conversion
-              </li>
-              <li>
-                <strong>GenAI-Powered Execution:</strong> AI-enhanced marketing
-                automation and optimization
-              </li>
-            </ul>
-          </section>
+                <h3 className="terms-h3">Core Services</h3>
+                <p>We provide the following primary services:</p>
+                <ul className="terms-list">
+                  <li>
+                    <strong>Branding Services:</strong> Brand development and
+                    positioning
+                  </li>
+                  <li>
+                    <strong>Account-Based Marketing (ABM):</strong> Targeted B2B
+                    marketing campaigns
+                  </li>
+                  <li>
+                    <strong>Product Marketing:</strong> Product positioning,
+                    messaging, and launch strategies
+                  </li>
+                  <li>
+                    <strong>Performance Marketing:</strong> Data-driven marketing
+                    campaigns optimized for conversion
+                  </li>
+                  <li>
+                    <strong>GenAI-Powered Execution:</strong> AI-enhanced marketing
+                    automation and optimization
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </div>
 
           {/* Client Responsibilities */}
           <section className="terms-section" id="terms-client-responsibilities">
@@ -141,7 +146,11 @@ export default function Terms() {
           </section>
 
           {/* Service Agreements and Payments */}
-          <section className="terms-section" id="terms-payments">
+          <section
+            className="terms-section relative left-1/2 w-screen -translate-x-1/2 !border-0 !bg-[linear-gradient(135deg,rgba(189,0,242,0.14),rgba(189,0,242,0.07),rgba(189,0,242,0.02))] !px-6 !py-10 sm:!px-10"
+            id="terms-payments"
+          >
+            <div className="mx-auto w-full max-w-[820px]">
             <h2 className="terms-h2">Service Agreements and Payments</h2>
 
             <h3 className="terms-h3">Project Scope</h3>
@@ -182,6 +191,7 @@ export default function Terms() {
                 incurred up to the termination date
               </li>
             </ul>
+            </div>
           </section>
 
           {/* Intellectual Property */}
@@ -247,6 +257,8 @@ export default function Terms() {
           </section>
 
           {/* Performance and Results */}
+             <div className="relative left-1/2 w-screen -translate-x-1/2 bg-[linear-gradient(135deg,rgba(189,0,242,0.14),rgba(189,0,242,0.07),rgba(189,0,242,0.02))] px-6 py-10 sm:px-10">
+            <div className="mx-auto w-full max-w-[820px]">
           <section className="terms-section" id="terms-performance">
             <h2 className="terms-h2">Performance and Results</h2>
 
@@ -296,6 +308,8 @@ export default function Terms() {
               </li>
             </ul>
           </section>
+             </div>
+          </div>
 
           {/* Force Majeure */}
         <div className="absolute middle-[50%] right-[2%] h-[300px] w-[300px] rotate-45 border border-[#bd00f2]/[0.35]" />
@@ -349,6 +363,8 @@ export default function Terms() {
           </section>
 
           {/* Compliance and Legal */}
+             <div className="relative left-1/2 w-screen -translate-x-1/2 bg-[linear-gradient(135deg,rgba(189,0,242,0.14),rgba(189,0,242,0.07),rgba(189,0,242,0.02))] px-6 py-10 sm:px-10">
+            <div className="mx-auto w-full max-w-[820px]">
           <section className="terms-section" id="terms-compliance">
             <h2 className="terms-h2">Compliance and Legal</h2>
 
@@ -406,6 +422,8 @@ export default function Terms() {
               </li>
             </ul>
           </section>
+             </div>
+          </div>
 
           {/* General Provisions */}
           <div className="absolute middle-[50%] left-[-4%] h-[300px] w-[300px] rotate-45 border border-[#bd00f2]/[0.35]" />

@@ -70,56 +70,75 @@ export default function PrivacyPolicy() {
         </header>
 
         <article className="w-full max-w-[880px] space-y-7">
-          {sections.map((section) => (
-            <section key={section.title}>
-              <h2 className="mb-3 text-[21px] font-bold leading-tight tracking-[-0.02em] text-[#10161d]">
-                
-                {section.title}
-              </h2>
-              {section.paragraphs?.map((paragraph) => (
-                <p
-                  key={paragraph}
-                  className="mb-3 text-[15px] leading-[1.65] text-[#20252b] last:mb-0"
-                >
-                  {paragraph}
-                </p>
-              ))}
-              {section.intro && (
-                <p className="mb-2 text-[15px] leading-[1.65] text-[#20252b]">
-                  {section.intro}
-                </p>
-              )}
-              {section.list && <PolicyList items={section.list} />}
-              {section.afterList && (
-                <p className="mt-2 text-[15px] leading-[1.65] text-[#20252b]">
-                  {section.afterList}
-                </p>
-              )}
-              {section.subsections?.map((subsection) => (
-                <PolicySubsection
-                  key={subsection.title}
-                  subsection={subsection}
-                />
-              ))}
-              {section.contact && (
-                <div className="mt-3 space-y-2 text-[15px] leading-[1.65] text-[#20252b]">
-                    <div className="absolute end-[5px] left-[-4%] h-[300px] w-[300px] rotate-45 border border-[#bd00f2]/[0.35]" />
-                  <p className="font-bold text-[#10161d]">mDNA Digital</p>
-                  <p>
-                    Website:{" "}
-                    <a
-                      href="https://mdna.digital/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[#a604d6] underline decoration-transparent underline-offset-4 transition-colors hover:text-[#bd00f2] hover:decoration-[#bd00f2]"
-                    >
-                      https://mdna.digital
-                    </a>
+          {sections.map((section) => {
+            const sectionContent = (
+              <section key={section.title}>
+                <h2 className="mb-3 text-[21px] font-bold leading-tight tracking-[-0.02em] text-[#10161d]">
+                  {section.title}
+                </h2>
+                {section.paragraphs?.map((paragraph) => (
+                  <p
+                    key={paragraph}
+                    className="mb-3 text-[15px] leading-[1.65] text-[#20252b] last:mb-0"
+                  >
+                    {paragraph}
                   </p>
+                ))}
+                {section.intro && (
+                  <p className="mb-2 text-[15px] leading-[1.65] text-[#20252b]">
+                    {section.intro}
+                  </p>
+                )}
+                {section.list && <PolicyList items={section.list} />}
+                {section.afterList && (
+                  <p className="mt-2 text-[15px] leading-[1.65] text-[#20252b]">
+                    {section.afterList}
+                  </p>
+                )}
+                {section.subsections?.map((subsection) => (
+                  <PolicySubsection
+                    key={subsection.title}
+                    subsection={subsection}
+                  />
+                ))}
+                {section.contact && (
+                  <div className="mt-3 space-y-2 text-[15px] leading-[1.65] text-[#20252b]">
+                    <div className="absolute end-[5px] left-[-4%] h-[300px] w-[300px] rotate-45 border border-[#bd00f2]/[0.35]" />
+                    <p className="font-bold text-[#10161d]">mDNA Digital</p>
+                    <p>
+                      Website:{" "}
+                      <a
+                        href="https://mdna.digital/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#a604d6] underline decoration-transparent underline-offset-4 transition-colors hover:text-[#bd00f2] hover:decoration-[#bd00f2]"
+                      >
+                        https://mdna.digital
+                      </a>
+                    </p>
+                  </div>
+                )}
+              </section>
+            );
+
+            if (
+              section.title === "How We Collect Information" ||
+              section.title === "Your Data Rights and Choices"
+            ) {
+              return (
+                <div
+                  key={section.title}
+                  className="relative isolate px-4 py-10 before:absolute before:inset-y-0 before:-left-[100vw] before:-right-[100vw] before:-z-10 before:content-[''] before:bg-[linear-gradient(135deg,rgba(189,0,242,0.14),rgba(189,0,242,0.07),rgba(189,0,242,0.02))] sm:px-10"
+                >
+                  <div className="mx-auto w-full max-w-[900px]">
+                    {sectionContent}
+                  </div>
                 </div>
-              )}
-            </section>
-          ))}
+              );
+            }
+
+            return sectionContent;
+          })}
         </article>
 
       </div>
