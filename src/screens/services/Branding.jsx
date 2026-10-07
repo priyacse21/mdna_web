@@ -85,7 +85,13 @@ export default function Branding() {
 		</section>
 
 		<section className="relative flex min-h-[520px] flex-col justify-center overflow-hidden bg-[#0d151d] px-[max(48px,calc((100vw-1320px)/2))] py-[82px] text-[#f8f8f7] max-[767px]:min-h-[440px] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="branding-cta-title">
-			<SectionTitle className="relative z-[1] mb-7 max-[767px]:mb-5"><span>06</span> / Start here</SectionTitle><h2 className="relative z-[1] mb-[18px] text-[68px] leading-[1.03] max-[767px]:text-[44px]" id="branding-cta-title">Have a story worth<br /><span className="text-[#bd00f2]">amplifying?</span></h2><p className="relative z-[1] mb-[22px] max-w-[430px] text-[18px] leading-[1.7] text-[#B8C1CC]">Let's turn it into something people notice, trust and remember.</p><Link className="relative z-[1] inline-flex min-h-[45px] items-center gap-[14px] bg-[#f8f8f7] px-[17px] text-[11px] font-bold text-[#101116] no-underline transition-all duration-200 max-[767px]:text-[10px]" to="/contact">Talk to mDNA <span aria-hidden="true">↗</span></Link><div className="absolute top-[-100px] right-[18%] h-[300px] w-[300px] rotate-45 border border-[#bd00f2]/[0.35]" />
+			<SectionTitle className="relative z-[1] mb-7 max-[767px]:mb-5"> Start here</SectionTitle>
+			<h2 className="relative z-[1] mb-[18px] text-[68px] leading-[1.03] max-[767px]:text-[44px]" id="branding-cta-title">Have a story worth<br />
+			<span className="text-[#bd00f2]">amplifying?</span>
+			</h2><p className="relative z-[1] mb-[22px] max-w-[430px] text-[18px] leading-[1.7] text-[#B8C1CC]">Let's turn it into something people notice, trust and remember.</p>
+			<Link className="relative z-[1] inline-flex min-h-[45px] items-center gap-[14px] bg-[#f8f8f7] px-[17px] text-[11px] font-bold text-[#101116] no-underline transition-all duration-200 max-[767px]:text-[10px]" to="/contact">Talk to mDNA <span aria-hidden="true">↗</span>
+			</Link>
+			<div className="absolute top-[-100px] right-[18%] h-[300px] w-[300px] rotate-45 border border-[#bd00f2]/[0.35]" />
 		</section>
 		<ToolsSection tools={BrandingData.tools} />
 	</div>

@@ -33,12 +33,7 @@ const schema = z.object({
   company: z.string().trim().min(1, "Company is required."),
   help: z.string().min(1, "Please select one."),
   context: z.string().trim().min(1, "Tell us a bit of context."),
-  website: z
-    .string()
-    .trim()
-    .url("Include http:// or https://")
-    .optional()
-    .or(z.literal("")),
+  website: z.string().trim().optional().or(z.literal("")),
 });
 
 const Contact = () => {
@@ -49,6 +44,7 @@ const Contact = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: zodResolver(schema),
@@ -57,16 +53,21 @@ const Contact = () => {
     },
   });
 
+  const handleCancel = () => {
+    reset();
+    setStatus("");
+  };
+
   const onSubmit = (data) => {
     console.log(data);
     setStatus(
-      "Thanks — your enquiry is ready to be sent to hello@mdna.digital."
+      "Thanks"
     );
   };
 
   return (
     <div className="bg-[#f3f1eb] font-sans text-[#111318]">
-      <main className="px-[4vw] py-[40px] sm:py-[60px] lg:py-[100px] max-[760px]:px-7">
+      <main className="px-[4vw] py-[40px] sm:py-[60px] lg:py-[100px] max-[760px]:px-5">
 
         
         <section className="grid grid-cols-[minmax(0,1fr)_minmax(0,1fr)] items-start gap-[7vw] max-[760px]:grid-cols-1 max-[760px]:gap-[65px]">
@@ -98,7 +99,7 @@ const Contact = () => {
 
             <div className="border-b border-[#111318]/[0.18] py-5 focus-within:border-[#111318]">
               <label
-                className="mb-[9px] block font-mono text-[11px] tracking-[0.08em] uppercase"
+                className="mb-[9px] block text-[13px] tracking-[0.08em] uppercase"
                 htmlFor="contact-name"
               >
                 Name
@@ -121,7 +122,7 @@ const Contact = () => {
 
             <div className="border-b border-[#111318]/[0.18] py-5 focus-within:border-[#111318]">
               <label
-                className="mb-[9px] block font-mono text-[11px] tracking-[0.08em] uppercase"
+                className="mb-[9px] block text-[13px] tracking-[0.08em] uppercase"
                 htmlFor="contact-email"
               >
                 Work Email
@@ -145,7 +146,7 @@ const Contact = () => {
 
             <div className="border-b border-[#111318]/[0.18] py-5 focus-within:border-[#111318]">
               <label
-                className="mb-[9px] block font-mono text-[11px] tracking-[0.08em] uppercase"
+                className="mb-[9px] block text-[13px] tracking-[0.08em] uppercase"
                 htmlFor="contact-company"
               >
                 Company
@@ -169,7 +170,7 @@ const Contact = () => {
 
             <div className="border-b border-[#111318]/[0.18] py-5 focus-within:border-[#111318]">
               <label
-                className="mb-[9px] block font-mono text-[11px] tracking-[0.08em] uppercase"
+                className="mb-[9px] block text-[13px] tracking-[0.08em] uppercase"
                 htmlFor="contact-help"
               >
                 What Can We Help With?
@@ -177,17 +178,25 @@ const Contact = () => {
 
               <select
                 id="contact-help"
-                className={`w-full cursor-pointer appearance-none border-0 bg-transparent text-[17px] outline-none [font-family:inherit] ${
+                className={`w-full cursor-pointer appearance-none border-0 bg-transparent text-[17px] focus:outline-offset-2 [font-family:inherit] [&]:accent-[#a604d6] ${
                   errors.help ? "text-[#c0392b]" : "text-[#111318]"
                 }`}
                 {...register("help")}
               >
-                <option value="" disabled>
+                <option
+                  value=""
+                  disabled
+                  className="bg-[#f3f1eb] px-3 py-2 text-[#111318] checked:text-[#111318] hover:text-[#111318]"
+                >
                   Select one
                 </option>
 
                 {helpOptions.map((option) => (
-                  <option key={option} value={option}>
+                  <option
+                    key={option}
+                    value={option}
+                    className="bg-[#f3f1eb] px-3 py-2 text-[#111318] checked:bg-[#f3f1eb] checked:text-[#111318] hover:text-[#111318]"
+                  >
                     {option}
                   </option>
                 ))}
@@ -201,7 +210,7 @@ const Contact = () => {
             </div>
             <div className="border-b border-[#111318]/[0.18] py-5 focus-within:border-[#111318]">
               <label
-                className="mb-[9px] block font-mono text-[11px] tracking-[0.08em] uppercase"
+                className="mb-[9px] block text-[13px] tracking-[0.08em] uppercase"
                 htmlFor="contact-context"
               >
                 Your Context
@@ -224,7 +233,7 @@ const Contact = () => {
 
             <div className="border-b border-[#111318]/[0.18] py-5 focus-within:border-[#111318]">
               <label
-                className="mb-[9px] block font-mono text-[11px] tracking-[0.08em] uppercase"
+                className="mb-[9px] block text-[13px] tracking-[0.08em] uppercase"
                 htmlFor="contact-website"
               >
                 Optional Website
@@ -240,7 +249,7 @@ const Contact = () => {
               />
 
               {errors.website && (
-                <span className="mt-[6px] block text-[11px] text-[#c0392b]">
+                <span className="mt-[6px] block text-[14px] text-[#c0392b]">
                   {errors.website.message}
                 </span>
               )}
@@ -254,12 +263,21 @@ const Contact = () => {
                 {status}
               </span>
 
-              <button
-                className="cursor-pointer border-0 bg-[#111318] px-[23px] py-[15px] text-white transition-colors duration-[250ms] hover:bg-[#b400e8]"
-                type="submit"
-              >
-                Send Enquiry →
-              </button>
+              <div className="flex items-center gap-3">
+                <button
+                  className="cursor-pointer border-0 bg-[#111318] px-[23px] py-[15px] text-white transition-colors duration-[250ms] hover:bg-[#b400e8]"
+                  type="button"
+                  onClick={handleCancel}
+                >
+                  Cancel
+                </button>
+                <button
+                  className="cursor-pointer border-0 bg-[#111318] px-[23px] py-[15px] text-white transition-colors duration-[250ms] hover:bg-[#b400e8]"
+                  type="submit"
+                >
+                  Send Enquiry →
+                </button>
+              </div>
             </div>
           </form>
         </section>
