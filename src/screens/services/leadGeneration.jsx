@@ -66,7 +66,7 @@ export default function LeadGeneration() {
 
 		<section className="bg-[#f2f0ea] px-[max(48px,calc((100vw-1300px)/2))] py-[100px] pb-[110px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="lead-opportunity-title">
 			<SectionTitle className="mb-0"> The opportunity</SectionTitle>
-			<div className="ml-auto max-w-[980px] max-[767px]:mt-[25px]">
+			<div className="ml-[120px] max-w-[980px] max-[767px]:mt-[25px]">
 				<h2 className="m-0 text-[78px] leading-[1.03] max-[767px]:text-[42px]" id="lead-opportunity-title">More outreach doesn't automatically mean <span className="text-[#85898f]">more opportunity.</span></h2>
 				<div className="mt-[46px] grid grid-cols-2 gap-10 border-t border-[#10161d]/[0.18] pt-6 max-[767px]:mt-7 max-[767px]:grid-cols-1 max-[767px]:gap-[18px]">
 					<p className="m-0 max-w-[440px] text-[18px] leading-[1.8] text-[#3B4452]">Lead generation starts with knowing who you want to reach, then choosing the channels and messages that make those buyers worth pursuing.</p>
@@ -87,7 +87,7 @@ export default function LeadGeneration() {
     />
 
 		<section className="bg-[#f2f0ea] px-[max(48px,calc((100vw-1300px)/2))] py-[90px] pb-[100px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="lead-pathway-title">
-			<div className="mb-[78px] ml-auto grid max-w-[940px] grid-cols-[1fr_2fr] gap-10 max-[767px]:mb-[42px] max-[767px]:grid-cols-1 max-[767px]:gap-5">
+			<div className="mb-[78px]  grid max-w-[940px] grid-cols-[1fr_2fr] gap-10 max-[767px]:mb-[42px] max-[767px]:grid-cols-1 max-[767px]:gap-5">
 				<SectionTitle className="mt-3 max-[767px]:mt-0">The pathway</SectionTitle>
 				<div>
 					<h2 className="m-0 text-[78px] leading-[1.03] max-[767px]:text-[42px]" id="lead-pathway-title">From market to a working pipeline.</h2>
@@ -104,33 +104,15 @@ export default function LeadGeneration() {
 			</div>
 		</section>
 
-		<section className="bg-[#f5f4f7] px-[max(48px,calc((100vw-1300px)/2))] py-[90px] pb-[100px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="lead-targeting-title">
-			<div className="mb-[34px] grid grid-cols-[1fr_280px] items-center gap-16 max-[1023px]:grid-cols-1 max-[1023px]:gap-5">
-				<div>
-					<SectionTitle className="mb-7 max-[767px]:mb-5"> Signature interaction</SectionTitle>
-					<h2 className="m-0 text-[64px] leading-[1.03] max-[767px]:text-[42px]" id="lead-targeting-title">The account targeting board.</h2>
-				</div>
-				<p className="mb-[6px] text-[16px] leading-[1.7] text-[#3B4452] max-[1023px]:max-w-[520px]">Lead generation is not a list of names. It is a system for deciding who deserves attention, then connecting the right signals.</p>
-			</div>
-			<div className="relative min-h-[490px] overflow-hidden border-y border-[#10161d]/[0.15] bg-[#f7f6f2] bg-[linear-gradient(rgba(16,22,29,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(16,22,29,0.035)_1px,transparent_1px)] bg-[length:88px_80px] max-[767px]:min-h-[400px]" role="img" aria-label="Five priority account signals connected around a focus account">
-				<span className="absolute top-5 left-5 z-[2] font-mono text-[8px] text-[#68727d]">ACCOUNT MAP / LIVE VIEW<br />SELECT A NODE</span>
-				<span className="absolute top-1/2 left-[5%] h-px w-[90%] bg-[#10161d]/[0.18]" />
-				<span className="absolute top-[10%] bottom-[10%] left-1/2 w-px bg-[#10161d]/[0.18]" />
-				<span className="absolute top-1/2 left-1/2 h-px w-[34%] origin-left rotate-[-145deg] bg-[#bd00f2]/[0.55] max-[767px]:w-[30%]" />
-				<span className="absolute top-1/2 left-1/2 h-px w-[34%] origin-left rotate-[-18deg] bg-[#bd00f2]/[0.55] max-[767px]:w-[30%]" />
-				<span className="absolute top-1/2 left-1/2 h-px w-[34%] origin-left rotate-[34deg] bg-[#bd00f2]/[0.55] max-[767px]:w-[30%]" />
-				{accountNodes.map(([label, name], index) => <div className={`absolute z-[1] grid min-h-[82px] w-[145px] content-center gap-2 border border-[#10161d]/[0.28] bg-white/[0.78] px-[15px] py-3 max-[767px]:min-h-[70px] max-[767px]:w-[118px] max-[767px]:p-[10px] ${accountPositions[index]}`} key={label}><small className="font-mono text-[7px] text-[#76818b]">{label}</small><strong className="text-[11px] font-medium">{name}</strong><i className="absolute top-[10px] right-[10px] h-[5px] w-[5px] rounded-full bg-[#bd00f2]" /></div>)}
-				<div className="absolute top-1/2 left-1/2 grid h-[62px] w-[62px] -translate-x-1/2 -translate-y-1/2 rotate-45 place-items-center border border-[#bd00f2] bg-[#111318] shadow-[0_0_0_11px_rgba(189,0,242,0.08)] max-[767px]:h-[52px] max-[767px]:w-[52px]"><span className="rotate-[-45deg] font-mono text-[7px] text-white">FOCUS</span></div>
-				<span className="absolute right-5 bottom-[14px] font-mono text-[8px] text-[#68727d]">STATUS: <b className="text-[#bd00f2]">FOCUS ACTIVE</b></span>
-			</div>
-		</section>
-		<section className="px-6 py-16">
+		
+		<section className="px-6 py-6">
        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#111218]/60">
-        <span className="text-[#b400e6]">05</span> / Signature interaction
+        
+        <SectionTitle className="mt-3 max-[767px]:mt-0">signature interaction</SectionTitle>
       </p>
  
       {/* Heading + description */}
-      <div className="mt-4 grid gap-8 lg:grid-cols-[1fr_350px] lg:items-end">
+      <div className="mt-4 grid gap-8 lg:grid-cols-[1fr_350px] mb-20 lg:items-end">
         <h2 className="max-w-[800px] text-5xl font-semibold leading-[0.95] tracking-tighter text-[#111218] sm:text-7xl lg:text-[88px]">
           The account targeting board.
         </h2>
@@ -237,7 +219,7 @@ export default function LeadGeneration() {
 
 		<section className="bg-[#f2f0ea] px-[max(48px,calc((100vw-1150px)/2))] py-[90px] pb-[100px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="lead-outcomes-title">
 			<SectionTitle className="mb-7 max-[767px]:mb-5"> What changes</SectionTitle>
-			<h2 className="mb-[50px] ml-auto max-w-[790px] text-[66px] leading-[1.03] max-[767px]:mb-[34px] max-[767px]:text-[42px]" id="lead-outcomes-title">Turn prospecting into a more focused system.</h2>
+			<h2 className="mb-[50px]  max-w-[790px] text-[66px] leading-[1.03] max-[767px]:mb-[34px] max-[767px]:text-[42px]" id="lead-outcomes-title">Turn prospecting into a more focused system.</h2>
 			<div className="grid grid-cols-3 border-y border-[#10161d]/[0.18] max-[767px]:grid-cols-1">
 				{leadOutcomes.map(([label, title, description], index) => <article className={`relative flex min-h-[220px] flex-col justify-between border-r border-[#10161d]/[0.14] p-[22px] last:border-r-0 max-[767px]:min-h-[170px] max-[767px]:border-r-0 max-[767px]:border-b max-[767px]:last:border-b-0`} key={label}>
 					<span className="font-mono text-[12px] text-violet">{label}</span>

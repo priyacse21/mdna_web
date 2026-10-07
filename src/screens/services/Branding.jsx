@@ -47,14 +47,23 @@ export default function Branding() {
 				items={SERVICES_branding}
 			/>
 
-		<section className="bg-[#f5f4f7] px-[max(48px,calc((100vw-1000px)/2))] pt-[92px] pb-[100px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="branding-journey-title">
-			<SectionTitle className="mb-7 max-[767px]:mb-5"><span>03</span> / The journey</SectionTitle>
-			<h2 className="mb-[50px] ml-auto max-w-[780px] text-[72px] leading-[1.04] max-[767px]:mt-6 max-[767px]:mb-9 max-[767px]:text-[42px]" id="branding-journey-title">From story to influence.</h2>
-			<div className="relative ml-auto max-w-[850px] before:absolute before:top-8 before:bottom-8 before:left-[31px] before:w-px before:bg-[#10161d]/[0.18] before:content-[''] max-[767px]:before:left-[25px]">{brandingJourney.map(([number, title, description], index) => <article className="relative grid min-h-[140px] grid-cols-[64px_1fr] items-center gap-6 max-[767px]:min-h-28 max-[767px]:grid-cols-[52px_1fr] max-[767px]:gap-[18px]" key={number}>
-				<span className={`z-[1] grid h-16 w-16 place-items-center border border-[#10161d]/20 bg-[#f2f0ea] font-mono text-[9px] max-[767px]:h-[52px] max-[767px]:w-[52px] ${index === 0 ? 'rotate-45 border-[#bd00f2] bg-[#bd00f2] text-white' : ''}`}><b className={`font-normal ${index === 0 ? 'rotate-[-45deg]' : ''}`}>{number}</b>
-				</span><div><strong className="text-[19px] font-semibold uppercase max-[767px]:text-[15px]">{title}</strong>
-				<p className="mt-[6px] mb-0 text-[12px] text-[#3B4452]">{description}</p></div></article>)}</div>
-		</section>
+	<section className="bg-[#f5f4f7] px-[max(48px,calc((100vw-1320px)/2))] pt-[92px] pb-[100px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="branding-journey-title">
+  <SectionTitle className="mb-7 max-[767px]:mb-5"><span>03</span> / The journey</SectionTitle>
+  <h2 className="mb-[50px] max-w-[1000px] text-[72px] leading-[1.04] ml-auto max-[767px]:mt-6 max-[767px]:mb-9 max-[767px]:text-[42px]" id="branding-journey-title">From story to influence.</h2>
+  <div className="relative mx-auto  w-fit max-w-[850px] before:absolute before:top-8 before:bottom-8 before:left-[31px] before:w-px before:bg-[#10161d]/[0.18] before:content-[''] max-[767px]:before:left-[25px]">	
+    {brandingJourney.map(([number, title, description], index) => (
+      <article className="relative grid min-h-[140px] grid-cols-[64px_1fr] items-center gap-6 max-[767px]:min-h-28 max-[767px]:grid-cols-[52px_1fr] max-[767px]:gap-[18px]" key={number}>
+        <span className={`z-[1] grid h-16 w-16 place-items-center border border-[#10161d]/20 bg-[#f2f0ea] font-mono text-[9px] max-[767px]:h-[52px] max-[767px]:w-[52px] ${index === 0 ? 'rotate-45 border-[#bd00f2] bg-[#bd00f2] text-white' : ''}`}>
+          <b className={`font-normal ${index === 0 ? 'rotate-[-45deg]' : ''}`}>{number}</b>
+        </span>
+        <div>
+          <strong className="text-[19px] font-semibold uppercase max-[767px]:text-[15px]">{title}</strong>
+          <p className="mt-[6px] mb-0 text-[12px] text-[#3B4452]">{description}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
 
 		<section className="bg-[#f2f0ea] px-[max(48px,calc((100vw-1260px)/2))] pt-[92px] pb-[104px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="branding-formats-title">
 			<div className="grid grid-cols-[1fr_280px] items-end gap-[60px] border-b border-[#10161d]/[0.18] pb-8 max-[1023px]:grid-cols-1 max-[1023px]:gap-5 max-[767px]:gap-[18px]"><div><SectionTitle className="mb-7 max-[767px]:mb-5"><span>04</span> / The newsroom</SectionTitle><h2 className="m-0 text-[72px] leading-[1.04] max-[767px]:text-[42px]" id="branding-formats-title">One story.<br /><span className="text-[#bd00f2]">Many signals.</span></h2></div><p className="mb-1 text-[12px] leading-[1.7] text-[#67727d]">Different formats. One connected brand presence.</p></div>
@@ -74,7 +83,7 @@ export default function Branding() {
 		</section>
 
 		<section className="bg-[#f5f4f7] px-[max(48px,calc((100vw-1160px)/2))] py-[90px] pb-[100px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="branding-benefits-title">
-			<SectionTitle className="mb-7 max-[767px]:mb-5"><span>05</span> / Why branding</SectionTitle><h2 className="mb-[54px] ml-auto max-w-[900px] text-[72px] leading-[1.04] max-[767px]:mt-6 max-[767px]:mb-8 max-[767px]:text-[42px]" id="branding-benefits-title">Attention is easy.<br />Credibility takes work.</h2>
+			<SectionTitle className="mb-7 max-[767px]:mb-5"><span>05</span> / Why branding</SectionTitle><h2 className="mb-[54px]  max-w-[900px] text-[72px] leading-[1.04] max-[767px]:mt-6 max-[767px]:mb-8 max-[767px]:text-[42px]" id="branding-benefits-title">Attention is easy.<br />Credibility takes work.</h2>
 			<div className="grid grid-cols-3 border-y border-[#10161d]/[0.18] max-[767px]:grid-cols-1">{brandingBenefits.map(([label, title, description]) => 
 			<article className="relative flex min-h-[210px] flex-col justify-between border-r border-[#10161d]/[0.16] p-6 last:border-r-0 max-[767px]:min-h-40 max-[767px]:border-r-0 max-[767px]:border-b max-[767px]:p-[18px] max-[767px]:last:border-b-0" key={label}>
 				<span className="font-mono text-[10px]  text-violet">{label}</span>
