@@ -522,9 +522,43 @@ export const auditItems = [
   },
 ];
 
+export const auditSignals = [
+	['01 / OPERATIONS', 'Setup without clarity.', 'A full review of marketing operations can separate what works from what does not.'],
+	['02 / CHANNELS', 'Channels without context.', 'A deep-dive into channels and ROI shows where budget is wasted or underused.'],
+	['03 / CONVERSION', 'Traffic without conversion.', 'A website audit surfaces conversion, SEO and UX issues that stop the funnel from doing its job.'],
+]
+
+export const auditOutcomes = [
+	['01 / CLARITY', 'Clarity', 'Know what works, what does not and where the marketing operation needs attention.'],
+	['02 / PRIORITY', 'Priority', 'Understand where budget is wasted or underused and establish a prioritized fix list.'],
+	['03 / READINESS', 'Readiness', 'Assess AI visibility, website accessibility and conversion health before the next move.'],
+]
+
 export const steps = [
   { number: '01', title: 'Detect', text: 'Review the relevant marketing layer and surface the issues that need attention.', helper: 'Find the signal' },
   { number: '02', title: 'Diagnose', text: 'Examine operations, channel performance and AI visibility in context.', helper: 'Understand the cause' },
   { number: '03', title: 'Prioritize', text: 'Turn findings into a clear, ranked list of what matters and what deserves attention.', helper: 'Order the fixes' },
   { number: '04', title: 'Fix', text: 'Use the audit output as the basis for the next action, from quick wins to broader changes.', helper: 'Move with clarity' },
+];
+export const stratergyMap = [
+    ['START', 'top-[28%] left-[12%] max-[767px]:top-[23%] max-[767px]:left-[7%]'],
+	['MARKET', 'top-[28%] right-[22%] max-[767px]:top-[25%] max-[767px]:right-[16%]'],
+	['DECIDE', 'top-[46%] left-[48%] max-[767px]:top-[45%] max-[767px]:left-[42%]'],
+	['AUDIENCE', 'right-[22%] bottom-[31%] max-[767px]:right-[10%] max-[767px]:bottom-[35%]'],
+	['BUILD', 'bottom-[20%] left-[31%] max-[767px]:bottom-[23%] max-[767px]:left-[20%]'],
+	['MOVE', 'right-[16%] bottom-[18%] max-[767px]:right-[10%]'],
+]
+
+export const ACCOUNT_NODES = [
+  { id: 1, title: "Priority target", x: 10, y: 16, tilt: -4 },
+  { id: 2, title: "Ideal buyer group", x: 38, y: 12, tilt: 4 },
+  { id: 3, title: "Decision-maker", x: 78, y: 28, tilt: -3 },
+  { id: 4, title: "Target prospect", x: 23, y: 72, tilt: 3 },
+  { id: 5, title: "Qualified signal", x: 62, y: 70, tilt: -4 },
+];
+ 
+export const ACCOUNT_LINES = [
+  [25, 31, 45, 28.5],
+  [50, 32, 68, 48],
+  [40, 66, 56, 49],
 ];

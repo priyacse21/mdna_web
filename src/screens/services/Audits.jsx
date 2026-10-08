@@ -5,7 +5,7 @@ import ServiceShowcase from './common/ServiceShowcase/ServiceShowcase';
 import ToolsSection from './common/ToolSection/Toolsection';
 import AuditSurfaceExplorer from './common/Slider/lineSlider';
 import { auditDiagnosticData } from './data/toolsCatlog';
-import {auditItems,steps } from './data/serviceData';
+import { auditItems, auditOutcomes, auditSignals, steps } from './data/serviceData';
 
 export default function Audits() {
   return (
@@ -79,19 +79,17 @@ export default function Audits() {
           <h2 className="m-0 text-[78px] leading-[1.03] max-[767px]:text-[42px]" id="audit-opportunity-title">
             A busy marketing system can still hide the <span className="text-[#7a7d83]">wrong priorities.</span>
           </h2>
-          <div className="mt-[46px] grid grid-cols-3 gap-10 border-t border-[#10161d]/[0.18] pt-7 max-[767px]:mt-7 max-[767px]:grid-cols-1 max-[767px]:gap-[18px]">
-            <article>
-              <h3 className="m-0 mb-3 text-[22px] leading-[1.1]">Setup without clarity.</h3>
-              <p className="m-0 text-[14px] leading-[1.7] text-[#5b6570]">A full review of marketing operations can separate what works from what does not.</p>
-            </article>
-            <article className="max-[767px]:border-t max-[767px]:border-[#10161d]/[0.18] max-[767px]:pt-[18px] md:border-l md:border-[#10161d]/[0.18] md:pl-6">
-              <h3 className="m-0 mb-3 text-[22px] leading-[1.1]">Channels without context.</h3>
-              <p className="m-0 text-[14px] leading-[1.7] text-[#5b6570]">A deep-dive into channels and ROI shows where budget is wasted or underused.</p>
-            </article>
-            <article className="max-[767px]:border-t max-[767px]:border-[#10161d]/[0.18] max-[767px]:pt-[18px] md:border-l md:border-[#10161d]/[0.18] md:pl-6">
-              <h3 className="m-0 mb-3 text-[22px] leading-[1.1]">Traffic without conversion.</h3>
-              <p className="m-0 text-[14px] leading-[1.7] text-[#5b6570]">A website audit surfaces conversion, SEO and UX issues that stop the funnel from doing its job.</p>
-            </article>
+          <div className="mt-[46px] grid grid-cols-3 border-y border-[#10161d]/[0.18] max-[767px]:grid-cols-1">
+            {auditSignals.map(([label, title, description]) => (
+              <article className="relative flex min-h-[220px] flex-col justify-between border-r border-[#10161d]/[0.14] p-[22px] last:border-r-0 max-[767px]:min-h-[170px] max-[767px]:border-r-0 max-[767px]:border-b max-[767px]:last:border-b-0" key={label}>
+                <span className="font-mono text-[12px] text-violet">{label}</span>
+                <div>
+                  <h3 className="mb-[10px] text-[19px]">{title}</h3>
+                  <p className="m-0 max-w-[290px] text-[15px] leading-[1.6] text-[#3B4452]">{description}</p>
+                </div>
+                <i className="absolute right-4 bottom-[15px] h-7 w-7 rotate-45 border border-[#10161d]/[0.18]" aria-hidden="true" />
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -153,32 +151,22 @@ export default function Audits() {
         <AuditSurfaceExplorer items={auditItems} />
       </section>
 
-      <section className="bg-[#101116] px-[max(48px,calc((100vw-1300px)/2))] py-[100px] text-white max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="audit-less-guesswork-title">
-        <div className="mb-[30px] flex items-end justify-between gap-8 max-[1023px]:flex-col max-[1023px]:items-start">
-          <SectionTitle className="mb-0">05 / why it matters</SectionTitle>
-          <p className="m-0 max-w-[470px] text-[18px] leading-[1.7] text-[#B8C1CC]">
-            An audit is useful when the output changes what happens next. The outcomes should be close to the approved service promise.
-          </p>
-        </div>
-
-        <h2 className="m-0 max-w-[900px] text-[118px] leading-[0.9] max-[1023px]:text-[82px] max-[767px]:text-[56px]" id="audit-less-guesswork-title">
-          Less guesswork.<br />
-          More direction.
+      <section className="bg-[#101116] px-[max(48px,calc((100vw-1150px)/2))] py-[90px] pb-[100px] text-white max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="audit-less-guesswork-title">
+        <SectionTitle className="mb-7 max-[767px]:mb-5">05 / why it matters</SectionTitle>
+        <h2 className="mb-[50px] ml-auto max-w-[790px] text-[66px] leading-[1.03] max-[767px]:mb-[34px] max-[767px]:text-[42px]" id="audit-less-guesswork-title">
+          Less guesswork. <span className="text-[#85898f]">More direction.</span>
         </h2>
-
-        <div className="mt-[34px] grid gap-6 border-t border-white/10 pt-7 md:grid-cols-3">
-          <article className="border-r border-white/10 pr-6 max-[767px]:border-r-0 max-[767px]:pr-0">
-            <h3 className="m-0 mb-4 text-[28px] font-medium">Clarity</h3>
-            <p className="m-0 text-[16px] leading-[1.7] text-[#B8C1CC]">Know what works, what does not and where the marketing operation needs attention.</p>
-          </article>
-          <article className="border-r border-white/10 pr-6 max-[767px]:border-r-0 max-[767px]:pr-0">
-            <h3 className="m-0 mb-4 text-[28px] font-medium">Priority</h3>
-            <p className="m-0 text-[16px] leading-[1.7] text-[#B8C1CC]">Understand where budget is wasted or underused and establish a prioritized fix list.</p>
-          </article>
-          <article>
-            <h3 className="m-0 mb-4 text-[28px] font-medium">Readiness</h3>
-            <p className="m-0 text-[16px] leading-[1.7] text-[#B8C1CC]">Assess AI visibility, website accessibility and conversion health before the next move.</p>
-          </article>
+        <div className="grid grid-cols-3 border-y border-white/[0.18] max-[767px]:grid-cols-1">
+          {auditOutcomes.map(([label, title, description]) => (
+            <article className="relative flex min-h-[220px] flex-col justify-between border-r border-white/[0.14] p-[22px] last:border-r-0 max-[767px]:min-h-[170px] max-[767px]:border-r-0 max-[767px]:border-b max-[767px]:last:border-b-0" key={label}>
+              <span className="font-mono text-[12px] text-violet">{label}</span>
+              <div>
+                <h3 className="mb-[10px] text-[19px]">{title}</h3>
+                <p className="m-0 max-w-[290px] text-[15px] leading-[1.6] text-[#B8C1CC]">{description}</p>
+              </div>
+              <i className="absolute right-4 bottom-[15px] h-7 w-7 rotate-45 border border-white/[0.18]" aria-hidden="true" />
+            </article>
+          ))}
         </div>
       </section>
 
