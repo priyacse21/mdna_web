@@ -37,24 +37,24 @@ export default function ServiceShowcase({
   if (!active) return null;
 
   return (
-    <section className="bg-[#111218] px-6 py-16 text-white">
-      {/* Eyebrow */}
-      <SectionTitle>
-        <span className="text-[#b400e6]">{eyebrowIndex}</span> / {eyebrowLabel}
-      </SectionTitle>
+    <section className="bg-[#111218] px-5 py-12 text-white sm:px-8 sm:py-14 lg:px-12 lg:py-16">
+  {/* Eyebrow */}
+  <SectionTitle>
+    <span className="text-[#b400e6]">{eyebrowIndex}</span> / {eyebrowLabel}
+  </SectionTitle>
 
-      {/* Heading + description */}
-      <div className="mt-4 grid gap-8 lg:grid-cols-2 lg:items-end">
-        <h2 className="max-w-[760px] text-5xl font-semibold leading-[0.95] tracking-tighter sm:text-7xl lg:text-[88px]">
-          {heading}
-        </h2>
-        <p className="max-w-[400px] text-[18px]  text-[#3B4452] text-base leading-relaxed text-white/70 lg:pb-4">
-          {description}
-        </p>
-      </div>
+  {/* Heading + description */}
+  <div className="mt-4 grid gap-6 sm:gap-8 md:px-8 lg:grid-cols-2 lg:items-end lg:gap-20 lg:px-16 xl:px-32">
+    <h2 className="max-w-[900px] text-4xl font-semibold leading-[0.95] tracking-tighter sm:text-6xl lg:text-7xl xl:text-[80px]">
+      {heading}
+    </h2>
+    <p className="max-w-[600px] text-base leading-relaxed text-white/70 sm:text-[18px] lg:pb-4">
+      {description}
+    </p>
+  </div>
 
       {/* List + detail */}
-      <div className="mt-14 grid border border-white/10 lg:grid-cols-[455px_1fr]">
+      <div className="mx-auto mt-14 grid max-w-[1100px] border border-white/10 lg:grid-cols-[380px_1fr]">
         {/* Left list */}
         <ul role="tablist" className="flex flex-col border-white/10 lg:border-r">
           {items.map((s, i) => {
@@ -98,7 +98,7 @@ export default function ServiceShowcase({
         <div
           role="tabpanel"
           key={active.id}
-          className="relative min-h-[620px] overflow-hidden bg-[#141621] bg-[linear-gradient(to_right,rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:72px_72px] px-6 py-6 motion-safe:animate-[fadeIn_.35s_ease-out]"
+          className="relative min-h-[560px] overflow-hidden bg-[#141621] bg-[linear-gradient(to_right,rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:72px_72px] px-6 py-6 motion-safe:animate-[fadeIn_.35s_ease-out]"
         >
           <div
             aria-hidden

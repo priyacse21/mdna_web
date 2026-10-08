@@ -28,12 +28,12 @@ export default function ProcessSteps({
       {progressTrack && isHorizontal && (
         <li
           aria-hidden="true"
-          className={`pointer-events-none absolute top-6 right-[12.5%] left-[12.5%] hidden h-px md:block ${lineColor}`}
+         className={`pointer-events-none absolute top-6 right-0 left-0 hidden h-px md:block ${lineColor}`} 
         >
           <span
             className="block h-full bg-[#bd00f2]"
             style={{
-              width: `${steps.length > 1 ? Math.min(activeIndex / (steps.length - 1), 1) * 100 : 100}%`,
+              width: `${(activeIndex / steps.length) * 100}%`
             }}
           />
         </li>
@@ -92,7 +92,7 @@ export default function ProcessSteps({
             )}
 
             {/* Number Box */}
-            <div className="relative z-1 flex items-center justify-center">
+            <div className={`relative z-1 flex items-center ${isHorizontal ? "md:justify-start" : "justify-center"}`}>
               <span
                 className={`relative z-1 grid place-items-center font-mono text-[10px] transition-colors duration-300 ${numberTextClasses} ${
                   isHorizontal

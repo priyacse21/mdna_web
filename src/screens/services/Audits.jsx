@@ -108,17 +108,17 @@ export default function Audits() {
       <section className="bg-[#f2f0ea] px-[max(48px,calc((100vw-1300px)/2))] py-[100px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="audit-journey-title">
         <div className="grid grid-cols-1 items-end gap-5 lg:grid-cols-2 lg:gap-[7vw]">
           <div>
-            <SectionTitle className="mb-6 max-[767px]:mb-5">03 / the journey</SectionTitle>
-            <h2 className="m-0 text-[78px] leading-[1.03] max-[767px]:text-[42px]" id="audit-journey-title">
-              Detect.
-              <br />
-              Diagnose.
-              <br />
-              Prioritize.
-              <br />
-              Fix.
-            </h2>
-          </div>
+  <SectionTitle className="mb-6 max-[767px]:mb-5">03 / the journey</SectionTitle>
+  <h2 className="m-0 ml-auto w-fit max-w-[980px] text-[78px] leading-[1.03] max-[767px]:ml-0 max-[767px]:text-[42px]" id="audit-journey-title">
+    Detect.
+    <br />
+    Diagnose.
+    <br />
+    Prioritize.
+    <br />
+    Fix.
+  </h2>
+</div>
           <p className="mb-2 max-w-[540px] text-[18px] leading-[1.75] text-[#3B4452]">
             The audit journey moves from finding the signal to understanding the cause, ordering the fixes and acting with clarity.
           </p>
