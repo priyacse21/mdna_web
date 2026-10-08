@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import {
   getPrimaryNavigation,
   getServiceLinks,
-} from "../../data/navigation";
+} from "../../constant/navigation";
 import mdnaLogo from "../../assets/logo/mdna-logo-clean.png";
 
 export default function Footer() {
