@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -40,7 +40,19 @@ export default function WebsiteLayout() {
     <div className="min-h-screen flex flex-col bg-paper text-ink font-sans">
       <Header />
       <main className="flex-1">
-        <Outlet />
+        <Suspense
+          fallback={
+            <div
+              className="flex min-h-[60vh] items-center justify-center bg-paper text-sm text-muted"
+              role="status"
+              aria-live="polite"
+            >
+              Loading page...
+            </div>
+          }
+        >
+          <Outlet />
+        </Suspense>
       </main>
       <Footer />
     </div>
