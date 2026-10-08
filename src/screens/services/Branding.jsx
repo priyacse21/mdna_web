@@ -53,9 +53,15 @@ export default function Branding() {
   <div className="relative mx-auto  w-fit max-w-[850px] before:absolute before:top-8 before:bottom-8 before:left-[31px] before:w-px before:bg-[#10161d]/[0.18] before:content-[''] max-[767px]:before:left-[25px]">	
     {brandingJourney.map(([number, title, description], index) => (
       <article className="relative grid min-h-[140px] grid-cols-[64px_1fr] items-center gap-6 max-[767px]:min-h-28 max-[767px]:grid-cols-[52px_1fr] max-[767px]:gap-[18px]" key={number}>
-        <span className={`z-[1] grid h-16 w-16 place-items-center border border-[#10161d]/20 bg-[#f2f0ea] font-mono text-[9px] max-[767px]:h-[52px] max-[767px]:w-[52px] ${index === 0 ? 'rotate-45 border-[#bd00f2] bg-[#bd00f2] text-white' : ''}`}>
-          <b className={`font-normal ${index === 0 ? 'rotate-[-45deg]' : ''}`}>{number}</b>
-        </span>
+       <span
+  className={`z-[1] grid h-16 w-16 place-items-center border font-mono text-[9px] max-[767px]:h-[52px] max-[767px]:w-[52px] ${
+    index === 0
+      ? 'rotate-45 border-[#bd00f2] bg-[#bd00f2] text-white'
+      : 'border-[#10161d]/20 bg-[#f2f0ea]'
+  }`}
+>
+  <b className={`font-normal ${index === 0 ? 'rotate-[-45deg]' : ''}`}>{number}</b>
+</span>
         <div>
           <strong className="text-[19px] font-semibold uppercase max-[767px]:text-[15px]">{title}</strong>
           <p className="mt-[6px] mb-0 text-[12px] text-[#3B4452]">{description}</p>
@@ -70,7 +76,7 @@ export default function Branding() {
 			<div className="grid grid-cols-5 items-start gap-[22px] pt-12 max-[1023px]:grid-cols-3 max-[1023px]:gap-y-7 max-[767px]:grid-cols-2 max-[767px]:gap-x-[14px] max-[767px]:gap-y-[22px] max-[767px]:px-2 max-[767px]:pt-[30px] max-[767px]:pb-[10px]">
 				{brandingFormats.map(([number, name, description], index) => (
 					<article
-						className={`group relative flex min-h-[300px] flex-col justify-between border border-[#10161d]/[0.28] px-4 py-[22px] transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:bg-[#111318] hover:text-white hover:shadow-lg ${index === 1 || index === 3 ? 'mt-12 rotate-[4deg] max-[767px]:mt-[30px]' : '-rotate-[3deg]'} ${index === 2 ? 'rotate-[-2deg] bg-[#111318] text-white' : ''} ${index === 3 ? 'rotate-[3deg] bg-[#d4d5d2]' : ''} ${index === 4 ? '-rotate-[6deg] bg-[#bd00f2] text-white' : 'bg-[#f2f0ea]'} max-[1023px]:min-h-[250px] max-[767px]:min-h-[220px] max-[767px]:px-3 max-[767px]:py-4`}
+						className={`group relative flex min-h-[300px] flex-col justify-between border border-[#10161d]/[0.28] px-4 py-[22px] transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:bg-[#111318] hover:text-white hover:shadow-lg ${index === 1 || index === 3 ? 'mt-12 rotate-[4deg] max-[767px]:mt-[30px]' : '-rotate-[3deg]'} ${index === 2 ? 'rotate-[-2deg]' : ''} ${index === 3 ? 'rotate-[3deg] bg-[#d4d5d2]' : ''} ${index === 4 ? '-rotate-[6deg] bg-[#bd00f2] text-white' : 'bg-[#f2f0ea]'} max-[1023px]:min-h-[250px] max-[767px]:min-h-[220px] max-[767px]:px-3 max-[767px]:py-4`}
 						key={number}
 					>
 						<span className="font-mono text-[7px] text-[#78818a] group-hover:text-white">{`FORMAT ${number}`}</span>

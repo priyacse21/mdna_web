@@ -101,7 +101,7 @@ export default function LensExplorer({
             <h3 className="mt-2 max-w-[560px] text-4xl font-semibold leading-[0.95] tracking-tighter sm:text-[52px]">
               {active.title}
             </h3>
-            <p className="mt-5 max-w-[360px] text-sm leading-relaxed text-[#111218]/70">
+            <p className="mt-1 max-w-[360px] text-sm leading-relaxed text-[#111218]/70">
               {active.text}
             </p>
           </div>

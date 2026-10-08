@@ -124,20 +124,20 @@ export default function Audits() {
             The audit journey moves from finding the signal to understanding the cause, ordering the fixes and acting with clarity.
           </p>
         </div>
-        <div className="mt-14 lg:mt-16">
-          <ProcessSteps
-            theme="light"
-            marker="fill"
-            activeIndex={steps.length - 1}
-            progressTrack
-            steps={steps.map((step) => ({
-              number: step.number,
-              title: step.title,
-              description: step.text,
-              tag: step.helper,
-            }))}
-          />
-        </div>
+       <div className="mx-auto mt-14 w-full max-w-[1000px] lg:mt-16">
+  <ProcessSteps
+    theme="light"
+    marker="fill"
+    activeIndex={steps.length - 1}
+    progressTrack
+    steps={steps.map((step) => ({
+      number: step.number,
+      title: step.title,
+      description: step.text,
+      tag: step.helper,
+    }))}
+  />
+</div>
       </section>
 
       <section id="audit-system" className="bg-[#101116] px-[max(48px,calc((100vw-1300px)/2))] py-[100px] text-white max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="audit-scan-title">

@@ -25,19 +25,24 @@ export default function ProcessSteps({
           : "grid gap-0"
       }`}
     >
-      {progressTrack && isHorizontal && (
-        <li
-          aria-hidden="true"
-         className={`pointer-events-none absolute top-6 right-0 left-0 hidden h-px md:block ${lineColor}`} 
-        >
-          <span
-            className="block h-full bg-[#bd00f2]"
-            style={{
-              width: `${(activeIndex / steps.length) * 100}%`
-            }}
-          />
-        </li>
-      )}
+   {progressTrack && isHorizontal && (
+  <li
+    aria-hidden="true"
+    className={`pointer-events-none absolute top-6 left-0 hidden h-px md:block ${lineColor}`}
+    style={{
+      width: `calc(${((steps.length - 1) / steps.length) * 100}% + 48px + 200px)`,
+    }}
+  >
+    <span
+      className="block h-full bg-[#bd00f2]"
+      style={{
+        width: activeIndex >= steps.length - 1
+          ? "100%"
+          : `calc(${(activeIndex / steps.length) * 100}% + 24px)`,
+      }}
+    />
+  </li>
+)}
       {steps.map((step, index) => {
         const isActive = index <= activeIndex;
         const isLast = index === steps.length - 1;

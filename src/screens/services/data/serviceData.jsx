@@ -336,8 +336,8 @@ export const LENSES = [
   {
     id: "market",
     label: "Market",
-    title: "See the market before you move.",
-    text: "Market Research — understand demand, competitors and openings before committing budget.",
+    title: "Read the market before choosing the route.",
+    text: "Market Research — industry reports and competitive benchmarking for data-backed decisions",
     nodes: [
       { label: "Signal", x: 15, y: 55 },
       { label: "Segment", x: 42, y: 40 },
@@ -348,8 +348,8 @@ export const LENSES = [
   {
     id: "customer",
     label: "Customer",
-    title: "Know who you are really serving.",
-    text: "Customer Insights — turn conversations and data into clear decisions about who matters.",
+    title: "See the audiences behind the averages.",
+    text: "Customer Insights & Segmentation — analyze behavior to define audience segments for targeted campaigns, not one-size-fits-all",
     nodes: [
       { label: "Need", x: 14, y: 45 },
       { label: "Behaviour", x: 38, y: 62 },
@@ -360,8 +360,8 @@ export const LENSES = [
   {
     id: "direction",
     label: "Direction",
-    title: "Choose the route, then commit.",
-    text: "Consulting — set direction with a clear view of options, trade-offs and next steps.",
+    title: "Put the decision in context.",
+    text: "Consulting brings function, market and customer perspectives together so the next move has a clearer route.",
     nodes: [
       { label: "Option", x: 16, y: 64 },
       { label: "Trade-off", x: 41, y: 45 },

@@ -121,7 +121,7 @@ export default function LeadGeneration() {
           who deserves attention, then connecting the right signals.
         </p>
       </div>
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto px-[max(80px,calc((100vw-1320px)/2))] max-[767px]:px-5">
         <div className="relative h-[650px] min-w-[1000px] overflow-hidden border-y border-black/15 bg-[#faf9f6]">
           {/* Perspective grid */}
           <div

@@ -65,9 +65,17 @@ export default function ContentSearchAI() {
 		<div className="relative max-w-[860px] mx-auto w-fit before:absolute before:top-0 before:bottom-0 before:left-7 before:w-px before:bg-[#10161d]/[0.18] before:content-[''] max-[767px]:before:left-[23px]">
 			{contentProcess.map(([number, title, description], index) => (
 				<article className="relative grid min-h-[145px] grid-cols-[58px_1fr] items-start gap-[26px] max-[767px]:min-h-[135px] max-[767px]:grid-cols-[48px_1fr] max-[767px]:gap-[18px]" key={number}>
-					<span className={`relative z-[1] grid h-14 w-14 place-items-center border border-[#10161d]/[0.18] bg-[#f2f0ea] font-mono text-[10px] text-[#5d6670] max-[767px]:h-[46px] max-[767px]:w-[46px] ${index === 0 ? 'border-[#bd00f2] bg-[#bd00f2] text-white' : ''}`}>{number}</span>
+					<span
+	className={`relative z-[1] grid h-14 w-14 place-items-center border font-mono text-[10px] max-[767px]:h-[46px] max-[767px]:w-[46px] ${
+		index === 0
+			? 'border-[#bd00f2] bg-[#bd00f2] text-white'
+			: 'border-[#10161d]/[0.18] bg-[#f2f0ea] text-[#5d6670]'
+	}`}
+>
+	{number}
+</span>
 					<div>
-						<span className="font-mono text-[10px] text-violet">{['CREATE', 'OPTIMISE', 'ACTIVATE', 'SUSTAIN'][index]}</span>
+						<span className="font-mono text-[10px]  text-violet">{['CREATE', 'OPTIMISE', 'ACTIVATE', 'SUSTAIN'][index]}</span>
 						<h3 className="mt-[5px] mb-[6px] text-xl">{title}</h3>
 						<p className="m-0 max-w-[540px] text-[15px] leading-[1.6] text-[#3B4452]">{description}</p>
 					</div>

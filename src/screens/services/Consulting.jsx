@@ -71,10 +71,11 @@ export default function Consulting() {
 
 		<section className="bg-[#f5f4f7] px-[max(48px,calc((100vw-1320px)/2))] pt-[94px] pb-[102px] text-[#10161d] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="consulting-journey-title">
 			<SectionTitle className="mb-7 max-[767px]:mb-5">The journey</SectionTitle><h2 className="mb-[60px] ml-auto max-w-[860px] text-[72px] leading-[1.04] max-[767px]:mt-6 max-[767px]:mb-[38px] max-[767px]:text-[42px]" id="consulting-journey-title">Understand.<br /><span className="text-[#bd00f2]">Decide. Build. Move.</span></h2>
-			<div className="relative grid grid-cols-4 border-t border-[#10161d]/[0.18] before:absolute before:top-[-1px] before:right-0 before:left-0 before:h-px before:bg-[#10161d]/[0.18] before:content-[''] max-[767px]:grid-cols-2">{consultingJourney.map(([number, title, description], index) => 
+			<div className="relative grid grid-cols-4 border-t border-[#bd00f2] before:absolute before:top-[-1px] before:right-0 before:left-0 before:h-px before:bg-[#bd00f2] before:content-[''] max-[767px]:grid-cols-2">{consultingJourney.map(([number, title, description], index) => 
 			<article className={`relative min-h-[250px] border-r border-[#10161d]/[0.16] px-6 pt-16 pb-5 first:pl-0 last:border-r-0 max-[767px]:min-h-[210px] max-[767px]:border-b max-[767px]:px-3 max-[767px]:pt-12 max-[767px]:pb-[18px] max-[767px]:first:pl-0 max-[767px]:nth-[2]:border-r-0 max-[767px]:nth-last-[-n+2]:border-b-0`} key={number}>
-				<span className={`absolute top-[-6px] left-0 h-[10px] w-[10px] border border-[#85898f] bg-[#f2f0ea] ${index === 0 ? 'border-[#bd00f2] bg-[#bd00f2] shadow-[0_0_0_7px_rgba(189,0,242,0.12)]' : ''} ${index > 0 ? 'max-[767px]:left-3' : ''} ${index === 2 ? 'max-[767px]:left-0' : ''} ${index === 3 ? 'max-[767px]:left-3' : ''}`}>
-					<b className="hidden">{number}</b></span><div><span className="font-mono text-[12px] uppercase  text-violet">{number} / {['Understand', 'Decide', 'Build', 'Move'][index]}</span>
+				<span className={`absolute top-[-6px] left-0 h-[10px] w-[10px] border border-[#bd00f2] bg-[#bd00f2] shadow-[0_0_0_7px_rgba(189,0,242,0.12)] ${index > 0 ? 'max-[767px]:left-3' : ''} ${index === 2 ? 'max-[767px]:left-0' : ''} ${index === 3 ? 'max-[767px]:left-3' : ''}`}>
+  <b className="hidden">{number}</b>
+</span><div><span className="font-mono text-[12px] uppercase  text-violet">{number} / {['Understand', 'Decide', 'Build', 'Move'][index]}</span>
 					<h3 className="mt-7 mb-[10px] text-[19px] max-[767px]:mt-5 max-[767px]:text-[19px]">{title}</h3>
 					<p className="m-0 max-w-[250px] text-[15px] leading-[1.65] text-[#3B4452] max-[767px]:text-[15px]">{description}</p>
 					</div></article>)}</div>
