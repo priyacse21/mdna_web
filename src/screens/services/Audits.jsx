@@ -3,6 +3,7 @@ import SectionTitle from '../../components/common/SectionTitle';
 import ProcessSteps from '../../components/common/ProcessSteps/ProcessSteps';
 import ServiceShowcase from './common/ServiceShowcase/ServiceShowcase';
 import ToolsSection from './common/ToolSection/Toolsection';
+import AuditSurfaceExplorer from './common/Slider/lineSlider';
 import { auditDiagnosticData } from './data/toolsCatlog';
 import {auditItems,steps } from './data/serviceData';
 
@@ -149,106 +150,7 @@ export default function Audits() {
           </p>
         </div>
 
-        <div className="overflow-hidden border border-white/10 bg-[#0d1118]">
-          <div className="grid min-h-[440px] grid-cols-[180px_1fr] max-[767px]:grid-cols-1">
-            <aside className="border-r border-white/10 bg-[#0d1118] p-4">
-              <div className="space-y-4 font-mono text-[9px] uppercase tracking-[0.16em] text-white/45">
-                <div className="border-b border-white/10 pb-3">Audit surface</div>
-                <div className="text-white/80">Marketing</div>
-                <div>Channels</div>
-                <div>AI / GEO</div>
-                <div>Website</div>
-              </div>
-            </aside>
-
-            <div className="relative overflow-hidden bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[length:72px_72px]">
-              <div className="flex items-center justify-between border-b border-white/10 px-5 py-4 font-mono text-[9px] uppercase tracking-[0.18em] text-white/45">
-                <span>Marketing setup audit</span>
-                <span>Model / illustrative / 4 layers</span>
-              </div>
-
-              <div className="grid grid-cols-3 border-b border-white/10 px-4 py-4 text-center font-mono text-[9px] uppercase tracking-[0.16em] text-white/50">
-                <div className="py-3">Inspect</div>
-                <div className="py-3">Look for</div>
-                <div className="py-3">Output</div>
-              </div>
-
-              <div className="grid grid-cols-3 px-4 pb-8 pt-4 text-left text-white">
-                <div className="border-r border-white/10 pr-4">
-                  <h3 className="m-0 pb-3 text-[17px] font-medium">Marketing operations</h3>
-                  <div className="space-y-5 pt-2 text-[11px] text-white/65">
-                    <div>
-                      <p className="font-mono text-[8px] uppercase tracking-[0.14em] text-[#bd00f2]">Clarity</p>
-                      <div className="mt-2 h-1.5 w-full rounded-full bg-white/8">
-                        <div className="h-full w-[82%] rounded-full bg-[#bd00f2]" />
-                      </div>
-                    </div>
-                    <div>
-                      <p className="font-mono text-[8px] uppercase tracking-[0.14em] text-[#bd00f2]">Focus</p>
-                      <div className="mt-2 h-1.5 w-full rounded-full bg-white/8">
-                        <div className="h-full w-[76%] rounded-full bg-[#bd00f2]" />
-                      </div>
-                    </div>
-                    <div>
-                      <p className="font-mono text-[8px] uppercase tracking-[0.14em] text-[#bd00f2]">Next step</p>
-                      <div className="mt-2 h-1.5 w-full rounded-full bg-white/8">
-                        <div className="h-full w-[86%] rounded-full bg-[#bd00f2]" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="border-r border-white/10 px-4">
-                  <h3 className="m-0 pb-3 text-[17px] font-medium">What works / what doesn't</h3>
-                  <div className="space-y-5 pt-2 text-[11px] text-white/65">
-                    <div>
-                      <p className="font-mono text-[8px] uppercase tracking-[0.14em] text-[#bd00f2]">Channel fit</p>
-                      <div className="mt-2 h-1.5 w-full rounded-full bg-white/8">
-                        <div className="h-full w-[68%] rounded-full bg-[#bd00f2]" />
-                      </div>
-                    </div>
-                    <div>
-                      <p className="font-mono text-[8px] uppercase tracking-[0.14em] text-[#bd00f2]">Efficiency</p>
-                      <div className="mt-2 h-1.5 w-full rounded-full bg-white/8">
-                        <div className="h-full w-[58%] rounded-full bg-[#bd00f2]" />
-                      </div>
-                    </div>
-                    <div>
-                      <p className="font-mono text-[8px] uppercase tracking-[0.14em] text-[#bd00f2]">Readiness</p>
-                      <div className="mt-2 h-1.5 w-full rounded-full bg-white/8">
-                        <div className="h-full w-[72%] rounded-full bg-[#bd00f2]" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pl-4">
-                  <h3 className="m-0 pb-3 text-[17px] font-medium">Prioritized fix list</h3>
-                  <div className="space-y-5 pt-2 text-[11px] text-white/65">
-                    <div>
-                      <p className="font-mono text-[8px] uppercase tracking-[0.14em] text-[#bd00f2]">Priority 01</p>
-                      <div className="mt-2 h-1.5 w-full rounded-full bg-white/8">
-                        <div className="h-full w-[92%] rounded-full bg-[#bd00f2]" />
-                      </div>
-                    </div>
-                    <div>
-                      <p className="font-mono text-[8px] uppercase tracking-[0.14em] text-[#bd00f2]">Priority 02</p>
-                      <div className="mt-2 h-1.5 w-full rounded-full bg-white/8">
-                        <div className="h-full w-[72%] rounded-full bg-[#bd00f2]" />
-                      </div>
-                    </div>
-                    <div>
-                      <p className="font-mono text-[8px] uppercase tracking-[0.14em] text-[#bd00f2]">Priority 03</p>
-                      <div className="mt-2 h-1.5 w-full rounded-full bg-white/8">
-                        <div className="h-full w-[54%] rounded-full bg-[#bd00f2]" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <AuditSurfaceExplorer items={auditItems} />
       </section>
 
       <section className="bg-[#101116] px-[max(48px,calc((100vw-1300px)/2))] py-[100px] text-white max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="audit-less-guesswork-title">

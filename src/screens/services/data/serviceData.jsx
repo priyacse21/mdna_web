@@ -446,6 +446,16 @@ export const SERVICES_branding = [
 export const auditItems = [
   {
     id: 'marketing-setup',
+    surfaceLabel: 'Marketing',
+    consoleLabel: 'Marketing setup audit',
+    inspect: 'Marketing operations',
+    lookFor: 'What works / what doesn\'t',
+    output: 'Prioritized fix list',
+    signals: [
+      { label: 'Clarity', value: 82 },
+      { label: 'Focus', value: 76 },
+      { label: 'Next step', value: 86 },
+    ],
     title: 'Marketing Setup Audit',
     tagline: 'Full review of marketing operations',
     impact: 'Find the gaps in tracking, priorities and workflows before they quietly drain growth.',
@@ -455,6 +465,16 @@ export const auditItems = [
   },
   {
     id: 'channel-performance',
+    surfaceLabel: 'Channels',
+    consoleLabel: 'Channel scan',
+    inspect: 'Marketing channels + ROI',
+    lookFor: 'Wasted / underused budget',
+    output: 'Performance priorities',
+    signals: [
+      { label: 'Clarity', value: 68 },
+      { label: 'Focus', value: 58 },
+      { label: 'Next step', value: 72 },
+    ],
     title: 'Channel Performance Audit',
     tagline: 'Deep-dive into marketing channels and ROI',
     impact: 'Understand which channels deserve attention and where spend is working harder than it should.',
@@ -464,6 +484,16 @@ export const auditItems = [
   },
   {
     id: 'ai-readiness',
+    surfaceLabel: 'AI / GEO',
+    consoleLabel: 'AI visibility scan',
+    inspect: 'AI visibility & readiness',
+    lookFor: 'Readiness for AI search',
+    output: 'AI visibility direction',
+    signals: [
+      { label: 'Clarity', value: 64 },
+      { label: 'Focus', value: 73 },
+      { label: 'Next step', value: 81 },
+    ],
     title: 'AI Readiness Audit',
     tagline: 'Assessment for AI visibility and readiness',
     impact: 'Check if your brand, content and infrastructure are prepared to compete in AI-driven discovery.',
@@ -473,6 +503,16 @@ export const auditItems = [
   },
   {
     id: 'website-audit',
+    surfaceLabel: 'Website',
+    consoleLabel: 'Conversion scan',
+    inspect: 'Conversion, SEO + UX',
+    lookFor: 'Issues affecting the site',
+    output: 'Prioritized fix list',
+    signals: [
+      { label: 'Clarity', value: 87 },
+      { label: 'Focus', value: 65 },
+      { label: 'Next step', value: 94 },
+    ],
     title: 'Website Audit',
     tagline: 'Evaluate website fit for conversion, SEO and UX',
     impact: 'Turn friction, weak signals or underperforming pages into a clearer path to action.',
