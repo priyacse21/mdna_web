@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import MobileMenu from "./MobileMenu";
-import { getPrimaryNavigation } from "../../data/navigation";
+import { getPrimaryNavigation } from "../../constant/navigation";
 import mdnaLogo from "../../assets/logo/mdna-logo-clean.png";
 
 export default function Header() {

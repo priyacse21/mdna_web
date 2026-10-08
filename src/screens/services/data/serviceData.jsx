@@ -446,6 +446,16 @@ export const SERVICES_branding = [
 export const auditItems = [
   {
     id: 'marketing-setup',
+    surfaceLabel: 'Marketing',
+    consoleLabel: 'Marketing setup audit',
+    inspect: 'Marketing operations',
+    lookFor: 'What works / what doesn\'t',
+    output: 'Prioritized fix list',
+    signals: [
+      { label: 'Clarity', value: 82 },
+      { label: 'Focus', value: 76 },
+      { label: 'Next step', value: 86 },
+    ],
     title: 'Marketing Setup Audit',
     tagline: 'Full review of marketing operations',
     impact: 'Find the gaps in tracking, priorities and workflows before they quietly drain growth.',
@@ -455,6 +465,16 @@ export const auditItems = [
   },
   {
     id: 'channel-performance',
+    surfaceLabel: 'Channels',
+    consoleLabel: 'Channel scan',
+    inspect: 'Marketing channels + ROI',
+    lookFor: 'Wasted / underused budget',
+    output: 'Performance priorities',
+    signals: [
+      { label: 'Clarity', value: 68 },
+      { label: 'Focus', value: 58 },
+      { label: 'Next step', value: 72 },
+    ],
     title: 'Channel Performance Audit',
     tagline: 'Deep-dive into marketing channels and ROI',
     impact: 'Understand which channels deserve attention and where spend is working harder than it should.',
@@ -464,6 +484,16 @@ export const auditItems = [
   },
   {
     id: 'ai-readiness',
+    surfaceLabel: 'AI / GEO',
+    consoleLabel: 'AI visibility scan',
+    inspect: 'AI visibility & readiness',
+    lookFor: 'Readiness for AI search',
+    output: 'AI visibility direction',
+    signals: [
+      { label: 'Clarity', value: 64 },
+      { label: 'Focus', value: 73 },
+      { label: 'Next step', value: 81 },
+    ],
     title: 'AI Readiness Audit',
     tagline: 'Assessment for AI visibility and readiness',
     impact: 'Check if your brand, content and infrastructure are prepared to compete in AI-driven discovery.',
@@ -473,6 +503,16 @@ export const auditItems = [
   },
   {
     id: 'website-audit',
+    surfaceLabel: 'Website',
+    consoleLabel: 'Conversion scan',
+    inspect: 'Conversion, SEO + UX',
+    lookFor: 'Issues affecting the site',
+    output: 'Prioritized fix list',
+    signals: [
+      { label: 'Clarity', value: 87 },
+      { label: 'Focus', value: 65 },
+      { label: 'Next step', value: 94 },
+    ],
     title: 'Website Audit',
     tagline: 'Evaluate website fit for conversion, SEO and UX',
     impact: 'Turn friction, weak signals or underperforming pages into a clearer path to action.',
@@ -482,9 +522,43 @@ export const auditItems = [
   },
 ];
 
+export const auditSignals = [
+	['01 / OPERATIONS', 'Setup without clarity.', 'A full review of marketing operations can separate what works from what does not.'],
+	['02 / CHANNELS', 'Channels without context.', 'A deep-dive into channels and ROI shows where budget is wasted or underused.'],
+	['03 / CONVERSION', 'Traffic without conversion.', 'A website audit surfaces conversion, SEO and UX issues that stop the funnel from doing its job.'],
+]
+
+export const auditOutcomes = [
+	['01 / CLARITY', 'Clarity', 'Know what works, what does not and where the marketing operation needs attention.'],
+	['02 / PRIORITY', 'Priority', 'Understand where budget is wasted or underused and establish a prioritized fix list.'],
+	['03 / READINESS', 'Readiness', 'Assess AI visibility, website accessibility and conversion health before the next move.'],
+]
+
 export const steps = [
   { number: '01', title: 'Detect', text: 'Review the relevant marketing layer and surface the issues that need attention.', helper: 'Find the signal' },
   { number: '02', title: 'Diagnose', text: 'Examine operations, channel performance and AI visibility in context.', helper: 'Understand the cause' },
   { number: '03', title: 'Prioritize', text: 'Turn findings into a clear, ranked list of what matters and what deserves attention.', helper: 'Order the fixes' },
   { number: '04', title: 'Fix', text: 'Use the audit output as the basis for the next action, from quick wins to broader changes.', helper: 'Move with clarity' },
+];
+export const stratergyMap = [
+    ['START', 'top-[28%] left-[12%] max-[767px]:top-[23%] max-[767px]:left-[7%]'],
+	['MARKET', 'top-[28%] right-[22%] max-[767px]:top-[25%] max-[767px]:right-[16%]'],
+	['DECIDE', 'top-[46%] left-[48%] max-[767px]:top-[45%] max-[767px]:left-[42%]'],
+	['AUDIENCE', 'right-[22%] bottom-[31%] max-[767px]:right-[10%] max-[767px]:bottom-[35%]'],
+	['BUILD', 'bottom-[20%] left-[31%] max-[767px]:bottom-[23%] max-[767px]:left-[20%]'],
+	['MOVE', 'right-[16%] bottom-[18%] max-[767px]:right-[10%]'],
+]
+
+export const ACCOUNT_NODES = [
+  { id: 1, title: "Priority target", x: 10, y: 16, tilt: -4 },
+  { id: 2, title: "Ideal buyer group", x: 38, y: 12, tilt: 4 },
+  { id: 3, title: "Decision-maker", x: 78, y: 28, tilt: -3 },
+  { id: 4, title: "Target prospect", x: 23, y: 72, tilt: 3 },
+  { id: 5, title: "Qualified signal", x: 62, y: 70, tilt: -4 },
+];
+ 
+export const ACCOUNT_LINES = [
+  [25, 31, 45, 28.5],
+  [50, 32, 68, 48],
+  [40, 66, 56, 49],
 ];

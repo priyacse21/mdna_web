@@ -12,8 +12,9 @@ export default function PerformanceMarketing() {
 			<div className="grid grid-cols-[1fr_390px] items-center gap-16 border-b border-[#10161d]/20 pb-16 max-[1023px]:grid-cols-[1fr_300px] max-[767px]:grid-cols-1 max-[767px]:gap-[18px] max-[767px]:pb-[34px]">
 				<div>
 				<h1 className="m-0 text-[88px] leading-[0.99] max-[1023px]:text-[70px] max-[767px]:text-5xl" id="performance-title">Make every<br /><span className="text-[#bd00f2]">click accountable.</span></h1></div>
-				<p className="mt-[30px] mb-0 max-w-[390px] text-[18px] leading-[1.55] text-[#15171c] max-[767px]:mt-0 max-[767px]:text-[14px]">Paid acquisition, conversion and measurement working together so performance can be tested, understood and improved.</p>
-			</div>
+                <p className="mt-[30px] mb-0 max-w-[390px] -translate-x-110 translate-y-12 text-[18px] leading-[1.55] text-[#15171c] max-[767px]:mt-0 max-[767px]:text-[14px]">				
+		           Paid acquisition, conversion and measurement working together so performance can be tested, understood and improved.</p>
+			   </div>
 		</section>
 
 		<section className="bg-[#f2f0ea] px-[30px] pb-[72px] text-[#10161d] max-[767px]:px-5 max-[767px]:pb-[50px]" aria-label="Performance marketing services">

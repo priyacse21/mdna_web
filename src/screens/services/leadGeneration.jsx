@@ -1,29 +1,12 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import SectionTitle from '../../components/common/SectionTitle'
-import { accountNodes, leadMethods, leadOutcomes, leadPathway } from './data/serviceData'
+import { accountNodes, leadMethods, leadOutcomes, leadPathway,ACCOUNT_NODES,ACCOUNT_LINES } from './data/serviceData'
 import { leadGenerationData } from './data/toolsCatlog'
 import ToolsSection from './common/ToolSection/Toolsection'
 import ServiceShowcase from './common/ServiceShowcase/ServiceShowcase'
 
 import {SERVICES} from './data/serviceData'
-
-const ACCOUNT_NODES = [
-  { id: 1, title: "Priority target", x: 10, y: 16, tilt: -4 },
-  { id: 2, title: "Ideal buyer group", x: 38, y: 12, tilt: 4 },
-  { id: 3, title: "Decision-maker", x: 78, y: 28, tilt: -3 },
-  { id: 4, title: "Target prospect", x: 23, y: 72, tilt: 3 },
-  { id: 5, title: "Qualified signal", x: 62, y: 70, tilt: -4 },
-];
- 
-// purple connector lines, in % of container: [x1, y1, x2, y2]
-const ACCOUNT_LINES = [
-  [25, 31, 45, 28.5],
-  [50, 32, 68, 48],
-  [40, 66, 56, 49],
-];
-
- 
 const pad = (n) => String(n).padStart(2, "0");
 
 export default function LeadGeneration() {
@@ -154,17 +137,7 @@ export default function LeadGeneration() {
             preserveAspectRatio="none"
           >
             {ACCOUNT_LINES.map(([x1, y1, x2, y2], i) => (
-              <line
-                key={i}
-                x1={x1}
-                y1={y1}
-                x2={x2}
-                y2={y2}
-                stroke="#b400e6"
-                strokeOpacity="0.75"
-                strokeWidth="1"
-                vectorEffect="non-scaling-stroke"
-              />
+              <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#b400e6" strokeOpacity="0.75" strokeWidth="1" vectorEffect="non-scaling-stroke" />
             ))}
           </svg>
  

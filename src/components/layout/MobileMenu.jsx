@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { getPrimaryNavigation } from '../../data/navigation'
+import { getPrimaryNavigation } from '../../constant/navigation'
 
 export default function MobileMenu({ open, onClose }) {
   const primaryNavigation = getPrimaryNavigation()

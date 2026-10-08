@@ -1,23 +1,22 @@
+import { lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 import WebsiteLayout from "../components/layout/WebsiteLayout";
-import Home from "../pages/Home";
-import OurStory from "../pages/OurStory";
+const Home = lazy(() => import("../pages/Home"));
+const OurStory = lazy(() => import("../pages/OurStory"));
 // import OurWork from "../pages/OurWork";
-import Insights from "../pages/Insights";
-import Careers from "../pages/Careers/Careers";
-import Contact from "../pages/Contact/Contact";
-import Services from "../pages/Services";
-
-import LeadGeneration from "../screens/services/leadGeneration";
-import ContentSearchAI from "../screens/services/ContentSearchAI";
-
-import Audits from "../screens/services/Audits";
-import Consulting from "../screens/services/Consulting";
-import Branding from "../screens/services/Branding";
-import PerformanceMarketing from "../screens/services/PerformanceMarketing";
-import NotFound from "../pages/NotFound";
-import Terms from "../screens/PrivacyPolicy/Terms";
-import PrivacyPolicy from "../screens/PrivacyPolicy/policy";
+const Insights = lazy(() => import("../pages/Insights"));
+const Careers = lazy(() => import("../pages/Careers/Careers"));
+const Contact = lazy(() => import("../pages/Contact/Contact"));
+const Services = lazy(() => import("../pages/Services"));
+const LeadGeneration = lazy(() => import("../screens/services/leadGeneration"));
+const ContentSearchAI = lazy(() => import("../screens/services/ContentSearchAI"));
+const Audits = lazy(() => import("../screens/services/Audits"));
+const Consulting = lazy(() => import("../screens/services/Consulting"));
+const Branding = lazy(() => import("../screens/services/Branding"));
+const PerformanceMarketing = lazy(() => import("../screens/services/PerformanceMarketing"));
+const NotFound = lazy(() => import("../pages/NotFound"));
+const Terms = lazy(() => import("../screens/PrivacyPolicy/Terms"));
+const PrivacyPolicy = lazy(() => import("../screens/PrivacyPolicy/policy"));
 
 export default function AppRoutes() {
   return (
