@@ -61,7 +61,43 @@ export const points = [
   },
 ];
 
-
+export const services = [
+  {
+    number: "01",
+    title: "Lead Generation",
+    label: "PIPELINE",
+    description: "Identify, target and message ideal buyers.",
+    href: "/services/lead-generation",
+  },
+  {
+    number: "02",
+    title: "Content, Search & AI Visibility",
+    label: "VISIBILITY",
+    description: "Build visibility across search, content and AI discovery.",
+    href: "/services/content-search-ai",
+  },
+  {
+    number: "03",
+    title: "Digital PR",
+    label: "CREDIBILITY",
+    description: "Build credibility, reach and reputation across digital channels.",
+    href: "/services/branding",
+  },
+  {
+    number: "04",
+    title: "Audits & Diagnostics",
+    label: "CLARITY",
+    description: "Find what is working, what is not and what should happen next.",
+    href: "/services/audits",
+  },
+  {
+    number: "05",
+    title: "Consulting",
+    label: "CAPABILITY",
+    description: "Build stronger marketing functions and make better decisions.",
+    href: "/services/consulting",
+  },
+];
 
 export const nodes = [
   {
@@ -115,22 +151,27 @@ export const needs = [
   {
     title: "I need more qualified conversations.",
     service: "LEAD GENERATION",
+    href: "/services/lead-generation",
   },
   {
     title: "I need to be found on Google and AI.",
     service: "CONTENT, SEARCH & AI VISIBILITY",
+    href: "/services/content-search-ai",
   },
   {
     title: "I need stronger digital credibility.",
     service: "DIGITAL PR",
+    href: "/services/branding",
   },
   {
     title: "I need to know what's working.",
     service: "AUDITS & DIAGNOSTICS",
+    href: "/services/audits",
   },
   {
     title: "I need a stronger marketing function.",
     service: "CONSULTING",
+    href: "/services/consulting",
     description:
       "Build stronger marketing functions and make better decisions.",
     active: true,

@@ -10,12 +10,14 @@ import Services from "../pages/Services";
 
 import LeadGeneration from "../screens/services/leadGeneration";
 import ContentSearchAI from "../screens/services/ContentSearchAI";
-import DigitalPR from "../screens/services/DigitalPR";
+
 import Audits from "../screens/services/Audits";
 import Consulting from "../screens/services/Consulting";
 import Branding from "../screens/services/Branding";
 import PerformanceMarketing from "../screens/services/PerformanceMarketing";
 import NotFound from "../pages/NotFound";
+import Terms from "../screens/PrivacyPolicy/Terms";
+import PrivacyPolicy from "../screens/PrivacyPolicy/policy";
 
 export default function AppRoutes() {
   return (
@@ -24,9 +26,7 @@ export default function AppRoutes() {
       <Route index element={<Home />} />
         <Route path="services" element={<Services />} />
         <Route path="our-story" element={<OurStory />} />
-        {/* <Route path="our-work" element={<OurWork />} /> */}
-       
-        {/* Services */}
+
         <Route path="services">
           <Route
             path="lead-generation"
@@ -38,10 +38,6 @@ export default function AppRoutes() {
             element={<ContentSearchAI />}
           />
 
-          <Route
-            path="digital-pr"
-            element={<DigitalPR />}
-          />
 
           <Route
             path="audits"
@@ -66,6 +62,8 @@ export default function AppRoutes() {
          <Route path="our-work" element={<Insights />} />
         <Route path="careers" element={<Careers />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="terms" element={<Terms />} />
+        <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="*" element={<NotFound />} />
       </Route>
   

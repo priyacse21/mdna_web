@@ -25,6 +25,7 @@ export default function MovementSection() {
       </div>
 
       <ProcessSteps
+        centered
         steps={steps.map(([title, description, label], index) => ({
           number: `0${index + 1}`,
           title,

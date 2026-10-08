@@ -25,7 +25,7 @@ export default function Audits() {
             Marketing audits that show what is working, what is not, and what to fix next across your setup, channels, AI visibility and website.
           </p>
           <div className="flex flex-wrap gap-[10px]">
-            <Link className="inline-flex min-h-[45px] items-center gap-[14px] border border-current px-[17px] text-[11px] font-bold text-white no-underline transition-all duration-200 max-[767px]:text-[10px]" to="/contact?help=Website%20Audit">
+            <Link className="inline-flex min-h-[45px] items-center gap-[14px] border border-current px-[17px] text-[11px] font-bold text-white no-underline transition-all duration-200 max-[767px]:text-[10px]" to="/contact?service=website-audit">
               Book a free audit <span aria-hidden="true">↓</span>
             </Link>
           </div>

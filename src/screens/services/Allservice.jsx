@@ -4,13 +4,15 @@ import { servicePortfolios } from './data/serviceData'
 
 export default function Allservice() {
 	return <section className="min-h-[calc(100vh-68px)] bg-[#f2f0ea] px-[30px] py-[40px] sm:py-[60px] lg:py-[100px] max-[767px]:px-4" aria-labelledby="all-services-title">
-		<header className="grid grid-cols-[1fr_320px] items-end gap-16 pb-12 max-[800px]:grid-cols-1 max-[800px]:gap-6 max-[767px]:gap-[18px] max-[767px]:pb-[30px]">
+		<header className="grid grid-cols-[1fr_1fr] items-center gap-10 pb-12 max-[800px]:grid-cols-1 max-[800px]:gap-6 max-[767px]:gap-[18px] max-[767px]:pb-[30px]">
 			<div>
 				<SectionTitle className="mb-[30px]"> Services</SectionTitle>
 
 				<h1 className="m-0 text-[76px] leading-[1.02] tracking-normal font-bold normal-case max-[800px]:text-[60px] max-[767px]:text-[44px]" id="all-services-title">Marketing work,<br /><span className="text-[#b400e8]">built to connect.</span></h1>
 			</div>
-			<p className="mb-2 max-w-[320px] text-[18px] leading-[1.6] text-[#3B4452] max-[800px]:max-w-[500px] max-[767px]:text-[16px]">Six service portfolios. Each built around a different growth problem, and designed to work with the others when the problem needs more than one answer.</p>
+			<p className="m-0 max-w-[600px] translate-y-12 text-[18px] leading-[1.6] text-left text-[#3B4452] max-[800px]:max-w-[500px] max-[757px]:text-[16px] whitespace-normal">
+        Six service portfolios. Each built around a different growth problem, and designed to work with the others when the problem needs more than one answer.</p>
+
 		</header>
 		<div className="grid grid-cols-2 gap-[14px] border-t border-[#10161d]/[0.18] pt-4 max-[767px]:grid-cols-1 max-[767px]:gap-[10px]">
 			{servicePortfolios.map(({ number, name, path, description, services }) => (

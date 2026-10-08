@@ -21,16 +21,17 @@ const FAQContactSection = () => {
         ))}
       </section>
 
-      <section aria-labelledby="cta-title" className="flex items-end justify-between gap-[30px] max-[900px]:flex-col max-[900px]:items-start">
+      <section aria-labelledby="cta-title" className="flex flex-col items-start gap-[28px]">
         <div>
           <SectionTitle className="mb-3">KEEP IN TOUCH</SectionTitle>
-          <h2 className="m-0 max-w-[700px] text-[clamp(30px,4vw,55px)] leading-[0.95] tracking-[-0.055em] font-bold" id="cta-title">
+          <h2 className="m-0 max-w-[700px] text-[clamp(30px,6vw,55px)] leading-[0.95] tracking-[-0.055em] font-bold" id="cta-title">
             Have a question worth <span className="text-[#b400e8]">exploring?</span>
           </h2>
         </div>
-        <Link className="inline-flex min-h-11 items-center justify-center gap-[11px] border border-white bg-white px-4 font-mono text-[10px] leading-none tracking-[0.1em] uppercase text-[#111318] no-underline transition duration-200 hover:border-[#b400e8] hover:bg-[#b400e8] hover:text-white" to="/contact">
-          Talk to Us <span className="text-[14px]">↗</span>
-        </Link>
+        <Link
+            className="inline-flex min-h-12 items-center justify-center gap-[5px] whitespace-nowrap border border-white bg-white px-8 font-mono text-[10px] tracking-[0.1em] uppercase text-[#111318] no-underline transition duration-200 hover:border-[#b400e8] hover:bg-[#b400e8] hover:text-white"
+            to="/contact"> Talk to Us <span className="text-[14px]">↗</span>
+          </Link>
       </section>
     </div>
   );

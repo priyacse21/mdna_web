@@ -23,7 +23,7 @@ export default function AuditSection() {
         <div className="flex flex-wrap gap-2.5">
           <Link
             className="inline-flex min-h-[45px] cursor-pointer items-center gap-[14px] px-[17px] text-[11px] font-bold no-underline transition-all duration-200 max-md:text-[10px] bg-violet text-white"
-            to="/contact?help=Website%20Audit"
+            to="/contact?service=website-audit"
           >
             Book a Free Audit -&gt;
           </Link>

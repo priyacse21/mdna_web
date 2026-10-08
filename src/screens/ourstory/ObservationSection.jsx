@@ -24,7 +24,7 @@ export default function ObservationSection() {
             presence that matched the value they offered.
           </p>
 
-          <SectionTitle className="mt-7">
+          <SectionTitle className="mt-7 !text-[15px]">
             The Approach
           </SectionTitle>
           <p className="text-[15px] text-[#3B4452] leading-[1.7] max-w-[850px] m-0 mt-2">
