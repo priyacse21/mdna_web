@@ -1,5 +1,6 @@
 // src/pages/Contact/Contact.jsx
-
+import React from "react";
+import FormField from "../../components/common/FormField";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -34,15 +35,12 @@ const helpOptions = [
 ];
 
 const schema = z.object({
-  name: z.string().trim().min(1, "Name is required."),name: z
-  .string()
-  .trim()
-  .min(1, "Name is required.")
-  .regex(/^[A-Za-z]+(?: [A-Za-z]+)*$/, "Name must contain only letters."),  email: z
+  name: z
     .string()
     .trim()
-    .min(1, "Work email is required.")
-    .email("Enter a valid email."),
+    .min(1, "Name is required.")
+    .regex(/^[A-Za-z]+(?: [A-Za-z]+)*$/, "Name must contain only letters."),
+  email: z.string().trim().min(1, "Work email is required.").email("Enter a valid email."),
   company: z.string().trim().min(1, "Company is required."),
   help: z.string().min(1, "Please select one."),
   context: z.string().trim().min(1, "Tell us a bit of context."),
@@ -121,166 +119,13 @@ const Contact = () => {
             noValidate
             onSubmit={handleSubmit(onSubmit)}
           >
-
-            <div className="border-b border-[#111318]/[0.18] py-5 focus-within:border-[#111318]">
-              <label
-                className="mb-[9px] block text-[13px] tracking-[0.08em] uppercase"
-                htmlFor="contact-name"
-              >
-                Name
-              </label>
-
-              <input
-                id="contact-name"
-                className={`w-full border-0 bg-transparent text-[17px] outline-none [font-family:inherit] ${
-                  errors.name ? "text-[#c0392b]" : "text-[#111318]"
-                }`}
-                {...register("name")}
-              />
-
-              {errors.name && (
-                <span className="mt-[6px] block text-[11px] text-[#c0392b]">
-                  {errors.name.message}
-                </span>
-              )}
-            </div>
-
-            <div className="border-b border-[#111318]/[0.18] py-5 focus-within:border-[#111318]">
-              <label
-                className="mb-[9px] block text-[13px] tracking-[0.08em] uppercase"
-                htmlFor="contact-email"
-              >
-                Work Email
-              </label>
-
-              <input
-                id="contact-email"
-                type="email"
-                className={`w-full border-0 bg-transparent text-[17px] outline-none [font-family:inherit] ${
-                  errors.email ? "text-[#c0392b]" : "text-[#111318]"
-                }`}
-                {...register("email")}
-              />
-
-              {errors.email && (
-                <span className="mt-[6px] block text-[11px] text-[#c0392b]">
-                  {errors.email.message}
-                </span>
-              )}
-            </div>
-
-            <div className="border-b border-[#111318]/[0.18] py-5 focus-within:border-[#111318]">
-              <label
-                className="mb-[9px] block text-[13px] tracking-[0.08em] uppercase"
-                htmlFor="contact-company"
-              >
-                Company
-              </label>
-
-              <input
-                id="contact-company"
-                className={`w-full border-0 bg-transparent text-[17px] outline-none [font-family:inherit] ${
-                  errors.company ? "text-[#c0392b]" : "text-[#111318]"
-                }`}
-                {...register("company")}
-              />
-
-              {errors.company && (
-                <span className="mt-[6px] block text-[11px] text-[#c0392b]">
-                  {errors.company.message}
-                </span>
-              )}
-            </div>
-
-
-            <div className="border-b border-[#111318]/[0.18] py-5 focus-within:border-[#111318]">
-              <label
-                className="mb-[9px] block text-[13px] tracking-[0.08em] uppercase"
-                htmlFor="contact-help"
-              >
-                What Can We Help With?
-              </label>
-
-              <select
-                id="contact-help"
-                className={`w-full cursor-pointer appearance-none border-0 bg-transparent text-[17px] focus:outline-offset-2 [font-family:inherit] [&]:accent-[#a604d6] ${
-                  errors.help ? "text-[#c0392b]" : "text-[#111318]"
-                }`}
-                {...register("help")}
-              >
-                <option
-                  value=""
-                  disabled
-                  className="bg-[#f3f1eb] px-3 py-2 text-[#111318] checked:text-[#111318] hover:text-[#111318]"
-                >
-                  Select one
-                </option>
-
-                {helpOptions.map((option) => (
-                  <option
-                    key={option}
-                    value={option}
-                    className="bg-[#f3f1eb] px-3 py-2 text-[#111318] checked:bg-[#f3f1eb] checked:text-[#111318] hover:text-[#111318]"
-                  >
-                    {option}
-                  </option>
-                ))}
-              </select>
-
-              {errors.help && (
-                <span className="mt-[6px] block text-[11px] text-[#c0392b]">
-                  {errors.help.message}
-                </span>
-              )}
-            </div>
-            <div className="border-b border-[#111318]/[0.18] py-5 focus-within:border-[#111318]">
-              <label
-                className="mb-[9px] block text-[13px] tracking-[0.08em] uppercase"
-                htmlFor="contact-context"
-              >
-                Your Context
-              </label>
-
-              <textarea
-                id="contact-context"
-                className={`min-h-[130px] w-full resize-y border-0 bg-transparent text-[17px] outline-none [font-family:inherit] ${
-                  errors.context ? "text-[#c0392b]" : "text-[#111318]"
-                }`}
-                {...register("context")}
-              />
-
-              {errors.context && (
-                <span className="mt-[6px] block text-[11px] text-[#c0392b]">
-                  {errors.context.message}
-                </span>
-              )}
-            </div>
-
-            <div className="border-b border-[#111318]/[0.18] py-5 focus-within:border-[#111318]">
-              <label
-                className="mb-[9px] block text-[13px] tracking-[0.08em] uppercase"
-                htmlFor="contact-website"
-              >
-                Optional Website
-              </label>
-
-              <input
-                id="contact-website"
-                type="url"
-                className={`w-full border-0 bg-transparent text-[17px] outline-none [font-family:inherit] ${
-                  errors.website ? "text-[#c0392b]" : "text-[#111318]"
-                }`}
-                {...register("website")}
-              />
-
-              {errors.website && (
-                <span className="mt-[6px] block text-[14px] text-[#c0392b]">
-                  {errors.website.message}
-                </span>
-              )}
-            </div>
-
-            <div className="flex items-center justify-between gap-5 pt-6 max-[760px]:flex-wrap">
+           <FormField name="name" label="Name" register={register} errors={errors} />
+  <FormField name="email" label="Work Email" type="email" register={register} errors={errors} />
+  <FormField name="company" label="Company" register={register} errors={errors} />
+  <FormField name="help" label="What Can We Help With?" options={helpOptions} register={register} errors={errors} />
+  <FormField name="context" label="Your Context" multiline minRows={5} register={register} errors={errors} />
+  <FormField name="website" label="Optional Website" register={register} errors={errors} />
+<div className="flex items-center justify-between gap-5 pt-6 max-[760px]:flex-wrap">
               <span
                 aria-live="polite"
                 className="min-h-4 font-mono text-[11px]"
