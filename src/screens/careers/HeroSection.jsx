@@ -22,9 +22,7 @@ const HeroSection = () => {
             things well and contribute to work that moves businesses
             forward.
           </p>
-          <Button href="#opportunities" variant="purple" icon="↓">
-            See Opportunities
-          </Button>
+
         </div>
 
         <div className="h-[400px] max-[900px]:h-[320px] max-[560px]:mx-[-10px] max-[560px]:h-[270px] relative">

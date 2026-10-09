@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 const variantClassNames = {
   purple:
     "border-transparent bg-[#a604d6] hover:shadow-[0_14px_35px_rgba(166,4,214,0.24)]",
+
   black:
-    "border-white/30 bg-[#111318] ",
+    "border-white/30 bg-[#111318] hover:border-[#a604d6]",
 };
 
 export default function Button({
