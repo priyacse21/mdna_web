@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { GraphicNetwork } from "../Graphic";
 
 const pad = (n) => String(n).padStart(2, "0");
 
@@ -71,26 +72,17 @@ export default function LensExplorer({
         >
           {/* Lines (static, same for all lenses) */}
           <div className="absolute inset-0">
-          <svg
-            aria-hidden
-            className="pointer-events-none absolute inset-0 h-full w-full"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="none"
-          >
-            {lines.map(([x1, y1, x2, y2], i) => (
-              <line
-                key={i}
-                x1={x1}
-                y1={y1}
-                x2={x2}
-                y2={y2}
-                stroke="#111218"
-                strokeOpacity="0.45"
-                strokeWidth="1"
-                vectorEffect="non-scaling-stroke"
-              />
-            ))}
-          </svg>
+            <GraphicNetwork
+              lines={lines}
+              viewBox="0 0 100 100"
+              defaultLineProps={{
+                stroke: "#111218",
+                strokeOpacity: 0.45,
+                strokeWidth: 1,
+                vectorEffect: "non-scaling-stroke",
+              }}
+              circles={[]}
+            />
           </div>
 
           {/* Text */}

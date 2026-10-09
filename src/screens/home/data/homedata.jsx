@@ -196,3 +196,11 @@ export const homeneeds = [
     title: "A stronger marketing function",
   },
 ];
+
+export const nodePositions = {
+  n1: "left-0 top-[9%] max-[600px]:-left-2 max-[600px]:top-[4%]",
+  n2: "right-0 top-[8%] max-[600px]:-right-2 max-[600px]:top-[3%]",
+  n3: "left-[2%] bottom-[7%] max-[900px]:left-0 max-[600px]:-left-2 max-[600px]:bottom-[5%]",
+  n4: "right-0 bottom-[7%] max-[600px]:-right-2 max-[600px]:bottom-[5%]",
+  n5: "right-[-2%] top-[43%] max-[900px]:right-0 max-[600px]:hidden",
+};

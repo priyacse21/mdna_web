@@ -5,6 +5,7 @@ import {  leadOutcomes, leadPathway,ACCOUNT_NODES,ACCOUNT_LINES } from './data/s
 import { leadGenerationData } from './data/toolsCatlog'
 import ToolsSection from './common/ToolSection/Toolsection'
 import ServiceShowcase from './common/ServiceShowcase/ServiceShowcase'
+import { GraphicNetwork } from '../../components/common/Graphic'
 
 import {SERVICES} from './data/serviceData'
 const pad = (n) => String(n).padStart(2, "0");
@@ -13,14 +14,6 @@ export default function LeadGeneration() {
 	const [activeId, setActiveId] = useState(SERVICES[0].id);
   const activeIndex = SERVICES.findIndex((s) => s.id === activeId);
   const active = SERVICES[activeIndex];
-	const accountPositions = [
-		'top-[17%] left-[10%] max-[767px]:left-[4%]',
-		'top-[13%] left-[43%] max-[767px]:top-[12%] max-[767px]:left-auto max-[767px]:right-[4%]',
-		'top-[28%] right-[9%] max-[767px]:top-[37%] max-[767px]:right-[3%]',
-		'bottom-[15%] left-[23%] max-[767px]:bottom-[12%] max-[767px]:left-[4%]',
-		'bottom-[16%] right-[25%] max-[767px]:bottom-[12%] max-[767px]:right-[4%]',
-	]
-
  const [activeNode, setActiveNode] = useState(2);
 
 	return <main className="[&_h1]:tracking-normal [&_h1]:normal-case [&_h2]:tracking-normal [&_h2]:normal-case [&_.eyebrow_span]:text-[#bd00f2]">
@@ -89,18 +82,19 @@ export default function LeadGeneration() {
 
 		
 		<section className="px-6 py-6">
-       <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#111218]/60">
+       <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#111218]/60 lg:ml-[max(24px,calc((100vw-1440px)/2-24px))]">
         
         <SectionTitle className="mt-3 max-[767px]:mt-0">signature interaction</SectionTitle>
       </p>
  
       {/* Heading + description */}
-      <div className="mt-4 grid gap-8 lg:grid-cols-[1fr_350px] mb-20 lg:items-end">
-        <h2 className="max-w-[800px] text-5xl font-semibold leading-[0.95] tracking-tighter text-[#111218] sm:text-7xl lg:text-[88px]">
+      <div className="mt-4 mb-20 grid gap-8 xl:grid-cols-[minmax(0,1fr)_560px] xl:items-end xl:gap-68">
+        <h2 className="max-w-[800px] text-5xl font-semibold leading-[0.95] tracking-tighter text-[#111218] sm:text-7xl xl:translate-x-8 xl:justify-self-end xl:text-[88px]">
           The account targeting board.
         </h2>
-        <p className="text-lg leading-relaxed text-[#111218]/60 lg:pb-4">
+        <p className="text-lg leading-relaxed text-[#111218]/60 xl:w-[560px] xl:-translate-x-50 xl:pb-4">
           Lead generation is not a list of names. It is a system for deciding
+          <br className="hidden xl:block" />
           who deserves attention, then connecting the right signals.
         </p>
       </div>
@@ -130,16 +124,17 @@ export default function LeadGeneration() {
           />
  
           {/* Purple connector lines */}
-          <svg
-            aria-hidden
-            className="pointer-events-none absolute inset-0 h-full w-full"
+          <GraphicNetwork
+            lines={ACCOUNT_LINES}
             viewBox="0 0 100 100"
-            preserveAspectRatio="none"
-          >
-            {ACCOUNT_LINES.map(([x1, y1, x2, y2], i) => (
-              <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#b400e6" strokeOpacity="0.75" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-            ))}
-          </svg>
+            defaultLineProps={{
+              stroke: "#b400e6",
+              strokeOpacity: 0.75,
+              strokeWidth: 1,
+              vectorEffect: "non-scaling-stroke",
+            }}
+            circles={[]}
+          />
  
           {/* Center focus diamond */}
           <div className="absolute left-1/2 top-[54%] -translate-x-1/2 -translate-y-1/2">

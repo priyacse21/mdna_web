@@ -1,4 +1,5 @@
 import SectionTitle from "../../components/common/SectionTitle";
+import { Circle } from "../../components/common/Graphic";
 
 export default function CompanySection() {
   return (
@@ -26,12 +27,12 @@ export default function CompanySection() {
               stroke="#a604d6"
               strokeOpacity=".5"
             />
-            <circle cx="40" cy="130" r="7" fill="#a604d6" />
-            <circle cx="150" cy="50" r="7" fill="#10171e" />
-            <circle cx="275" cy="125" r="8" fill="#a604d6" />
-            <circle cx="405" cy="35" r="7" fill="#10171e" />
-            <circle cx="220" cy="160" r="6" fill="#a604d6" />
-            <circle cx="460" cy="150" r="5" fill="#10171e" />
+            <Circle cx="40" cy="130" r="7" fill="#a604d6" />
+            <Circle cx="150" cy="50" r="7" fill="#10171e" />
+            <Circle cx="275" cy="125" r="8" fill="#a604d6" />
+            <Circle cx="405" cy="35" r="7" fill="#10171e" />
+            <Circle cx="220" cy="160" r="6" fill="#a604d6" />
+            <Circle cx="460" cy="150" r="5" fill="#10171e" />
           </svg>
         </div>
       </div>

@@ -18,6 +18,7 @@ const labelPositions = [
 ];
 
 import SectionTitle from "../../components/common/SectionTitle";
+import { Line } from "../../components/common/Graphic";
 
 export default function ExplorerSection() {
   const [activeKey, setActiveKey] = useState("lead");
@@ -97,13 +98,14 @@ export default function ExplorerSection() {
 
           {/* SVG line from center to active dot */}
           <svg aria-hidden="true" className="absolute inset-0 w-full h-full z-1 pointer-events-none">
-            <line
+            <Line
               key={active.key}
               x1="50%"
               y1="50%"
               x2={`${active.x}%`}
               y2={`${active.y}%`}
-              className="stroke-[#a604d6] stroke-[1]"
+              stroke="#a604d6"
+              strokeWidth={1}
             />
           </svg>
 

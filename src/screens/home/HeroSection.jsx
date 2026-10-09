@@ -1,15 +1,8 @@
-import { nodes } from "./data/homedata";
+import { nodePositions,nodes } from "./data/homedata";
 import SectionTitle from "../../components/common/SectionTitle";
 import Button from "../../components/common/Button";
+import { Line } from "../../components/common/Graphic";
 
-
-const nodePositions = {
-  n1: "left-0 top-[9%] max-[600px]:-left-2 max-[600px]:top-[4%]",
-  n2: "right-0 top-[8%] max-[600px]:-right-2 max-[600px]:top-[3%]",
-  n3: "left-[2%] bottom-[7%] max-[900px]:left-0 max-[600px]:-left-2 max-[600px]:bottom-[5%]",
-  n4: "right-0 bottom-[7%] max-[600px]:-right-2 max-[600px]:bottom-[5%]",
-  n5: "right-[-2%] top-[43%] max-[900px]:right-0 max-[600px]:hidden",
-};
 
 export default function HeroSection() {
   return (
@@ -102,11 +95,11 @@ export default function HeroSection() {
               className="absolute inset-0 w-full h-full pointer-events-none"
               viewBox="0 0 620 520"
             >
-              <line className="stroke-[#a604d6] stroke-[1.7] [stroke-dasharray:5_6]" x1="310" x2="95" y1="260" y2="100" />
-              <line className="stroke-white/22 stroke-[1]" x1="310" x2="525" y1="260" y2="100" />
-              <line className="stroke-white/22 stroke-[1]" x1="310" x2="90" y1="260" y2="425" />
-              <line className="stroke-white/22 stroke-[1]" x1="310" x2="530" y1="260" y2="425" />
-              <line className="stroke-white/22 stroke-[1]" x1="310" x2="560" y1="260" y2="260" />
+              <Line x1="310" y1="260" x2="95" y2="100" stroke="#a604d6" strokeWidth={1.7} strokeDasharray="5 6" />
+              <Line x1="310" y1="260" x2="525" y2="100" stroke="rgba(255,255,255,0.22)" strokeWidth={1} strokeDasharray="" />
+              <Line x1="310" y1="260" x2="90" y2="425" stroke="rgba(255,255,255,0.22)" strokeWidth={1} strokeDasharray="" />
+              <Line x1="310" y1="260" x2="530" y2="425" stroke="rgba(255,255,255,0.22)" strokeWidth={1} strokeDasharray="" />
+              <Line x1="310" y1="260" x2="560" y2="260" stroke="rgba(255,255,255,0.22)" strokeWidth={1} strokeDasharray="" />
             </svg>
 
             <div className="absolute left-[2%] sm:left-[8%] top-0 text-[#5f6a72] font-mono text-[7px] sm:text-[9px] tracking-widest">
