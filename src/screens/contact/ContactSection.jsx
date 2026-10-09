@@ -2,7 +2,7 @@
 import React from "react";
 import FormField from "../../components/common/FormField";
 import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useSearchParams } from "react-router-dom";
@@ -53,18 +53,20 @@ const Contact = () => {
   const [searchParams] = useSearchParams();
   const requestedService = searchParams.get("service");
   const requestedHelp = searchParams.get("help");
-  const requestedServiceSlug = requestedService
-    ? toServiceSlug(requestedService)
-    : "";
+  const requestedSlugs = [requestedService, requestedHelp]
+    .filter(Boolean)
+    .map(toServiceSlug);
   const selectedHelp =
-    helpOptions.find((option) => toServiceSlug(option) === requestedServiceSlug) ??
-    (helpOptions.includes(requestedHelp) ? requestedHelp : "");
+    helpOptions.find(
+      (option) => requestedSlugs.includes(toServiceSlug(option))
+    ) ?? "";
 
   const {
     register,
     handleSubmit,
     reset,
     resetField,
+    control,
     formState: { errors },
   } = useForm({
     resolver: zodResolver(schema),
@@ -123,7 +125,19 @@ const Contact = () => {
            <FormField name="name" label="Name" register={register} errors={errors} />
   <FormField name="email" label="Work Email" type="email" register={register} errors={errors} />
   <FormField name="company" label="Company" register={register} errors={errors} />
-  <FormField name="help" label="What Can We Help With?" options={helpOptions} register={register} errors={errors} />
+  <Controller
+    name="help"
+    control={control}
+    render={({ field }) => (
+      <FormField
+        name="help"
+        label="What Can We Help With?"
+        options={helpOptions}
+        field={field}
+        errors={errors}
+      />
+    )}
+  />
   <FormField name="context" label="Your Context" multiline minRows={5} register={register} errors={errors} />
   <FormField name="website" label="Optional Website" register={register} errors={errors} />
 <div className="flex items-center justify-between gap-5 pt-6 max-[760px]:flex-wrap">
