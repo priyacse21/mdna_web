@@ -45,7 +45,7 @@ export default function Audits() {
 
             <div className="absolute left-1/2 top-[27%] bottom-[27%] w-px -translate-x-1/2 bg-white/[0.18]" />
             <div className="absolute top-1/2 right-[27%] left-[27%] h-px -translate-y-1/2 bg-white/[0.18]" />
-            <div className="absolute top-1/2 right-[8%] left-[8%] h-px -translate-y-1/2 bg-[#bd00f2]/70" />
+            <div className="absolute right-[8%] left-[8%] h-px -translate-y-1/2 bg-[#bd00f2]/70 shadow-[0_0_12px_2px_rgba(189,0,242,0.5)] [animation:scan-move_4s_ease-in-out_infinite]" />
             <div className="absolute left-1/2 top-1/2 aspect-square w-[34%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/[0.3] bg-[radial-gradient(circle,rgba(189,0,242,0.14),transparent_72%)]" />
             <span className="absolute left-1/2 top-1/2 h-[12px] w-[12px] -translate-x-1/2 -translate-y-1/2 bg-[#bd00f2] shadow-[0_0_26px_8px_rgba(189,0,242,0.55)]" />
 
