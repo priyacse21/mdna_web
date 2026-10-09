@@ -12,15 +12,15 @@ export default function Footer() {
   return (
     <footer className="block bg-[#101116] text-[#f8f8f7]" id="footer-contact">
       <div className="w-[calc(100%-32px)] md:w-[calc(100%-48px)] xl:w-[min(calc(100%-64px),1500px)] min-h-[330px] mx-auto py-11 px-0 md:px-10 grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-[55px] lg:gap-20">
-        {/* Footer Navigation */}
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[30px] md:gap-[18px] lg:col-start-2 lg:gap-9">
-          {/* Explore */}
+
           <div className="flex flex-col items-start gap-[13px]">
             <p className="my-[5px] text-violet font-mono text-[15px] tracking-[0.15em] uppercase">
               Explore
             </p>
 
-            {primaryNavigation.slice(0, 5).map(({ label, path }) => (
+            {primaryNavigation.slice(0, 3).map(({ label, path }) => (
               <Link
                 to={path}
                 key={path}
@@ -31,13 +31,12 @@ export default function Footer() {
             ))}
           </div>
 
-          {/* Services */}
           <div className="flex flex-col items-start gap-[13px]">
             <p className="my-[5px]  text-violet font-mono text-[15px] tracking-[0.15em] uppercase">
               Services
             </p>
 
-            {serviceLinks.slice(0, 5).map(({ label, path }) => (
+            {serviceLinks.slice(0, 6).map(({ label, path }) => (
               <Link
                 to={path}
                 key={path}
@@ -48,7 +47,6 @@ export default function Footer() {
             ))}
           </div>
 
-          {/* Connect */}
           <div className="flex flex-col items-start gap-[13px]">
             <p className="my-[5px]  text-violet font-mono text-[15px] tracking-[0.15em] uppercase">
               Connect

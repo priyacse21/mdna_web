@@ -30,7 +30,8 @@ const helpOptions = [
   "Reputation Audit",
   "Retargeting Plan",
   "Tracking Audit",
-  "Explore Affiliate"
+  "Explore Affiliate",
+  "Next campaign"
 ];
 
 const schema = z.object({
