@@ -1,5 +1,6 @@
 
 import SectionTitle from "../../components/common/SectionTitle";
+import Button from "../../components/common/Button";
 
 const HeroSection = () => {
   return (
@@ -20,9 +21,9 @@ const HeroSection = () => {
             things well and contribute to work that moves businesses
             forward.
           </p>
-          <a className="inline-flex gap-3 bg-[#b400e8] px-5 py-[15px] text-[14px] font-bold text-white no-underline transition duration-[250ms] hover:-translate-y-0.5 hover:bg-[#d318ff]" href="#opportunities">
-            See Opportunities ↓
-          </a>
+          <Button href="#opportunities" variant="purple" icon="↓">
+            See Opportunities
+          </Button>
         </div>
 
         <div className="h-[400px] max-[900px]:h-[320px] max-[560px]:mx-[-10px] max-[560px]:h-[270px]">

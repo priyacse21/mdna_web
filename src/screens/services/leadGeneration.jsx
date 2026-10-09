@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import SectionTitle from '../../components/common/SectionTitle'
-import { accountNodes, leadMethods, leadOutcomes, leadPathway,ACCOUNT_NODES,ACCOUNT_LINES } from './data/serviceData'
+import Button from '../../components/common/Button'
+import {  leadOutcomes, leadPathway,ACCOUNT_NODES,ACCOUNT_LINES } from './data/serviceData'
 import { leadGenerationData } from './data/toolsCatlog'
 import ToolsSection from './common/ToolSection/Toolsection'
 import ServiceShowcase from './common/ServiceShowcase/ServiceShowcase'
@@ -30,7 +30,7 @@ export default function LeadGeneration() {
 				<h1 className="m-0 mb-7 text-[88px] leading-[0.98] max-[1023px]:text-[72px] max-[767px]:text-5xl" id="lead-title">Find the<br />right buyers.<br /><span className="text-[#bd00f2]">Start the right conversations.</span></h1>
 				<p className="mb-[26px] max-w-[430px] text-[18px] leading-[1.7] text-[#B8C1CC] max-[767px]:text-[18px]">Identify ideal buyers, reach them through targeted channels and create a more focused path to sales-ready conversations.</p>
 				<div className="flex flex-wrap gap-[10px]">
-					<Link className="inline-flex min-h-[45px] items-center gap-[14px] bg-[#f8f8f7] px-[17px] text-[11px] font-bold text-[#101116] no-underline transition-all duration-200 max-[767px]:text-[10px]" to="/contact">Talk to us <span aria-hidden="true">↗</span></Link>
+					<Button to="/contact" variant="black" icon="↗">Talk to us</Button>
 				</div>
 			</div>
 			<div className="relative min-h-[700px] overflow-hidden border-l border-white/[0.14] bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[length:76px_76px] before:absolute before:top-[4%] before:bottom-[5%] before:left-1/2 before:w-px before:bg-[#bd00f2]/75 before:content-[''] after:absolute after:top-1/2 after:right-[9%] after:left-[9%] after:h-px after:bg-[#bd00f2]/75 after:content-[''] max-[1023px]:min-h-[520px] max-[1023px]:border-t max-[1023px]:border-l-0 max-[767px]:min-h-[390px]" aria-label="A visual map of targeted conversations">
@@ -206,7 +206,7 @@ export default function LeadGeneration() {
 			<SectionTitle className="relative z-[1] mb-7 max-[767px]:mb-5"> Start here</SectionTitle>
 			<h2 className="relative z-[1] m-0 mb-[18px] text-[68px] leading-[1.05] max-[767px]:text-[42px]" id="lead-cta-title">Know who you want to reach?<br /><span className="text-[#bd00f2]">Let's build the path.</span></h2>
 			<p className="relative z-[1] mb-6 max-w-[490px] text-[18px] leading-[1.65] text-[#B8C1CC]">Tell us what you are trying to solve. We’ll help identify the right starting point for your lead generation system.</p>
-			<Link className="relative z-[1] inline-flex min-h-[45px] items-center gap-[14px] bg-[#f8f8f7] px-[17px] text-[11px] font-bold text-[#101116] no-underline transition-all duration-200 max-[767px]:text-[10px]" to="/contact">Talk to mDNA <span aria-hidden="true">↗</span></Link>
+			<Button className="relative z-[1]" to="/contact" variant="black" icon="↗">Talk to mDNA</Button>
 			<div className="absolute right-[15%] bottom-[-360px] h-[640px] w-[640px] rotate-45 border border-[#bd00f2]/[0.32]" />
 		</section>
 

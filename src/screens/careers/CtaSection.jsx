@@ -1,7 +1,6 @@
 
-import { Link } from "react-router-dom";
-
 import SectionTitle from "../../components/common/SectionTitle";
+import Button from "../../components/common/Button";
 
 const CtaSection = () => {
   return (
@@ -14,12 +13,12 @@ const CtaSection = () => {
         </div>
 
         <div className="flex flex-wrap gap-[10px]">
-          <Link className="border border-white bg-white px-[18px] py-[14px] text-[13px] font-bold text-[#111318] no-underline" to="/services">
-            Explore Our Services →
-          </Link>
-          <Link className="border border-white bg-transparent px-[18px] py-[14px] text-[13px] font-bold text-white no-underline" to="/contact">
-            Talk to Us →
-          </Link>
+          <Button to="/services" variant="purple" icon="→">
+            Explore Our Services
+          </Button>
+          <Button to="/contact" variant="black" icon="→">
+            Talk to Us
+          </Button>
         </div>
       </div>
     </section>

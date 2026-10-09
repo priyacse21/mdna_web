@@ -1,21 +1,9 @@
 import { useState } from "react";
 import SectionTitle from "../../../../components/common/SectionTitle";
+import Button from "../../../../components/common/Button";
 
 const pad = (n) => String(n).padStart(2, "0");
 
-/**
- * Reusable accordion/tab showcase section.
- *
- * Props:
- * - eyebrowIndex   : string  -> "03"
- * - eyebrowLabel   : string  -> "The lead generation system"
- * - heading        : string
- * - description    : string
- * - panelLabel     : string  -> top-right label in detail panel
- * - codePrefix     : string  -> bottom-left label, e.g. "mDNA / LG"
- * - items          : [{ id, title, tagline, impact, ctaLabel, ctaHref, footerFlow }]
- * - defaultActiveId: string (optional)
- */
 export default function ServiceShowcase({
   eyebrowIndex,
   eyebrowLabel,
@@ -38,12 +26,11 @@ export default function ServiceShowcase({
 
   return (
     <section className="bg-[#111218] px-5 py-12 text-white sm:px-8 sm:py-14 lg:px-12 lg:py-16">
-  {/* Eyebrow */}
+
   <SectionTitle>
     <span className="text-[#b400e6]">{eyebrowIndex}</span> / {eyebrowLabel}
   </SectionTitle>
 
-  {/* Heading + description */}
   <div className="mt-4 grid gap-6 sm:gap-8 md:px-8 lg:grid-cols-2 lg:items-end lg:gap-20 lg:px-16 xl:px-32">
     <h2 className="max-w-[900px] text-4xl font-semibold leading-[0.95] tracking-tighter sm:text-6xl lg:text-7xl xl:text-[80px]">
       {heading}
@@ -53,9 +40,8 @@ export default function ServiceShowcase({
     </p>
   </div>
 
-      {/* List + detail */}
       <div className="mx-auto mt-14 grid max-w-[1100px] border border-white/10 lg:grid-cols-[380px_1fr]">
-        {/* Left list */}
+
         <ul role="tablist" className="flex flex-col border-white/10 lg:border-r">
           {items.map((s, i) => {
             const isActive = s.id === activeId;
@@ -94,7 +80,7 @@ export default function ServiceShowcase({
           <li aria-hidden className="hidden flex-1 lg:block" />
         </ul>
 
-        {/* Right detail */}
+
         <div
           role="tabpanel"
           key={active.id}
@@ -132,13 +118,14 @@ export default function ServiceShowcase({
             </div>
 
             {active.ctaLabel && (
-              <a
+              <Button
                 href={active.ctaHref ?? "#contact"}
-                className="mt-8 inline-flex items-center gap-6 bg-[#b400e6] px-5 py-4 font-mono text-[11px] font-semibold uppercase tracking-[0.15em] text-white transition-colors hover:bg-[#c61af5] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                variant="purple"
+                icon="↗"
+                className="mt-8 gap-6 px-5 py-4 font-mono text-[11px] uppercase tracking-[0.15em] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 {active.ctaLabel}
-                <span aria-hidden>↗</span>
-              </a>
+              </Button>
             )}
           </div>
 

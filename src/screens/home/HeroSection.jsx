@@ -1,10 +1,6 @@
-import React from "react";
-
-
-
-import { Link } from "react-router-dom";
 import { nodes } from "./data/homedata";
 import SectionTitle from "../../components/common/SectionTitle";
+import Button from "../../components/common/Button";
 
 
 const nodePositions = {
@@ -22,7 +18,6 @@ export default function HeroSection() {
   className="relative flex items-center overflow-hidden py-[40px] sm:py-[60px] lg:py-[100px] bg-[#10171e] text-white font-['Poppins',Arial,sans-serif]"
 
     >
-      {/* Background grid */}
       <div
         className="absolute inset-0 opacity-[0.09] pointer-events-none"
         style={{
@@ -34,7 +29,6 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Hero glow ring */}
       <div
         aria-hidden="true"
         className="absolute w-[720px] h-[720px] -right-[330px] -top-[150px] border border-[#a604d6]/[0.22] rounded-full pointer-events-none"
@@ -64,18 +58,20 @@ export default function HeroSection() {
           </p>
 
           <div className="flex gap-3 flex-wrap mt-[34px]">
-            <a
-              className="min-h-[46px] inline-flex items-center justify-center gap-2.5 px-[19px] border border-transparent text-[12px] font-semibold tracking-[0.01em] bg-[#a604d6] text-white no-underline hover:shadow-[0_14px_35px_rgba(166,4,214,0.24)] transition-all max-[600px]:w-full"
+            <Button
               href="#system"
+              variant="purple"
+              icon="↓"
             >
-              Explore the mDNA System <span>↓</span>
-            </a>
-            <Link
-              className="min-h-[46px] inline-flex items-center justify-center gap-2.5 px-[19px] border border-white/30 text-[12px] font-semibold tracking-[0.01em] text-white no-underline hover:border-[#a604d6] hover:bg-[#a604d6]/8 transition-all max-[600px]:w-full"
+              Explore the mDNA System
+            </Button>
+            <Button
               to="/contact"
+              variant="black"
+              icon="↗"
             >
-              Talk to Us <span>↗</span>
-            </Link>
+              Talk to Us
+            </Button>
           </div>
 
           <div className="flex items-center gap-2.5 mt-[22px] text-[#69747c] font-mono text-[10px] tracking-[0.7px]">

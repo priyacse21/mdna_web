@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
 import SectionTitle from '../../components/common/SectionTitle';
+import Button from '../../components/common/Button';
 import ProcessSteps from '../../components/common/ProcessSteps/ProcessSteps';
 import ServiceShowcase from './common/ServiceShowcase/ServiceShowcase';
 import ToolsSection from './common/ToolSection/Toolsection';
@@ -26,9 +26,9 @@ export default function Audits() {
             Marketing audits that show what is working, what is not, and what to fix next across your setup, channels, AI visibility and website.
           </p>
           <div className="flex flex-wrap gap-[10px]">
-            <Link className="inline-flex min-h-[45px] items-center gap-[14px] border border-current px-[17px] text-[11px] font-bold text-white no-underline transition-all duration-200 max-[767px]:text-[10px]" to="/contact?service=website-audit">
-              Book a free audit <span aria-hidden="true">↓</span>
-            </Link>
+            <Button to="/contact?service=website-audit" variant="purple" icon="↓">
+              Book a free audit
+            </Button>
           </div>
         </div>
 
@@ -183,9 +183,9 @@ export default function Audits() {
             Book a free audit or get an AI readiness score and turn the unknowns into a prioritized view of what to address next.
           </p>
           <div className="mt-10 flex justify-center">
-            <Link to="/contact" className="inline-flex min-h-[48px] items-center bg-[#bd00f2] px-[28px] text-[11px] font-bold uppercase tracking-[0.18em] text-white no-underline transition-all duration-200 hover:bg-[#ce29ff]">
+            <Button to="/contact" variant="purple">
               Talk to mDNA
-            </Link>
+            </Button>
           </div>
         </div>
       </section>

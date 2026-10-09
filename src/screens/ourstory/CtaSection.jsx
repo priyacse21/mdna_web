@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import SectionTitle from "../../components/common/SectionTitle";
+import Button from "../../components/common/Button";
 
 export default function CtaSection() {
   return (
@@ -12,12 +12,14 @@ export default function CtaSection() {
           <h2 className="text-[clamp(34px,4vw,58px)] leading-[1.05] tracking-[-0.04em] m-0 font-normal">
             And we're just getting started.
           </h2>
-          <Link
+          <Button
+            className="self-start whitespace-nowrap md:self-auto"
             to="/contact"
-            className="bg-[#a604d6] text-white py-[13px] px-[18px] text-[12px] font-semibold whitespace-nowrap no-underline inline-block self-start md:self-auto hover:bg-[#bd00f2] transition-colors"
+            variant="purple"
+            icon="→"
           >
-            Start a conversation →
-          </Link>
+            Start a conversation
+          </Button>
         </div>
       </div>
     </section>

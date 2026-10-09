@@ -1,7 +1,7 @@
 
-import { Link } from "react-router-dom";
 import { faqs } from "./data/insightsData";
 import SectionTitle from "../../components/common/SectionTitle";
+import Button from "../../components/common/Button";
 
 
 const FAQContactSection = () => {
@@ -28,10 +28,9 @@ const FAQContactSection = () => {
             Have a question worth <span className="text-[#b400e8]">exploring?</span>
           </h2>
         </div>
-        <Link
-            className="inline-flex min-h-12 items-center justify-center gap-[5px] whitespace-nowrap border border-white bg-white px-8 font-mono text-[10px] tracking-[0.1em] uppercase text-[#111318] no-underline transition duration-200 hover:border-[#b400e8] hover:bg-[#b400e8] hover:text-white"
-            to="/contact"> Talk to Us <span className="text-[14px]">↗</span>
-          </Link>
+        <Button to="/contact" variant="purple" icon="↗">
+          Talk to Us
+        </Button>
       </section>
     </div>
   );

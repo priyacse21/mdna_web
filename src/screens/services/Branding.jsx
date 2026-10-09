@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import SectionTitle from '../../components/common/SectionTitle'
+import Button from '../../components/common/Button'
 import { brandingBenefits, brandingFormats, brandingJourney, brandingServices } from './data/serviceData'
 import { BrandingData } from './data/toolsCatlog'
 import ToolsSection from './common/ToolSection/Toolsection'
@@ -21,7 +21,7 @@ export default function Branding() {
 				<h1 className="m-0 mb-[22px] text-[84px] leading-[1.02] max-[1023px]:text-[62px] max-[767px]:text-5xl" id="branding-title">Make your<br />brand part of<br />the <span className="text-[#bd00f2]">conversation.</span></h1>
 				<p className="mb-7 max-w-[580px] text-[18px] leading-[1.7] text-[#B8C1CC] max-[767px]:text-xs">Branding that builds visibility, credibility and attention across the channels your audience already trusts.</p>
 				<div className="flex flex-wrap gap-[10px]">
-					<Link className="inline-flex min-h-[45px] items-center gap-[14px] bg-[#f8f8f7] px-[17px] text-[11px] font-bold text-[#101116] no-underline transition-all duration-200 max-[767px]:text-[10px]" to="/contact">Talk to us <span aria-hidden="true">↗</span></Link></div>
+					<Button to="/contact" variant="black" icon="↗">Talk to us</Button></div>
 			</div>
 			<div className="relative min-h-[700px] overflow-hidden border-l border-white/[0.14] bg-[#111318] max-[1023px]:min-h-[600px] max-[767px]:min-h-[420px] max-[767px]:border-t max-[767px]:border-l-0" aria-label="A grid of brand and media touchpoints">
 				<div className="absolute inset-[-6%] grid grid-cols-7 auto-rows-fr gap-2 rotate-[-10deg] scale-[1.08]">{Array.from({ length: 35 }, (_, index) => <span className={`border ${[2, 8, 12, 17, 23, 29, 33].includes(index) ? 'border-[#bd00f2]/[0.65] bg-[#bd00f2]/[0.04]' : 'border-white/[0.09] bg-[#0d0f15]/75'}`} key={index} />)}</div>
@@ -104,8 +104,7 @@ export default function Branding() {
 			<h2 className="relative z-[1] mb-[18px] text-[68px] leading-[1.03] max-[767px]:text-[44px]" id="branding-cta-title">Have a story worth<br />
 			<span className="text-[#bd00f2]">amplifying?</span>
 			</h2><p className="relative z-[1] mb-[22px] max-w-[430px] text-[18px] leading-[1.7] text-[#B8C1CC]">Let's turn it into something people notice, trust and remember.</p>
-			<Link className="relative z-[1] inline-flex min-h-[45px] items-center gap-[14px] bg-[#f8f8f7] px-[17px] text-[11px] font-bold text-[#101116] no-underline transition-all duration-200 max-[767px]:text-[10px]" to="/contact">Talk to mDNA <span aria-hidden="true">↗</span>
-			</Link>
+			<Button className="relative z-[1]" to="/contact" variant="black" icon="↗">Talk to mDNA</Button>
 			<div className="absolute top-[-100px] right-[18%] h-[300px] w-[300px] rotate-45 border border-[#bd00f2]/[0.35]" />
 		</section>
 		<ToolsSection tools={BrandingData.tools} />

@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import SectionTitle from '../../components/common/SectionTitle'
+import Button from '../../components/common/Button'
 import NeedList from '../../components/common/NeedList/NeedList'
 import { contentCapabilities, contentHeroNeeds, contentImpacts, contentProcess, contentProblemNeeds, visibilityModes } from './data/serviceData'
 import { contentSearchAIData } from './data/toolsCatlog'
@@ -23,7 +23,7 @@ export default function ContentSearchAI() {
     <h1 className="m-0 mb-7 text-[88px] leading-[1.04] max-[1023px]:text-[72px] max-[767px]:text-5xl" id="content-ai-title">Be found.<br />Be <span className="text-[#bd00f2]">seen.</span><br />Be remembered.</h1>
     <p className="mb-[30px] max-w-[500px] text-[18px] leading-[1.75] text-[#B8C1CC] max-[767px]:text-xs">Content, search and AI visibility services that help your brand appear where buyers look, from search results to AI recommendations and the channels that keep you top-of-mind.</p>
     <div className="flex flex-wrap gap-[10px]">
-      <Link className="inline-flex min-h-[45px] items-center gap-[14px] bg-[#f8f8f7] px-[17px] text-[11px] font-bold text-[#101116] no-underline transition-all duration-200 max-[767px]:text-[10px]" to="/contact">Talk to us <span aria-hidden="true">↗</span></Link>
+      <Button to="/contact" variant="black" icon="↗">Talk to us</Button>
     </div>
   </div>
 
@@ -102,7 +102,10 @@ export default function ContentSearchAI() {
 		</section>
 
 		<section className="relative flex min-h-[540px] flex-col justify-center overflow-hidden bg-[#101116] px-[max(48px,calc((100vw-1400px)/2))] py-20 text-[#f8f8f7] max-[767px]:min-h-[440px] max-[767px]:px-5 max-[767px]:py-[68px]" aria-labelledby="content-ai-cta-title">
-			<SectionTitle className="relative z-[1] mb-7 max-[767px]:mb-5"><span>07</span> / Start here</SectionTitle><h2 className="relative z-[1] mb-[18px] max-w-[850px] text-[68px] leading-[1.04] max-[767px]:text-[42px]" id="content-ai-cta-title">Ready to be found?<br /><span className="text-[#bd00f2]">Let's make the signal clear.</span></h2><p className="relative z-[1] mb-[22px] max-w-[480px] text-[12px] leading-[1.7] text-[#a6abb4]">Start with the visibility problem you need to solve. We can map the relevant content, search and channel work from there.</p><Link className="relative z-[1] inline-flex min-h-[45px] items-center gap-[14px] bg-[#f8f8f7] px-[17px] text-[11px] font-bold text-[#101116] no-underline transition-all duration-200 max-[767px]:text-[10px]" to="/contact">Talk to mDNA <span aria-hidden="true">↗</span></Link><div className="absolute right-[17%] bottom-[-140px] h-[280px] w-[280px] rotate-45 border border-[#bd00f2]/40" />
+			<SectionTitle className="relative z-[1] mb-7 max-[767px]:mb-5"><span>07</span> / Start here</SectionTitle>
+			<h2 className="relative z-[1] mb-[18px] max-w-[850px] text-[68px] leading-[1.04] max-[767px]:text-[42px]" id="content-ai-cta-title">Ready to be found?<br />
+			<span className="text-[#bd00f2]">Let's make the signal clear.</span></h2><p className="relative z-[1] mb-[22px] max-w-[480px] text-[12px] leading-[1.7] text-[#a6abb4]">Start with the visibility problem you need to solve. We can map the relevant content, search and channel work from there.</p>
+			<Button className="relative z-[1]" to="/contact" variant="black" icon="↗">Talk to mDNA</Button><div className="absolute right-[17%] bottom-[-140px] h-[280px] w-[280px] rotate-45 border border-[#bd00f2]/40" />
 		</section>
 		  <ToolsSection tools={contentSearchAIData.tools} />
 	</div>

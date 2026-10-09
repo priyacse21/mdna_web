@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import SectionTitle from '../../components/common/SectionTitle'
+import Button from '../../components/common/Button'
 import NeedList from '../../components/common/NeedList/NeedList'
 import { consultingJourney, consultingLenses, consultingOffers, consultingOpportunityCards, consultingOutcomes,stratergyMap } from './data/serviceData'
 import { consultingData } from './data/toolsCatlog'
@@ -20,7 +21,8 @@ export default function Consulting() {
 				<SectionTitle className="mb-9 max-[767px]:mb-5">Consulting</SectionTitle>
 				<h1 className="m-0 mb-6 text-[82px] leading-[1.02] max-[767px]:text-5xl" id="consulting-title">Make the<br />next move<br />with a clear <span className="text-[#bd00f2]">map.</span></h1>
 				<p className="mb-7 max-w-[510px] text-[18px] leading-[1.7] text-[#B8C1CC] max-[767px]:text-xs">Consulting that helps you build the marketing function, understand the market and define the audiences that matter.</p>
-				<div className="flex flex-wrap gap-[10px]"><Link className="inline-flex min-h-[45px] items-center gap-[14px] border border-current px-[17px] text-[11px] font-bold text-white no-underline transition-all duration-200 max-[767px]:text-[10px]" to="/contact">Book a consulting call <span aria-hidden="true">↗</span></Link></div>
+				<div className="flex flex-wrap gap-[10px]">
+				<Button to="/contact" variant="black" icon="↗">Book a consulting call</Button></div>
 				<div className="mt-[58px] grid grid-cols-3 gap-[18px] border-t border-white/[0.17] pt-5 max-[767px]:mt-[34px] max-[767px]:grid-cols-1 max-[767px]:gap-[14px]">
 					{['Setup & handover', 'Research & benchmarking', 'Insights & segmentation'].map((label, index) => <div className="grid gap-[6px]" key={label}>
 						<span className="font-mono text-[12px] uppercase text-[#8a909a]">0{index + 1} / {['Function', 'Market', 'Customer'][index]}</span>
@@ -101,8 +103,7 @@ export default function Consulting() {
 			<h2 className="relative z-[1] mb-5 text-[68px] leading-[1.03] max-[767px]:text-[44px]" id="consulting-cta-title">Ready to turn<br />uncertainty into a<br />
 				<span className="text-[#bd00f2]">route?</span>
 			</h2><p className="relative z-[1] mb-6 max-w-[480px] text-[18px] leading-[1.7] text-[#B8C1CC]">Book a consulting call, request a research scope or book a segmentation review.</p>
-			<Link className="relative z-[1] inline-flex min-h-[45px] items-center gap-[14px] bg-[#f8f8f7] px-[17px] text-[11px] font-bold text-[#101116] no-underline transition-all duration-200 max-[767px]:text-[10px]" to="/contact">Talk to mDNA <span aria-hidden="true">↗</span>
-			</Link><div className="absolute top-1/2 right-[18%] h-[260px] w-[260px] -translate-y-1/2 rotate-45 border border-[#bd00f2]/40 max-[767px]:right-[-35%] max-[767px]:h-[200px] max-[767px]:w-[200px]" />
+			<Button className="relative z-[1]" to="/contact" variant="black" icon="↗">Talk to mDNA</Button><div className="absolute top-1/2 right-[18%] h-[260px] w-[260px] -translate-y-1/2 rotate-45 border border-[#bd00f2]/40 max-[767px]:right-[-35%] max-[767px]:h-[200px] max-[767px]:w-[200px]" />
 		</section>
 		<ToolsSection tools={consultingData.tools} />
 	</div>

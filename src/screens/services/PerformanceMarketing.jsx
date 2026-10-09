@@ -4,6 +4,7 @@ import {performanceServices, performanceStages } from './data/serviceData'
 import { performanceData } from './data/toolsCatlog'
 import ToolsSection from './common/ToolSection/Toolsection'
 import { toServiceSlug } from '../../utils/serviceSlug'
+import Button from '../../components/common/Button'
 
 export default function PerformanceMarketing() {
 	return <div className="[&_h1]:tracking-normal [&_h1]:normal-case [&_h2]:tracking-normal [&_h2]:normal-case">
@@ -43,7 +44,10 @@ export default function PerformanceMarketing() {
 
 		<section className="grid grid-cols-[1fr_1.7fr] items-start gap-[50px] bg-[#0d151d] px-[30px] pt-20 pb-[90px] text-[#f8f8f7] max-[767px]:grid-cols-1 max-[767px]:gap-6 max-[767px]:px-5 max-[767px]:pt-16 max-[767px]:pb-[72px]" aria-labelledby="performance-cta-title">
 			<SectionTitle> Performance marketing</SectionTitle>
-			<div><h2 className="mb-4 text-[54px] leading-[1.05] max-[767px]:text-[40px]" id="performance-cta-title">Spend with purpose.<br /><span className="text-[#bd00f2]">Learn from every click.</span></h2><p className="mb-6 max-w-[520px] text-[18px] leading-[1.7] text-[#B8C1CC]">Bring acquisition, conversion and measurement together in a performance system built to keep improving.</p><Link className="inline-flex min-h-[45px] items-center gap-[14px] bg-[#f8f8f7] px-[17px] text-[11px] font-bold text-[#101116] no-underline transition-all duration-200 max-[767px]:text-[10px]" to="/contact">Plan your next campaign <span aria-hidden="true">↗</span></Link></div>
+			<div><h2 className="mb-4 text-[54px] leading-[1.05] max-[767px]:text-[40px]" id="performance-cta-title">Spend with purpose.<br />
+			<span className="text-[#bd00f2]">Learn from every click.</span>
+			</h2><p className="mb-6 max-w-[520px] text-[18px] leading-[1.7] text-[#B8C1CC]">Bring acquisition, conversion and measurement together in a performance system built to keep improving.</p>
+			<Button to="/contact" variant="black" icon="↗">Plan your next campaign</Button></div>
 		</section>
 		<ToolsSection tools={performanceData.tools} />
 	</div>

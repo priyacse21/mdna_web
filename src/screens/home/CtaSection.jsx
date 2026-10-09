@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
 
+import Button from "../../components/common/Button";
 export default function CtaSection() {
   return (
     <section
@@ -25,15 +25,8 @@ export default function CtaSection() {
         </p>
 
         <div className="flex flex-wrap justify-center gap-2.5">
-          <Link className="inline-flex min-h-[45px] cursor-pointer items-center gap-[14px] px-[17px] text-[11px] font-bold no-underline transition-all duration-200 max-md:text-[10px] bg-violet text-white" to="/contact">
-            Talk to mDNA -&gt;
-          </Link>
-          <Link
-            className="inline-flex min-h-[45px] cursor-pointer items-center gap-[14px] px-[17px] text-[11px] font-bold no-underline transition-all duration-200 max-md:text-[10px] border border-current border-white/40 text-white hover:border-[#bd00f2] hover:bg-[#bd00f2]/10 transition-colors"
-            to="/services"
-          >
-            Explore Services -&gt;
-          </Link>
+          <Button to="/contact" variant="purple" icon="↓" >Talk to mDNA  </Button>
+          <Button to ="/services" variant="black" icon="↗" >Explore Services </Button>
         </div>
       </div>
     </section>
