@@ -95,11 +95,14 @@ export default function HeroSection() {
               className="absolute inset-0 w-full h-full pointer-events-none"
               viewBox="0 0 620 520"
             >
-              <Line x1="310" y1="260" x2="95" y2="100" stroke="#a604d6" strokeWidth={1.7} strokeDasharray="5 6" />
-              <Line x1="310" y1="260" x2="525" y2="100" stroke="rgba(255,255,255,0.22)" strokeWidth={1} strokeDasharray="" />
-              <Line x1="310" y1="260" x2="90" y2="425" stroke="rgba(255,255,255,0.22)" strokeWidth={1} strokeDasharray="" />
-              <Line x1="310" y1="260" x2="530" y2="425" stroke="rgba(255,255,255,0.22)" strokeWidth={1} strokeDasharray="" />
-              <Line x1="310" y1="260" x2="560" y2="260" stroke="rgba(255,255,255,0.22)" strokeWidth={1} strokeDasharray="" />
+              <line
+  className="stroke-[#a604d6] stroke-[1.7] [stroke-dasharray:5_6] [animation:dash-flow_0.8s_linear_infinite]"
+  x1="310" x2="95" y1="260" y2="100"
+/>
+              <line className="stroke-white/22 stroke-[1]" x1="310" x2="525" y1="260" y2="100" />
+              <line className="stroke-white/22 stroke-[1]" x1="310" x2="90" y1="260" y2="425" />
+              <line className="stroke-white/22 stroke-[1]" x1="310" x2="530" y1="260" y2="425" />
+              <line className="stroke-white/22 stroke-[1]" x1="310" x2="560" y1="260" y2="260" />
             </svg>
 
             <div className="absolute left-[2%] sm:left-[8%] top-0 text-[#5f6a72] font-mono text-[7px] sm:text-[9px] tracking-widest">
