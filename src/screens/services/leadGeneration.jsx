@@ -70,9 +70,24 @@ export default function LeadGeneration() {
 					<p className="mt-[18px] mb-0 max-w-[440px] text-[15px] leading-[1.7] text-[#3B4452]">The service components can work independently or as part of a connected lead generation system: identify the buyers, reach them with targeted outreach and work from researched decision-maker lists.</p>
 				</div>
 			</div>
-			<div className="grid grid-cols-4 border-y border-[#10161d]/[0.18] max-[767px]:grid-cols-2">
-				{leadPathway.map(([number, title, description, label], index) => <article className={`min-h-[290px] border-r border-[#10161d]/[0.14] px-6 py-7 last:border-r-0 max-[1023px]:px-4 max-[767px]:min-h-[260px] max-[767px]:border-b max-[767px]:px-[14px] max-[767px]:py-[22px] max-[767px]:nth-[2]:border-r-0 max-[767px]:nth-last-[-n+2]:border-b-0`} key={number}>
-					<span className={`mx-auto mb-[38px] grid h-[76px] w-[76px] rotate-45 place-items-center border ${index === 0 ? 'border-[#bd00f2] bg-[#bd00f2] shadow-[0_0_0_8px_rgba(189,0,242,0.1)]' : 'border-[#7d8389]'} max-[767px]:mb-[30px] max-[767px]:h-[58px] max-[767px]:w-[58px]`}><b className="rotate-[-45deg] font-mono text-[9px] text-[#17191e]">{number}</b></span>
+			<div className="grid grid-cols-4 max-[767px]:grid-cols-2">
+				{leadPathway.map(([number, title, description, label], index) => <article
+  className={`relative min-h-[290px] border-r border-[#10161d]/[0.14] px-6 py-7
+    before:absolute before:left-0 before:right-0 before:top-[65px] before:h-px before:bg-[#10161d]/[0.25] before:content-['']
+    max-[1023px]:px-4
+    max-[767px]:min-h-[260px] max-[767px]:border-b max-[767px]:px-[14px] max-[767px]:py-[22px] max-[767px]:before:top-[51px]
+    last:border-r-0 max-[767px]:nth-[2]:border-r-0 max-[767px]:nth-last-[-n+2]:border-b-0`}
+  key={number}
+>
+  <span
+    className={`relative z-10 mx-auto mb-[38px] grid h-[76px] w-[76px] rotate-45 place-items-center border
+      ${index === 0
+        ? 'border-[#bd00f2] bg-[#bd00f2] shadow-[0_0_0_8px_rgba(189,0,242,0.1)]'
+        : 'border-[#7d8389] bg-[#f1f0eb]'}
+      max-[767px]:mb-[30px] max-[767px]:h-[58px] max-[767px]:w-[58px]`}
+  >
+    <b className="rotate-[-45deg] font-mono text-[9px] text-[#17191e]">{number}</b>
+  </span>
 					<h3 className="mb-2 text-base uppercase">{title}</h3>
 					<p className="mb-3 min-h-12 max-w-[220px] text-[15px] leading-[1.55] text-[#3B4452] max-[767px]:min-h-[60px] max-[767px]:text-[11px]">{description}</p>
 					<span className="font-mono text-[12px] leading-[2] text-[#68737d] max-[767px]:text-[7px]">{label}</span>
